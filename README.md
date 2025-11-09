@@ -82,15 +82,19 @@ git-quest/
 - ✅ Database loader script
   - Loads parsed tutorials to PostgreSQL
   - Extracts and catalogs Git commands
+- ✅ Data quality validation suite
+  - 10 validation test types
+  - Schema validation, type checking, Git command validation
+  - Content completeness checks
+  - 725 tests across 25 tutorials (100% pass rate)
 
 **In Progress:**
-- 🔨 Great Expectations data quality suite
 - 🔨 Airflow ETL pipeline
 
 **Next Up:**
-- Great Expectations test suite
 - Airflow DAG for content pipeline
 - dbt transformation models
+- Phase 2: FastAPI Backend
 
 ### 📊 Content Statistics
 
@@ -132,7 +136,19 @@ docker-compose ps
 # Email: admin@gitquest.local | Password: admin
 ```
 
-### 3. Load Tutorials into Database
+### 3. Validate Data Quality
+
+```bash
+# Run data quality validation (Great Expectations principles)
+python3 data-pipeline/data_quality/validate_tutorials.py
+```
+
+**Validation Results:**
+- ✅ 25 tutorials validated
+- ✅ 725 tests passed (100% success rate)
+- ✅ 10 validation types: schema, types, Git commands, timestamps, content completeness
+
+### 4. Load Tutorials into Database
 
 ```bash
 # Set up environment variables
@@ -150,7 +166,7 @@ python3 data-pipeline/scripts/load_to_db.py
 - ✅ 28 Git commands cataloged
 - ✅ 5 default achievements seeded
 
-### 4. Database Access
+### 5. Database Access
 
 **PostgreSQL:**
 - Host: `localhost:5432`

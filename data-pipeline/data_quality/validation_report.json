@@ -1,0 +1,4361 @@
+{
+  "timestamp": "2025-11-09T06:24:43.976542",
+  "tutorials_validated": 25,
+  "total_tests": 725,
+  "passed": 725,
+  "errors": 0,
+  "warnings": 0,
+  "success": true,
+  "results": [
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-TBD.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-TBD.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-TBD.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-TBD.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-TBD.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-TBD.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-TBD.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-TBD.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-TBD.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-TBD.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-TBD.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-TBD.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-TBD.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-TBD.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-TBD.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-TBD.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-TBD.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-TBD.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-TBD.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-TBD.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "advanced-TBD.json: Level 'advanced' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "advanced-TBD.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "advanced-TBD.json: Section numbers are sequential (1-8)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "advanced-TBD.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "advanced-TBD.json: All Git commands are valid (0 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "advanced-TBD.json: Word count 567 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "advanced-TBD.json: Has 8 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "advanced-TBD.json: Has 1 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "advanced-TBD.json: ID 'advanced-TBD' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-bisect.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-bisect.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-bisect.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-bisect.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-bisect.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-bisect.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-bisect.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-bisect.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-bisect.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-bisect.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-bisect.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-bisect.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-bisect.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-bisect.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-bisect.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-bisect.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-bisect.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-bisect.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-bisect.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-bisect.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "advanced-bisect.json: Level 'advanced' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "advanced-bisect.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "advanced-bisect.json: Section numbers are sequential (1-8)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "advanced-bisect.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "advanced-bisect.json: All Git commands are valid (2 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "advanced-bisect.json: Word count 525 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "advanced-bisect.json: Has 8 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "advanced-bisect.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "advanced-bisect.json: ID 'advanced-bisect' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: Level 'advanced' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: Section numbers are sequential (1-7)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: All Git commands are valid (1 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: Word count 448 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: Has 7 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: Has 4 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "advanced-cherry-picking.json: ID 'advanced-cherry-picking' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: Level 'advanced' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: Section numbers are sequential (1-12)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: All Git commands are valid (2 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: Word count 613 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: Has 12 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "advanced-complex-merge-scenarios.json: ID 'advanced-complex-merge-scenarios' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-LFS.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-LFS.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-LFS.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-LFS.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-LFS.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-LFS.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-LFS.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-LFS.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-LFS.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-LFS.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-LFS.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-LFS.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-LFS.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-LFS.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-LFS.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-LFS.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-LFS.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-LFS.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-LFS.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-LFS.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "advanced-git-LFS.json: Level 'advanced' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "advanced-git-LFS.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "advanced-git-LFS.json: Section numbers are sequential (1-7)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "advanced-git-LFS.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "advanced-git-LFS.json: All Git commands are valid (4 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "advanced-git-LFS.json: Word count 547 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "advanced-git-LFS.json: Has 7 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "advanced-git-LFS.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "advanced-git-LFS.json: ID 'advanced-git-LFS' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: Level 'advanced' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: Section numbers are sequential (1-6)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: All Git commands are valid (2 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: Word count 508 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: Has 6 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "advanced-git-filter-repo.json: ID 'advanced-git-filter-repo' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: Level 'advanced' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: Section numbers are sequential (1-12)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: All Git commands are valid (1 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: Word count 575 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: Has 12 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: Has 4 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "advanced-git-rebasing.json: ID 'advanced-git-rebasing' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-reflog.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-reflog.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-reflog.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-reflog.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-reflog.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-reflog.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-reflog.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-reflog.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-reflog.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-reflog.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-reflog.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-reflog.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-reflog.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-reflog.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-reflog.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-reflog.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-reflog.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-reflog.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-reflog.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-reflog.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "advanced-git-reflog.json: Level 'advanced' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "advanced-git-reflog.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "advanced-git-reflog.json: Section numbers are sequential (1-11)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "advanced-git-reflog.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "advanced-git-reflog.json: All Git commands are valid (4 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "advanced-git-reflog.json: Word count 605 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "advanced-git-reflog.json: Has 11 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "advanced-git-reflog.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "advanced-git-reflog.json: ID 'advanced-git-reflog' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-submodules.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-submodules.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-submodules.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-submodules.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-submodules.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-submodules.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-submodules.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-submodules.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-submodules.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-submodules.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-submodules.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-submodules.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-submodules.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-submodules.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-submodules.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-submodules.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-submodules.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-submodules.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-submodules.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-submodules.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "advanced-git-submodules.json: Level 'advanced' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "advanced-git-submodules.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "advanced-git-submodules.json: Section numbers are sequential (1-9)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "advanced-git-submodules.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "advanced-git-submodules.json: All Git commands are valid (3 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "advanced-git-submodules.json: Word count 587 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "advanced-git-submodules.json: Has 9 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "advanced-git-submodules.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "advanced-git-submodules.json: ID 'advanced-git-submodules' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: Level 'advanced' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: Section numbers are sequential (1-8)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: All Git commands are valid (2 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: Word count 576 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: Has 8 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "advanced-git-worktrees.json: ID 'advanced-git-worktrees' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: Level 'advanced' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: Section numbers are sequential (1-13)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: All Git commands are valid (1 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: Word count 604 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: Has 13 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "advanced-understanding-merge-types.json: ID 'advanced-understanding-merge-types' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-branches.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-branches.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-branches.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-branches.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-branches.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-branches.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-branches.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-branches.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-branches.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-branches.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-branches.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-branches.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-branches.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-branches.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-branches.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-branches.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-branches.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-branches.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-branches.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-branches.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "intermediate-branches.json: Level 'intermediate' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "intermediate-branches.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "intermediate-branches.json: Section numbers are sequential (1-15)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "intermediate-branches.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "intermediate-branches.json: All Git commands are valid (2 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "intermediate-branches.json: Word count 635 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "intermediate-branches.json: Has 15 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "intermediate-branches.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "intermediate-branches.json: ID 'intermediate-branches' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: Level 'intermediate' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: Section numbers are sequential (1-9)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: All Git commands are valid (0 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: Word count 600 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: Has 9 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "intermediate-merge-conflicts.json: ID 'intermediate-merge-conflicts' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: Level 'intermediate' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: Section numbers are sequential (1-10)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: All Git commands are valid (1 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: Word count 500 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: Has 10 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: Has 3 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "intermediate-merging-branches.json: ID 'intermediate-merging-branches' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: Level 'intermediate' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: Section numbers are sequential (1-13)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: All Git commands are valid (2 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: Word count 591 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: Has 13 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "intermediate-modifying-and-comparing-branches.json: ID 'intermediate-modifying-and-comparing-branches' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: Level 'intermediate' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: Section numbers are sequential (1-11)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: All Git commands are valid (3 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: Word count 615 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: Has 11 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "intermediate-pulling-from-remotes.json: ID 'intermediate-pulling-from-remotes' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: Level 'intermediate' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: Section numbers are sequential (1-17)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: All Git commands are valid (2 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: Word count 649 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: Has 17 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "intermediate-pushing-to-remotes.json: ID 'intermediate-pushing-to-remotes' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-remotes.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-remotes.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-remotes.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-remotes.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-remotes.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-remotes.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-remotes.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-remotes.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-remotes.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "intermediate-remotes.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-remotes.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-remotes.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-remotes.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-remotes.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-remotes.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-remotes.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-remotes.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-remotes.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-remotes.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "intermediate-remotes.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "intermediate-remotes.json: Level 'intermediate' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "intermediate-remotes.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "intermediate-remotes.json: Section numbers are sequential (1-10)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "intermediate-remotes.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "intermediate-remotes.json: All Git commands are valid (2 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "intermediate-remotes.json: Word count 587 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "intermediate-remotes.json: Has 10 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "intermediate-remotes.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "intermediate-remotes.json: ID 'intermediate-remotes' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: Level 'introduction' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: Section numbers are sequential (1-14)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: All Git commands are valid (3 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: Word count 640 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: Has 14 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: Has 4 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "introduction-comparing-versions.json: ID 'introduction-comparing-versions' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-creating-repos.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-creating-repos.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-creating-repos.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-creating-repos.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-creating-repos.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-creating-repos.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-creating-repos.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-creating-repos.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-creating-repos.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-creating-repos.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-creating-repos.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-creating-repos.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-creating-repos.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-creating-repos.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-creating-repos.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-creating-repos.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-creating-repos.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-creating-repos.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-creating-repos.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-creating-repos.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "introduction-creating-repos.json: Level 'introduction' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "introduction-creating-repos.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "introduction-creating-repos.json: Section numbers are sequential (1-10)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "introduction-creating-repos.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "introduction-creating-repos.json: All Git commands are valid (3 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "introduction-creating-repos.json: Word count 604 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "introduction-creating-repos.json: Has 10 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "introduction-creating-repos.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "introduction-creating-repos.json: ID 'introduction-creating-repos' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: Level 'introduction' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: Section numbers are sequential (1-15)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: All Git commands are valid (4 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: Word count 636 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: Has 15 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "introduction-restoring-and-reverting-files.json: ID 'introduction-restoring-and-reverting-files' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: Level 'introduction' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: Section numbers are sequential (1-6)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: All Git commands are valid (3 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: Word count 435 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: Has 6 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "introduction-staging-and-committing-files.json: ID 'introduction-staging-and-committing-files' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-control.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-control.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-control.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-control.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-control.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-control.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-control.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-control.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-control.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-control.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-control.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-control.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-control.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-control.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-control.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-control.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-control.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-control.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-control.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-control.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "introduction-version-control.json: Level 'introduction' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "introduction-version-control.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "introduction-version-control.json: Section numbers are sequential (1-13)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "introduction-version-control.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "introduction-version-control.json: All Git commands are valid (0 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "introduction-version-control.json: Word count 622 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "introduction-version-control.json: Has 13 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "introduction-version-control.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "introduction-version-control.json: ID 'introduction-version-control' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-history.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-history.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-history.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-history.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-history.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-history.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-history.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-history.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-history.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-version-history.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-history.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-history.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-history.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-history.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-history.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-history.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-history.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-history.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-history.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-version-history.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "introduction-version-history.json: Level 'introduction' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "introduction-version-history.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "introduction-version-history.json: Section numbers are sequential (1-9)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "introduction-version-history.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "introduction-version-history.json: All Git commands are valid (2 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "introduction-version-history.json: Word count 509 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "introduction-version-history.json: Has 9 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "introduction-version-history.json: Has 5 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "introduction-version-history.json: ID 'introduction-version-history' follows correct format",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: Field 'id' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: Field 'filename' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: Field 'level' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: Field 'title' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: Field 'sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: Field 'total_sections' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: Field 'git_commands_used' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: Field 'learning_objectives' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: Field 'word_count' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Required Fields",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: Field 'parsed_at' exists",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: 'id' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: 'filename' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: 'level' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: 'title' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: 'sections' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: 'total_sections' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: 'git_commands_used' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: 'learning_objectives' has correct type (list)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: 'word_count' has correct type (int)",
+      "severity": "info"
+    },
+    {
+      "test": "Field Types",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: 'parsed_at' has correct type (str)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Level",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: Level 'introduction' is valid",
+      "severity": "info"
+    },
+    {
+      "test": "Section Structure",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: All sections have required fields",
+      "severity": "info"
+    },
+    {
+      "test": "Sequential Sections",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: Section numbers are sequential (1-11)",
+      "severity": "info"
+    },
+    {
+      "test": "Timestamp Format",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: All timestamps are valid (HH:MM format)",
+      "severity": "info"
+    },
+    {
+      "test": "Valid Git Commands",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: All Git commands are valid (2 commands)",
+      "severity": "info"
+    },
+    {
+      "test": "Word Count Range",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: Word count 614 is reasonable",
+      "severity": "info"
+    },
+    {
+      "test": "Content Completeness",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: Has 11 sections (good depth)",
+      "severity": "info"
+    },
+    {
+      "test": "Learning Objectives",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: Has 4 learning objectives",
+      "severity": "info"
+    },
+    {
+      "test": "ID Format",
+      "passed": true,
+      "message": "introduction-vh-tips-and-tricks.json: ID 'introduction-vh-tips-and-tricks' follows correct format",
+      "severity": "info"
+    }
+  ]
+}
