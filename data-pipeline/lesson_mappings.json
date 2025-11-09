@@ -40,5 +40,109 @@
     "level": "introduction",
     "order_index": 7,
     "filename": "vh_tips_and_tricks.txt"
+  },
+
+  "branches": {
+    "title": "The Multiverse Splits: Creating Branches",
+    "level": "intermediate",
+    "order_index": 8,
+    "filename": "branches.txt"
+  },
+  "modifying_and_comparing_branches": {
+    "title": "Parallel Realities: Modifying & Comparing Branches",
+    "level": "intermediate",
+    "order_index": 9,
+    "filename": "modifying_and_comparing_branches.txt"
+  },
+  "merging_branches": {
+    "title": "Timeline Convergence: Merging Branches",
+    "level": "intermediate",
+    "order_index": 10,
+    "filename": "merging_branches.txt"
+  },
+  "merge_conflicts": {
+    "title": "The Merge Disaster: Resolving Conflicts",
+    "level": "intermediate",
+    "order_index": 11,
+    "filename": "merge_conflicts.txt"
+  },
+  "remotes": {
+    "title": "The Network Effect: Understanding Remotes",
+    "level": "intermediate",
+    "order_index": 12,
+    "filename": "remotes.txt"
+  },
+  "pushing_to_remotes": {
+    "title": "Broadcasting Changes: git push",
+    "level": "intermediate",
+    "order_index": 13,
+    "filename": "pushing_to_remotes.txt"
+  },
+  "pulling_from_remotes": {
+    "title": "Syncing Realities: git pull & git fetch",
+    "level": "intermediate",
+    "order_index": 14,
+    "filename": "pulling_from_remotes.txt"
+  },
+
+  "git_rebasing": {
+    "title": "Timeline Rewriter: Mastering git rebase",
+    "level": "advanced",
+    "order_index": 15,
+    "filename": "git_rebasing.txt"
+  },
+  "cherry_picking": {
+    "title": "Selective Time Travel: git cherry-pick",
+    "level": "advanced",
+    "order_index": 16,
+    "filename": "cherry_picking.txt"
+  },
+  "git_reflog": {
+    "title": "The Safety Net: git reflog Recovery",
+    "level": "advanced",
+    "order_index": 17,
+    "filename": "git_reflog.txt"
+  },
+  "bisect": {
+    "title": "Bug Detective: git bisect Binary Search",
+    "level": "advanced",
+    "order_index": 18,
+    "filename": "bisect.txt"
+  },
+  "understanding_merge_types": {
+    "title": "Merge Mastery: Fast-Forward vs Three-Way",
+    "level": "advanced",
+    "order_index": 19,
+    "filename": "understanding_merge_types.txt"
+  },
+  "complex_merge_scenarios": {
+    "title": "The Merge Gauntlet: Complex Scenarios",
+    "level": "advanced",
+    "order_index": 20,
+    "filename": "complex_merge_scenarios.txt"
+  },
+  "git_worktrees": {
+    "title": "Parallel Workspaces: git worktree",
+    "level": "advanced",
+    "order_index": 21,
+    "filename": "git_worktrees.txt"
+  },
+  "git_submodules": {
+    "title": "Nested Repositories: git submodule",
+    "level": "advanced",
+    "order_index": 22,
+    "filename": "git_submodules.txt"
+  },
+  "git_LFS": {
+    "title": "Large File Guardian: Git LFS",
+    "level": "advanced",
+    "order_index": 23,
+    "filename": "git_LFS.txt"
+  },
+  "git_filter_repo": {
+    "title": "History Surgeon: git filter-repo",
+    "level": "advanced",
+    "order_index": 24,
+    "filename": "git_filter_repo.txt"
   }
 }
