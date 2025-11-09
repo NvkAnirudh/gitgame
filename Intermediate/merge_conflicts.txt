@@ -1,0 +1,35 @@
+1. Merge conflicts
+00:00 - 00:14
+Welcome back! In this chapter, we'll explore how to collaborate using Git! Before we dive in, let's take a look at a common challenge when merging branches - conflicts.
+
+2. Conflicts
+00:14 - 00:48
+In the last chapter we successfully merged one branch into another, and the merge went smoothly, but this isn't always the case. A conflict is a scenario where Git is unable to resolve differences in contents of one or more files between branches. For example, if we edit the same file in two different branches, then try to merge, Git won't know which version should be kept. This results in a conflict. Let's see an example.
+
+3. Conflicting versions of README.md
+00:48 - 01:23
+We've been working in the documentation branch, adding a README file that describes the scope and intended usage of the repo. However, one of our colleagues was not aware of this and thought that, given we are only adding a document rather than editing code, they could simply perform this same task in the main branch. So, we have two versions of the file in two branches - main and documentation! The version in documentation has an extra paragraph in the middle.
+
+4. Merging
+01:23 - 01:38
+We try to merge documentation into main, but the output tells us there is a conflict and that the merge failed. It states that we need to fix the conflicts, then make a new commit.
+
+5. Opening the file
+01:38 - 02:04
+We can open the file from the terminal by running the nano command, followed by the filename and extension. When we do this something interesting happens! New characters have appeared, which have been added by Git to highlight where the conflict occurs. Put another way, Git shows us how the contents differ between branches.
+
+6. Git conflict syntax
+02:04 - 02:56
+The first line starting with arrows pointing to the left and the word documentation indicates that lines beneath it contain the file's contents in the latest commit of the documentation branch. Everything between the line with the word documentation and the equals signs are in the documentation branch but not the main branch. There is no content between the equals signs and the line with several arrows pointing to the right and the word HEAD. This indicates that no content exists in our current branch, main, that is missing from the documentation branch. The contents above the lines with left arrows and below the lines with right arrows are in the versions of the file in both branches.
+
+7. Resolving the conflict
+02:56 - 03:28
+Here, we take steps to resolve the conflict. We want all the content in the documentation branch to remain, so we remove the lines starting with left arrows, the lines with the equals signs, and the lines with the right arrows. We can save our file in the text editor by pressing Control and O, then Enter. To exit and return to the terminal we press Control and X.
+
+8. Merging the branches
+03:28 - 04:00
+We add our updated README to the staging area, then commit it to our current branch. Now, we can try to merge the documentation branch into main again. As we've resolved the conflict, Git informs us that the two branches are already up to date, which is a relief! Remember, we should avoid editing the same file in multiple branches. Prevention is better than cure when it comes to Git conflicts!
+
+9. Let's practice!
+04:00 - 04:04
+Now let's practice dealing with conflicts in Git!

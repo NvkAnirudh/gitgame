@@ -1,0 +1,51 @@
+1. Modifying and comparing branches
+00:00 - 00:06
+Now we know how to create and switch between branches, let's see what else we can do with them.
+
+2. Diff recap
+00:06 - 00:19
+Recall that the git diff command can be used to compare the state of files or repos at different points in time, such as between two different commits, or the last commit and the version in the staging area.
+
+3. Comparing branches
+00:19 - 00:35
+Well, not only this, but git diff can also be used to compare two branches! Here, we provide the names of the two branches we want to compare. In this case, we examine main versus summary-statistics.
+
+4. git diff output
+00:35 - 00:49
+This produces a standard git diff output. It's quite large! This is the first half, with the green text in the output representing new content added in the second branch, summary-statistics.
+
+5. git diff output
+00:49 - 01:17
+In the second half of the output we see that git is showing the diff for the summary.txt file within the results directory between the two branches. Hence, the only difference between the branches was the creation of this summary file and the addition of content to it. If there are multiple files that have been modified, or more extensive revisions to existing files, then the diff output will grow!
+
+6. Navigating large git outputs
+01:17 - 01:27
+To navigate through the output we press the space bar. To exit, returning to the terminal, we can press q.
+
+7. Modifying branches
+01:27 - 02:05
+We know how to view our branches, make new branches, and compare a repo's state between branches. Now, let's look at how we can rename and delete branches. Say we have a branch called feature_dev. However, another team has been assigned to work on an additional feature for our system. To avoid confusion, we should rename our existing branch to be more specific, as well as using a detailed name for the second feature branch. To rename a branch, we use the git branch command with the -m flag.
+
+8. Renaming a branch
+02:05 - 02:15
+We follow this with the current branch name, feature_dev, then the name to change this branch to. In this case, chatbot.
+
+9. Checking our branches
+02:15 - 02:22
+This command won't produce an output, but we can confirm the change by running git branch.
+
+10. Deleting a branch
+02:22 - 02:54
+Large projects such as open-source software can have a large number of branches at any point! Once we've finished working in a branch and brought the contents back into the main branch, we should delete the redundant branch. To delete a branch, we execute git branch with the lowercase -d flag, followed by the branch to delete. We'll get an output confirming the deletion and referencing the last commit hash for that branch.
+
+11. Deleting a branch that hasn't been merged
+02:54 - 03:23
+If we haven't merged the chatbot branch into main the -d flag will produce an error. If we still want to delete this branch, we run the same command but use an uppercase -D flag instead. We see the same output. Beware though, that while we can recover deleted branches, it's not easy. So, we should make sure we are confident that we won't need the branch later before deleting it.
+
+12. Summary
+03:23 - 03:29
+This slide summarizes the commands covered in this video.
+
+13. Let's practice!
+03:29 - 03:33
+Let's practice comparing and modifying branches!

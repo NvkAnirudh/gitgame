@@ -1,0 +1,59 @@
+1. Introduction to branches
+00:00 - 00:06
+Hi, I'm George, a Curriculum Manager at DataCamp. Welcome to the course!
+
+2. What we will cover
+00:06 - 00:16
+We will introduce several concepts and techniques for working with Git, including branches, remotes, and handling conflicts.
+
+3. What you should know
+00:16 - 00:29
+Before getting started, you should be familiar with how Git stores data, how to create repos, make commits, compare versions, and revert files to previous states.
+
+4. Branches
+00:29 - 00:58
+Let's dive in! We'll start by exploring what branches are, why they are useful, and how to use them. Branches are like their own versions of repos, like parallel universes! They enable us to have multiple versions of our files and track each version systematically. In each branch, some files might be the same, others might be different, or some may not exist.
+
+5. Why use branches?
+00:58 - 01:36
+Branches are essential for continuous software development. By default, every repo has a branch called main. Generally, this branch is where we store our working application, with everything functioning as expected, such as the DataCamp website. In a separate branch, we can develop and test a new feature, an AI assistant, to help learners find the content they need. During development, the new feature might not work correctly, but this won't affect the live system because it continues to run from the main branch!
+
+6. Why use branches?
+01:36 - 02:01
+So, branches are beneficial because they allow multiple developers to work on a project simultaneously! Git makes it easy to compare a repo's state between branches, and to combine contents between branches, allowing us to push new features to our live software. Generally, each branch should have a specific purpose.
+
+7. Visualizing branches
+02:01 - 02:10
+Let's see what software development using branches looks like. Here, we see the main branch, where our live system is stored.
+
+8. Branching off
+02:10 - 02:19
+We create a new branch from main called ai-assistant. Each box in diagram represents a commit.
+
+9. Merging back into main
+02:19 - 02:37
+Once the new feature has been developed and tested, we merge our ai-assistant branch back into main, which combines the contents of the branches, making the new feature available to users. We'll discuss merging at the end of the chapter.
+
+10. Fixing a bug
+02:37 - 02:51
+Later, we notice a bug in our production system. So we create another branch called bug-fix, make commits to resolve the issue, and merge that branch back into main.
+
+11. Identifying branches
+02:51 - 03:11
+To identify what branches exist for our project, we execute the git branch command in the terminal. We see two branches in the output: main and ai-assistant. The ai-assistant branch has an asterisk, which is how Git tells us we are currently in this branch.
+
+12. Switching between branches
+03:11 - 03:23
+What if we need to move back to main? We can run git switch, followed by the branch we want to move to. The output confirms we have switched to main.
+
+13. Creating a new branch
+03:23 - 03:46
+What if we need a new branch? We use the git branch command, followed by the name of the new branch. We can then use git switch again, and the output confirms we've switched to this branch! Alternatively, we can create a new branch and switch to it by using git switch with the -c flag.
+
+14. Terminology
+03:46 - 03:59
+Note that when we create a new branch, it is common to say that we are "branching off". If we create the speed-test branch from the main branch, then we are branching off main.
+
+15. Let's practice!
+03:59 - 04:04
+Let's branch out of the video and into some exercises!

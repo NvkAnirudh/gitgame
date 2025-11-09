@@ -1,0 +1,31 @@
+1. Trunk Based Development
+00:00 - 00:12
+Let's explore the concept of trunk-based development with Git, a powerful approach to version control that focuses on continuous integration and rapid development.
+
+2. What is Trunk Based Development?
+00:12 - 00:45
+Trunk-Based Development, or TBD, is a source control branching model where developers collaborate on code in a single branch called 'trunk' or 'main'. Instead of pushing dev branches to different release branches, developers push their changes directly to the main branch. When using this development model, developers make frequent and small commits from short-lived branches to the main branch.
+
+3. Core principles of Trunk Based Development
+00:45 - 01:25
+TBD revolves around several core principles: frequent commits to the main branch, short-lived feature branches, continuous integration, and feature flags for managing incomplete features. Typically, a developer would create a feature branch where they make small changes that are feature flagged and commit a few times a day to main. After each commit to main, the continuous integration process kicks off and validates that the main trunk code still behaves as expected and is validated.
+
+4. Feature flagging in TBD
+01:25 - 01:57
+Feature flags are a key technique in TBD for managing incomplete features. They allow us to merge work-in-progress code into main without affecting user experience. We can then gradually enable features for specific user groups. This allows teams to test features in a controlled environment before releasing them to the public. It also allows developers to make changes quickly and with minimal disruption.
+
+5. Continuous integration in TBD
+01:57 - 02:39
+Continuous Integration is crucial in TBD. Every commit to the main branch triggers automated builds and tests. This assures us that the main branch is always deployable and issues are caught early. This helps to reduce maintenance costs and allows for faster releases. It further ensures that the product is always reliable and stable. Continuous Integration also helps to ensure that code is secure and compliant with industry standards. Additionally, it reduces the risk of bugs and maintains code quality.
+
+6. Benefits and challenges of TBD
+02:39 - 04:03
+runk-Based Development offers several significant benefits that enhance development. One of the primary advantages is the reduction of merge conflicts, which streamlines the integration of code changes. This leads to faster release cycles, allowing teams to deliver updates and new features faster. Additionally, TBD contributes to improved code quality by encouraging frequent commits and continuous integration, which helps catch and address issues early. TBD's collaborative nature fosters better teamwork and communication among developers. However, it comes with a number of challenges. It requires a high level of team discipline to adhere to frequent commits and short-lived feature branches. Robust testing is essential to ensure codebase stability and functionality. There is also an initial learning curve as teams adapt to the TBD workflow. Furthermore, managing incomplete features can be complex, as developers need to use feature flags effectively to avoid disrupting the main branch.
+
+7. Best Practices
+04:03 - 04:35
+To succeed with TBD, we should focus on small, frequent commits, robust automated testing, and the effective use of feature flags. Remember, our goal is to maintain a constantly deployable main branch. So, ensure all code is tested and peer-reviewed before merging; regularly review code and test coverage to ensure quality. Monitor performance and stability after deployment.
+
+8. Let's practice!
+04:35 - 04:41
+Let's master trunk-based development!

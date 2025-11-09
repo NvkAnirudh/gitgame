@@ -1,0 +1,47 @@
+1. Advanced Branch Integration: Git Rebasing
+00:00 - 00:08
+Welcome back! Let's discuss what rebasing is, how to use it, and how it differs from merging.
+
+2. Git rebase
+00:08 - 00:23
+Git rebase is another way to integrate changes between branches, besides merge. Rebasing allows us to reorganize a branch's history, to create a clean and linear graph of commits.
+
+3. Rebase example - before
+00:23 - 00:28
+Let's take our `data-cleanup` feature branch and `main` as an example.
+
+4. Rebase process
+00:28 - 00:58
+To rebase `main` onto `data-cleanup`, use `git rebase main`. Rebase will move all new commits from `main` into the `data-cleanup` branch. Then `data-cleanup` commits will be recreated after `main`'s latest commit. Each `data-cleanup`'s recreated commits will have a new hash. Note, if there are any merge conflicts, we would need to resolve them manually.
+
+5. Rebase example - after
+00:58 - 01:06
+The result is a linear graph for the `data-cleanup` branch. Our`main` branch will remain unchanged.
+
+6. Interactive rebase
+01:06 - 01:41
+Interactive rebase is great for curating feature history before merging. It lets us edit multiple commits in our history at one time. Use `git rebase -i commit-hash` to open an editor and select and modify commits after the specified hash. Word of caution! Rebasing public branches can disrupt collaborators' workflow, and cause significant merge conflicts, so establish clear team rules on when to rebase.
+
+7. Interactive rebase - before
+01:41 - 01:54
+Let's walk through an example where want to edit the commit history after we performed a rebase. Here is our data-validation branch history after rebasing onto `main`.
+
+8. Interactive rebase editor
+01:54 - 02:32
+During interactive rebase we will modify the last 3 commits using git rebase -i HEAD~3. In the editor, we will see the three commits that we can edit. We will squash these three commits into one commit using the rebase commands `pick` and `fixup`. 'Pick' means we keep the commit as is, while 'fixup' combines the commit with the previous pick commit, discarding the fixup commit's message. In this case we'll 'pick' the first, and 'fixup' for the others.
+
+9. Interactive rebase - after
+02:32 - 02:59
+The result is four clean commits where the "Add data validation" commit now includes the validation bug fix and optimize performance commit changes. This clean history helps team members understand our data pipeline, focusing on major features rather than small changes. This can be extremely helpful when reverting if issues are found.
+
+10. Merge versus rebase
+02:59 - 03:42
+Let's compare merge and rebase. In our data pipeline, merge preserves the context of when we started the data cleanup feature relative to main's progress. In contrast, rebase makes it appear as if we started the cleanup after all main changes. Merge provides a clear picture of parallel development, useful for understanding how different data processing features evolved simultaneously. Rebase creates a cleaner, linear history, making it easier to track the sequence of changes to our pipeline, but loses some contextual information.
+
+11. When to use merge versus rebase
+03:42 - 04:01
+Use merge to integrate completed features and preserve development context. Use rebase to update feature branches with main or to clean up before merging. Remember: Rebase rewrites history, so use it sparingly.
+
+12. Let's practice!
+04:01 - 04:13
+Now that we've covered the essentials of rebasing, it's time to put your knowledge to the test. Let's dive into some hands-on coding exercises.

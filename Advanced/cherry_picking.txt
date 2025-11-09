@@ -1,0 +1,27 @@
+1. Cherry-Picking
+00:00 - 00:16
+Hey there! Let's discuss Git Cherry-Pick. In our last chapter, we covered merging and rebasing strategies. Now, we're diving into a more surgical Git operation: cherry-picking.
+
+2. What is cherry-pick?
+00:16 - 01:29
+Git cherry-pick` is a command that copies a specific commit from one branch and applies it to another. Unlike merging or rebasing, which typically involve multiple commits, cherry-picking deals with individual commits. It's like saying, "I want this specific change, but not everything else." When copying a commit from one branch to another, a new commit is created on the new branch with the same changes as the commit that was cherry-picked from the other branch. Cherry-picking multiple commits is also possible with the following command. The cherry-picking tool allows us to apply specific bug fixes or features to multiple branches without merging entire feature functionality. It is especially useful if we need to roll back a critical fix to a stable version. It is also useful if we want to experiment with new features and apply changes selectively. It also allows us to recover lost commits.
+
+3. Cherry-Pick example
+01:29 - 01:50
+Let's walk through a cherry-pick example in our flight data pipeline project. Imagine we have a feature branch with a commit that optimizes our data validation process. We want to apply this optimization to our main branch without bringing in other changes in the feature branch.
+
+4. Cherry-Pick process
+01:50 - 02:17
+To cherry-pick, we first checkout the target branch, main in this case. Then we run `git cherry-pick def456`. Git applies the changes from this commit to our current branch. If successful, a new commit is created on main with the same changes but a different commit hash from def456.
+
+5. Resolving cherry-pick conflicts
+02:17 - 02:54
+Sometimes, cherry-picking isn't smooth sailing. If the target branch has diverged significantly, we might encounter conflicts. When this happens, Git will stop the cherry-pick process and wait for conflicts to be resolved. To continue the process, we'll need to manually resolve these conflicts, stage the resolved files, and then continue the cherry-pick with `git cherry-pick --continue`. If things go south, we can always abort with `git cherry-pick --abort`.
+
+6. When to use cherry-pick
+02:54 - 03:29
+Cherry-picking is powerful, but it's not always the right tool. We use it when we need to apply specific, isolated changes across branches. It's great for hotfixes or when we want to test a feature in isolation. However, be cautious: overuse can lead to duplicate commits and a confusing history. For larger sets of changes, merging or rebasing is often more appropriate.
+
+7. Let's practice!
+00:00 - 03:29
+Time to go cherry picking.

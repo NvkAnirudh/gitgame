@@ -1,0 +1,67 @@
+1. Pushing to remotes
+00:00 - 00:08
+We know how to pull from a remote into a local repo, but what about getting our local changes into a remote repo?
+
+2. Pulling from a remote
+00:08 - 00:16
+To recap, we use git pull to gather content from a remote and merge it into our local repo.
+
+3. Pushing to a remote
+00:16 - 00:24
+The opposite of pulling is pushing, where we merge our local's repo content into a remote.
+
+4. git push
+00:24 - 01:06
+As with pulling contents from a remote, we need to commit local changes before we can push to the remote. Once we have done this, we can push to a remote using the git push command, supplying two arguments. First we provide the remote, followed by the local branch. The order that we supply the remote repo and the local branch is the same as git pull. So, we can think of it as pushing content into the remote repo from the local branch. Here, we push changes into origin from our local main branch.
+
+5. Push/pull workflow
+01:06 - 01:13
+The typical push/pull workflow starts with pulling the remote into our local repo.
+
+6. Push/pull workflow
+01:13 - 01:18
+We then work on our project locally, committing changes as we go.
+
+7. Push/pull workflow
+01:18 - 01:29
+Lastly, we push our updated local repo to the remote. This workflow is repeated throughout our time working on the project.
+
+8. Pushing first
+01:29 - 01:39
+What happens if we don't start the workflow by pulling from the remote? Here, we try to push the contents of our local repo's main branch to the remote.
+
+9. Remote/local conflicts
+01:39 - 01:44
+Git gives us a large output! Let's break it down.
+
+10. Remote/local conflicts
+01:44 - 01:49
+The first line shows us the remote repo URL we are trying to push to.
+
+11. Remote/local conflicts
+01:49 - 01:57
+The second and third lines show us the outcome of the command - it was rejected and failed.
+
+12. Remote/local conflicts
+01:57 - 02:39
+In the third to seventh lines, Git provides hints. This is where Git tells us why the command failed, and recommends what we should do to resolve the issue. In this case, we see that the tip, or the end, of our current branch is behind its remote counterpart and the suggestion is to pull from the remote before trying to push our local changes again. This can typically occur because while we've been working locally, our colleagues have been pushing their changes to the remote. So, if we don't pull from the remote at the start of the workflow then our local repo won't be synchronized with the remote.
+
+13. Avoiding a conflict
+02:39 - 03:15
+Previously we saw that git pull used a fast-forward merge. In this case it's slightly different, as there are different commits on the local and remote repos, so Git can't just bring them in line with one another. It will use a recursive merge. So, when we try to pull, Git will automatically open the nano text editor and ask us to add a message for the merge. We leave a message that we are pulling the latest report from the remote, then save and exit nano.
+
+14. Pulling without editing
+03:15 - 03:26
+We can avoid providing a message by including dash-dash-no-edit when executing git pull, however, this is not recommended!
+
+15. Pushing a new local branch
+03:26 - 03:31
+What if we have a local branch that doesn't exist in the remote?
+
+16. Creating a new remote branch
+03:31 - 03:41
+We can still use git push origin followed by the name of our local branch. This will result in a new branch in the remote with the same name!
+
+17. Let's practice!
+03:41 - 03:45
+Let's push on with some exercises!

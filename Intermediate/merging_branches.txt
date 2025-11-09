@@ -1,0 +1,39 @@
+1. Merging branches
+00:00 - 00:08
+We've talked about combining, or merging, branches together. Let's explore how we can do this using Git!
+
+2. The purpose of branches
+00:08 - 00:33
+Recall that each branch should have a particular purpose, such as developing a new feature, or debugging an error. Once we are finished, we need to incorporate these changes into the live system, typically hosted in the main branch. We can think of main as the ground truth for our project, so it should be kept up to date.
+
+3. Source and destination
+00:33 - 01:02
+When we merge two branches, the last commits from each branch are called parent commits. One branch is known as the source, the branch we want to merge from, and the other is known as the destination, the branch we want to merge into. So, when we merge ai-assistant back into main, the ai-assistant branch is the source, and main is the destination.
+
+4. Merging branches
+01:02 - 01:45
+To merge branches, we first switch to the destination branch. Here, we switch to main, where we want to merge our changes from the ai-assistant branch into. From here, we can merge the source branch into the destination branch, where we are currently located, by using the git merge command followed by the source branch. Therefore, if we want to merge ai-assistant into main we execute git merge ai-assistant. If we're in a different branch we can still perform a merge, but need to include the source and destination branches, in that order, like so.
+
+5. Git merge output
+01:45 - 01:53
+The output provides some key information about what happened as part of the merge. Let's break the output down.
+
+6. Git merge output
+01:53 - 02:04
+First, we can see the first seven characters from the each branch's latest commit hashes at the top. These are the parent commits.
+
+7. Git merge output
+02:04 - 02:38
+Next is the type of merge. In this case, it is a fast-forward merge. This means that the commit history across the two branches is linear, where we have branched off main into ai-assistant, then only made commits in that branch. Therefore, Git can "fast-forward" the main branch, pointing to the last commit in the ai-assistant branch when the merge occurs. There are other types of merges, but these are out of scope for the course.
+
+8. Git merge output
+02:38 - 02:50
+The output also shows the number of lines added or deleted per file. In this case, a Python file called main was modified with 11 extra lines added.
+
+9. Git merge output
+02:50 - 03:11
+The final line of the output shows the phrase "create mode", indicating a new file has been created. It then mentions the Python file main.py, located in the source directory, highlighting that this is the new file that has been created in the ai-assistant branch.
+
+10. Let's practice!
+03:11 - 03:16
+Let's merge this video into some exercises!

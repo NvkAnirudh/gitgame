@@ -1,0 +1,47 @@
+1. Complex Merge Scenarios
+00:00 - 00:12
+We covered fast-forward and recursive merging. Now, we'll explore two more advanced merge strategies: squash merge and octopus merge.
+
+2. Flight travel data pipeline repo
+00:12 - 00:40
+Assume we're collaborating with our team to build a flight travel data pipeline. We will be using git to manage tracing and merging our feature development, as shown in this diagram. In our working directory, we have our main script, etl.py, as well as several others. The data folder contains our flight CSV data. Now, let's dive into our merge strategies.
+
+3. Git squash merging
+00:40 - 01:20
+Squash merging takes all commit changes from a feature branch and combines them into a single new commit on the target branch, like a main branch. Unlike the recursive strategy that produces a merge commit, this strategy adds a regular commit with only one parent. The squashed commit is added to the target branch and not the feature branch. So, we will lose the feature branch's commit history. The advantage of this method is that it reduce "noise" in our target branch. It gives us a clean, linear history.
+
+4. Merge squash example
+01:20 - 01:41
+We might use squash merge to consolidate a complex feature, such as a new data cleanup process for our flight data project, if we have already completed development and do not need to retain history. Here's our main branch and a feature branch `data-cleanup` with multiple commits.
+
+5. Merge squash process
+01:41 - 02:12
+To perform a squash merge, we will check out our main branch, squash all of data-cleanup commits into a single new commit with a new commit message using the 'squash' flag. Finally we'll commit this squash commit to our main branch. To note, if we do not commit this squash commit using `git commit`, then our changes will only stay in the staging area. We must complete this step.
+
+6. Merge squash result
+02:12 - 02:33
+After the squash merge, notice how the `main` branch has a single new commit representing all changes from `data-cleanup`. The original branch and its commit history remain untouched. Now let's discuss the git merge octopus strategy.
+
+7. Git octopus merge
+02:33 - 03:03
+Octopus merge allows us to merge three or more branches at the same time. It creates a single merge commit with parents from all the merged branches. When using this strategy, the branches should not contain any conflicts. If there is a conflict between any of the branches, this strategy will fail. This is useful for integrating multiple independent changes at once.
+
+8. Octopus merge example
+03:03 - 03:28
+In our flight data project, we might use an octopus merge to integrate our independently developed ingest, transform, and load functions all at once. Here's our main branch with three feature branches: `ingest`, `transform`, and `load`, each representing a component of our ETL process.
+
+9. Octopus merge commands
+03:28 - 03:46
+To perform an octopus merge, we need to switch to the main branch. Then we perform git merge using the `s` flag and passing in `octopus` as the next word. After that, we can list the branches we want to merge.
+
+10. Octopus merge result
+03:46 - 03:58
+The result is this 'octopus-like' graph, where all three feature branches converge into a single merge commit on the main branch.
+
+11. Summary
+03:58 - 04:16
+Both squash and octopus merges offer powerful ways to manage our Git history. Squash merges provide a clean, simplified history, while octopus merges allows for efficient integration of multiple parallel developments.
+
+12. Let's practice!
+04:16 - 04:24
+Let's test your knowledge on git squash and octopus merges.

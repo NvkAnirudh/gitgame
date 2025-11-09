@@ -1,0 +1,27 @@
+1. Git Large File Storage
+00:00 - 00:11
+Let's discuss Git Large File Storage, a powerful extension for managing large files, such as datasets and machine learning models, within our Git workflow.
+
+2. What is Git Large File System?
+00:11 - 01:12
+In Git Large File Storage, better known as Git LFS, large files in a repository are replaced with small pointer files. A separate LFS store stores the actual file content. Git LFS tracks and stores large files separately from existing Git workflows. By following this approach, Git handles large files more efficiently, especially when large binary files are frequently changed. Git LFS offers several key benefits for our data projects. It significantly reduces repository size and cloning times by storing large files separately. It allows for more efficient handling of data files, which is crucial for our datasets and models. LFS also enables smoother collaboration when working with large files across the team.
+
+3. Git LFS initialization process
+01:12 - 02:05
+Let's setup Git LFS and initialize tracking for a few large CSV files. First, we install LFS with `git lfs install`. To track files, we use `git lfs track "*.csv"`. This creates the `.gitattributes` config file and saves the tracking configuration for files with the '.csv' extension. After we've setup tracking, we use regular Git commands like `add` to stage the attributes config file and file pointer changes and `commit` to commit the changes. As a result, LFS creates pointer files in the repository and stores the actual files on the LFS server.
+
+4. Git LFS update process
+02:05 - 02:36
+To update LFS files, we use the commands `git add` to stage the changes, and then `git commit` and `git push`. This will push changes to the file on the LFS server. When pulling updates, Git automatically updates LFS file pointers in the repository. If we need to download the actual file to make changes from the LFS server, use `git lfs pull`.
+
+5. When to use Git LFS
+02:36 - 03:44
+Git LFS is ideal for managing large datasets, machine learning models, and other data assets. It is useful when we deal with large data files that are over 100MB in size, when we frequently update these files, or when we need to track changes. Lastly, Git LFS ensures that compressed archives and installers are handled and versioned efficiently for projects that require regular updates. If large files aren't updated all that often or need changes tracked, Git LFS may not be ideal. Git LFS can introduce overhead without significant gains if our team mainly works with small text files. In addition, Git LFS takes a long time to transfer large files, so it's not suited to repositories with limited storage quotas where LFS bandwidth usage could quickly exceed the limit. When using it, plan accordingly.
+
+6. Best practices
+03:44 - 04:13
+Git LFS is a powerful tool for managing large files in our data projects. Remember to use it carefully, track only necessary files, and keep your team informed about LFS usage. Regularly clean up our LFS cache to save space. With Git LFS, we can version our code and large data files together, streamlining our development process.
+
+7. Let's practice!
+04:13 - 04:19
+Now let's show our Git LFS skills!

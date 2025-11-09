@@ -1,0 +1,59 @@
+1. Restoring and reverting files
+00:00 - 00:09
+We've learned several ways to compare files; now, let's look at how to use Git commands to resolve problems.
+
+2. Making an error
+00:09 - 00:20
+Suppose we've modified a file, added it to the staging area, and made a commit. However, we've realized the last edit has a typo.
+
+3. Reverting files
+00:20 - 01:09
+We need to undo our most recent changes, restoring this file to the state before the last commit. To do this, we use the git revert command, which reinstates previous versions of files and creates a new commit with these older versions. Note that it will restore all files updated in that commit. We need to provide a reference, through a commit hash or HEAD, to the changes that we want to undo. Referencing HEAD, means undoing changes made in the last commit, while adding tilde-one would undo, or revert, the second-most recent commit. Let's run this and see what happens.
+
+4. Reverting files
+01:09 - 01:20
+By default, this opens a text editor where we are prompted to add a commit message. We can save and exit using these commands.
+
+5. Reverting files
+01:20 - 01:31
+Exiting the text editor, we see a terminal output confirming the revert, including the number of files and lines that were changed.
+
+6. git revert flags
+01:31 - 01:55
+If we want to avoid the text editor opening when we revert, we can include the --no-edit flag. If we want to revert without making a commit at that point, allowing us to review and modify the changes before finalizing with a commit, we can include the -n flag, which is short for 'no commit'.
+
+7. Revert a single file
+01:55 - 02:45
+The git revert command only reverts a commit. It worked for us in this scenario because we only committed a single file, but if we had updated more files, then those would have been reverted, too. To revert a single file, we need a different command. We use git checkout. It is a versatile command, which, in this scenario, allows us to check out one or more files from a specific commit, again using the commit hash or HEAD syntax. Here, we refer to the second most recent commit and narrow the command to a single file by including two dashes, a space, and the filename.
+
+8. Checking the checkout
+02:45 - 02:55
+We won't get an output, but we can confirm the file has been modified to its previous state and is in the staging area by running git status.
+
+9. Making a commit
+02:55 - 03:00
+We then make a new commit to save the file's latest state.
+
+10. Unstaging a file
+03:00 - 03:12
+We now know how to restore files to versions from previous commits. But what if we need to restore a file in the staging area before the update has been committed?
+
+11. Unstaging a file
+03:12 - 03:21
+We need to remove this file from the staging area or, to put it another way, unstage it so it is back in the repo.
+
+12. Unstaging a single file
+03:21 - 03:39
+To unstage a single file, we can use the git restore command with the --staged flag, followed by the filename. This will move the file back to the working directory, allowing us to edit it before restaging and committing.
+
+13. Unstaging all files
+03:39 - 03:51
+Alternatively, to move all files in the staging area back to the repo, we execute git restore --staged without specifying any filenames.
+
+14. Summary
+03:51 - 04:03
+We covered three new commands with several flags: git revert, git checkout, and git restore. This table summarizes their usage.
+
+15. Let's practice!
+04:03 - 04:07
+Let's practice reverting and restoring files!

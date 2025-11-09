@@ -1,0 +1,39 @@
+1. Introduction to remotes
+00:00 - 00:09
+Now we're going to learn about a fundamental feature for collaboration in Git - remote repos, also known as remotes.
+
+2. Local repo
+00:09 - 00:27
+So far, we have worked with repos stored on our computer. These are known as local repos. They are great if we are working on a local project, but what if we need to collaborate with colleagues? How will they access our repo?
+
+3. Remote repo
+00:27 - 00:38
+This is where remotes solve our problems! A remote repo is a repo stored in the cloud through an online repo hosting service such as GitHub.
+
+4. Why use remote repos?
+00:38 - 00:58
+There are a couple of key benefits to using remotes. If our computer breaks down or we lose it, we can use a different computer to access our project from the remote repo as it is backed up there! Additionally, colleagues can collaborate with us regardless of their location.
+
+5. Cloning a repo
+00:58 - 01:43
+We can also make multiple copies of a repo on our local computer or network. This concept is known as having local remotes. It can be useful for collaboration where cloud storage is prohibited, such as in enterprises with strict data privacy rules. We can make copies of a repo by using the git clone command followed by the path to the project repo. Here, we clone a local project from home/george/repo. We can also give the cloned repo a name by specifying it after the path, such as here, where we call it new_repo.
+
+6. Cloning a remote
+01:43 - 02:19
+While remotes can exist locally, it is more common to store them in an online repo hosting service such as GitHub, Bitbucket, or GitLab. If we have a GitHub account then we can access a remote stored on their server by cloning it on to our local computer. To do this we again use the git clone command, this time providing a URL rather than a local path. For example, here we clone a repo from github.com/datacamp/project.
+
+7. Identifying a remote
+02:19 - 02:43
+When we clone a repo, Git remembers where the original repo was. It does this by storing a remote tag in the new repo's configuration. If we are in a repo, we can list the names of its remotes using git remote. The output confirms we have cloned the datacamp GitHub project.
+
+8. Getting more information
+02:43 - 03:06
+If we want more information, such as the remotes URLs, we can add the dash-v flag, which stands for verbose. We see two outputs. They contain the same URL, but have either fetch or pull at the end of their respective rows. We will discuss these terms later in the chapter.
+
+9. Creating a remote
+03:06 - 03:51
+When cloning, Git will automatically name the remote as origin. We can add more remotes by specifying a name for Git to assign. We do this using the git remote add command, and provide two pieces of information - the name that we would like to assign to the remote repo, and the URL, or the path to the directory. Here, we create a remote called george, which points to the url github.com/george_datacamp/repo. It is useful to define the remote name as we can use it as a shortcut when merging rather than listing the URL or path.
+
+10. Let's practice!
+03:51 - 03:55
+Now it's time to practice working with remotes!

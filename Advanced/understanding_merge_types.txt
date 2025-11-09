@@ -1,0 +1,51 @@
+1. Understanding Merge Types
+00:00 - 00:13
+Welcome to this advanced Git course where you will learn to master complex merging, build and manipulate repository history and optimize Git for large data projects.
+
+2. I'm Amanda
+00:13 - 00:30
+I'm Amanda, a data and software engineer with over 10 years of Git experience at companies like Microsoft and Dropbox. I've managed complex data systems and CI/CD processes, and I'm excited to share my expertise with you.
+
+3. What is git merge?
+00:30 - 01:11
+You should already know merging. Now, we will cover fast-forward and recursive merges. We'll explore their functionality and use in data engineering projects. Git merge is like combining two work streams. At its core, git merge combines changes from one branch into another. Git will take two branch pointers and attempt to find a common base commit between them. A merge strategy is a method Git uses to find a base commit and create a new base commit. `git merge` will select a merge strategy automatically unless a different strategy is specified.
+
+4. Fast-forward merge
+01:11 - 01:41
+Fast-forward merges keep a simple, straight history. They're perfect for short branches with simple changes, like bug fixes, and when the main branch is unchanged. However, they don't preserve the lineage of a commit, which is crucial for tracing complex feature development on long-lived branches. If there's a conflict or if main has been updated since creating the feature branch, fast-forward merges won't work.
+
+5. Fast-forward merge (before)
+01:41 - 01:51
+Imagine a graph where the main branch hasn't moved since we created our feature branch. Our feature branch extends from the tip of main.
+
+6. Fast-forward merge syntax
+01:51 - 02:13
+A fast-forward merge is the simplest merge strategy. It occurs when there is a linear path from the current branch to the target branch. When running `git merge` Git will attempt to use this merge strategy by default. If you want to force Git to use this strategy, you'll need to add the `--ff-only` flag.
+
+7. Fast-forward merge (after)
+02:13 - 02:41
+After performing a merge using fast forward, notice how the main branch pointer moves forward and adds only the final commit from the feature branch, B3. This aligns with the latest commit in the feature branch. No additional commits are created; the history remains linear. However, if the commit is overwritten, we would not be able identify that B3 was created on the feature branch.
+
+8. Recursive merge
+02:41 - 02:57
+Recursive merges create merge commit objects with two parents. This allows us to preserve the full history of a feature branch. They're ideal for long-lived branches or when maintaining branching structure is important.
+
+9. Recursive merge (before)
+02:57 - 03:07
+Sometimes, the main branch progresses after we create our feature branch. In this case, fast-forward is impossible.
+
+10. Recursive merge syntax
+03:07 - 03:21
+The `--no-ff` flag forces a new merge commit, even if a fast-forward merge is possible. This is useful for preserving the feature branch's history after merging it into the main branch.
+
+11. Recursive merge (after)
+03:21 - 03:35
+In a recursive merge, Git creates a new commit that combines changes from both branches. The graph now shows an additional commit with two parents: one from main and one from feature.
+
+12. Summary
+03:35 - 03:57
+It's vital to know these merge strategies. They help keep a clean, informative Git history. Fast-forward merges keep things simple and linear when possible. Recursive merges preserve the historical context of feature development and are needed for complex development workflows.
+
+13. Let's practice!
+03:57 - 04:01
+Let's merge!

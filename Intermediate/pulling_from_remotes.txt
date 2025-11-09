@@ -1,0 +1,43 @@
+1. Pulling from remotes
+00:00 - 00:08
+We've seen how to clone remote repos, now let's look at how to get content from a remote into our local repo.
+
+2. Remote vs. local
+00:08 - 00:22
+Say we have been working in our local repo, but others have been working in the remote. Here, we can see additional files and subdirectories in the remote that aren't in the local repo.
+
+3. Collaborating on Git projects
+00:22 - 00:45
+If several people are collaborating on a project then they will access the remote, work locally, save files, and synchronize their changes between the remote and local repos. This means that the remote repo should be the project's source of truth, where the latest versions of files that are not drafts can be located.
+
+4. Fetching from a remote
+00:45 - 01:23
+To synchronize the files in a remote to a local repo we need to fetch branches from the remote. We do this using git fetch, providing the name of the remote. Here, we fetch from the origin remote. This fetches all branches from the remote into the local repo. If a branch only exists in the remote it will be created in the local repo as a result of this command. Note this doesn't merge the remote repo's contents into our local repo. We'll see how to do this shortly.
+
+5. Fetching a remote branch
+01:23 - 01:45
+If we want to fetch a particular branch only, we specify it after the remote name. Here, we only fetch from the remote's main branch. The output displays the URL or path we are fetching from, the branch, and that we are fetching the HEAD, or last commit.
+
+6. Synchronizing content
+01:45 - 02:18
+After fetching, we need to synchronize content between the remote and local repos. To do this, we perform a merge of the remote into our local repo. If we don't specify a local branch, the merge will be from the remote's main branch into the local branch that we are currently located in. The output is the same as if we merged two local branches, showing parent commit hashes, the type of merge, and what files changed.
+
+7. Pulling from a remote
+02:18 - 02:52
+In collaborative projects, synchronizing between remote and local repos is very common. To simplify this process, Git allows us to fetch and merge using a single command. We execute git pull followed by the remote repo's name, which will fetch the default branch from the remote, typically main, and merge it into the local repo's current branch. Here, we pull from origin into our current local branch.
+
+8. Pulling a remote branch
+02:52 - 03:15
+As with git fetch, we can specify which remote branch to pull from by including the branch name after the remote name. Here, we pull from the remote's dev branch. This will still merge into the local branch that we are located in, so we should switch to the local dev branch before running this!
+
+9. Git pull output
+03:15 - 03:25
+The output is a combination of git fetch and git merge, which makes sense because git pull is a shortcut to run both of these commands!
+
+10. A word of caution
+03:25 - 03:46
+Note that if we have been working locally and not yet committed our changes, then Git won't allow us to pull from a remote. We are instructed to commit our changes and told that the pull command was aborted. Therefore, it's important to save our work locally before we pull from a remote.
+
+11. Let's practice!
+03:46 - 03:52
+Time to practice fetching and pulling in Git!

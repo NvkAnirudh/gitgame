@@ -1,0 +1,53 @@
+1. Introduction to version control
+00:00 - 00:16
+Hi, my name is George. I'm a Curriculum Manager at DataCamp, and I use Git on a daily basis for version control in my projects. In this course, we'll discover the benefits of version control and why Git is so popular for this!
+
+2. What is version control?
+00:16 - 00:28
+Let's start by defining version control, which is a group of systems and processes to manage changes made to documents, programs, and directories.
+
+3. What should be version controlled?
+00:28 - 00:40
+Version control is helpful for anything that changes over time or needs to be shared, such as code and data. In this course, we'll focus on version control for code.
+
+4. What can version control do?
+00:40 - 00:51
+Version control allows us to track files in different states, combine different versions, identify a particular version of a file, and revert changes.
+
+5. Why is version control important?
+00:51 - 01:07
+So why should we care about version control for our software or data projects? Well, a project without version control is like cooking without a recipe - it'll be difficult to remember how to produce the same results again.
+
+1 Image credit: https://unsplash.com/@mvdheuvel
+6. Why is version control important?
+01:07 - 01:32
+Imagine we work for an e-commerce company and release a new feature on our website that recommends products to customers. However, there is a bug in our code, and the website stops working! With version control, we can easily revert our website to a previous working version, then work separately to identify the issue before safely re-releasing the new feature.
+
+7. Introducing Git
+01:32 - 01:50
+So, how do we perform version control? One popular program for version control is called Git. Git is open source and scalable to easily track everything from small solo projects to complex collaborative efforts with large teams!
+
+8. Benefits of Git
+01:50 - 02:14
+A key benefit of Git is that it stores everything, so nothing is ever lost. It allows us to compare the contents of files at different times. We can even examine what changes have been made, who made them, and when. Critically, if our software has issues, we can revert to a previous version that is known to work correctly!
+
+1 Image credit: https://unsplash.com/@wilsonjim
+9. Using Git
+02:14 - 02:42
+A common method to use Git is via the shell, also known as the terminal. The shell is a program for executing commands. Before we use Git, we'll run through some shell commands that will often be used in our version control workflow, such as previewing and inspecting files or directories. Note that a directory is often referred to on a computer as a folder.
+
+10. Useful terminal commands
+02:42 - 03:10
+To see our location, we can execute pwd, which prints the current working directory. Here, we are in the Documents directory of a user called Repl. We can use the ls command to see what is in our current directory. The output returns a list of all files and directories. There is a directory called archive and three csv files.
+
+11. Changing directory
+03:10 - 03:26
+If we need to change directory, we can execute cd followed by the directory we want to move into. Here, we navigate to the archive directory. Rechecking our location confirms we have successfully moved.
+
+12. Checking Git version
+03:26 - 03:41
+Let's learn our first Git command! Different versions of software have different functionality, and Git is no exception. We can check which version of Git we have installed by typing git dash-dash-version in the shell.
+
+13. Let's practice!
+03:41 - 03:46
+Now, let's check our understanding of version control!
