@@ -252,10 +252,10 @@ curl -X GET "http://localhost:8000/api/lessons/"
 
 ```bash
 # Get only introduction lessons
-curl -X GET "http://localhost:8000/api/lessons?level=introduction"
+curl -X GET "http://localhost:8000/api/lessons/?level=introduction"
 
 # Get only advanced lessons
-curl -X GET "http://localhost:8000/api/lessons?level=advanced"
+curl -X GET "http://localhost:8000/api/lessons/?level=advanced"
 ```
 
 ---
