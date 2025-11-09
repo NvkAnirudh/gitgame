@@ -17,12 +17,34 @@ ALGORITHM = os.getenv("ALGORITHM", "HS256")
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "30"))
 REFRESH_TOKEN_EXPIRE_DAYS = int(os.getenv("REFRESH_TOKEN_EXPIRE_DAYS", "7"))
 
-# Password hashing context
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+# Password hashing context with explicit configuration
+pwd_context = CryptContext(
+    schemes=["bcrypt"],
+    deprecated="auto",
+    bcrypt__rounds=12,
+    bcrypt__ident="2b"
+)
 
 
 def hash_password(password: str) -> str:
-    """Hash a password using bcrypt"""
+    """
+    Hash a password using bcrypt
+
+    Args:
+        password: Plain text password (max 72 bytes for bcrypt)
+
+    Returns:
+        Hashed password string
+    """
+    # Ensure password is a string and encode to handle any special characters
+    if isinstance(password, bytes):
+        password = password.decode('utf-8')
+
+    # Truncate to 72 bytes if needed (bcrypt limitation)
+    password_bytes = password.encode('utf-8')
+    if len(password_bytes) > 72:
+        password = password_bytes[:72].decode('utf-8', errors='ignore')
+
     return pwd_context.hash(password)
 
 
