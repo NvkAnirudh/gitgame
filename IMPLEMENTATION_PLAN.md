@@ -67,6 +67,9 @@ Transform Git Quest into a **full-scale Data Engineering project** that teaches 
 - **Pydantic**: Data validation and settings management
 - **GitPython**: Git operations and simulation
 - **Uvicorn**: ASGI server
+- **FastAPI-Users** or **python-jose**: Authentication & JWT tokens
+- **passlib**: Password hashing (bcrypt)
+- **python-multipart**: OAuth2 form data support
 
 ### **ETL & Data Pipeline (Python)**
 - **Apache Airflow** or **Prefect**: Workflow orchestration
@@ -116,6 +119,7 @@ git-quest/
 ├── backend/                          # Python FastAPI application
 │   ├── app/
 │   │   ├── api/                      # FastAPI routes
+│   │   │   ├── auth.py               # Authentication endpoints (login, register, token)
 │   │   │   ├── game.py               # Game session endpoints
 │   │   │   ├── lessons.py            # Tutorial endpoints
 │   │   │   ├── challenges.py         # Challenge endpoints
@@ -125,8 +129,10 @@ git-quest/
 │   │   │   ├── game_engine.py        # Main game loop
 │   │   │   ├── git_simulator.py      # Git command execution
 │   │   │   ├── challenge_engine.py   # Challenge validation
-│   │   │   └── story_engine.py       # Narrative system
+│   │   │   ├── story_engine.py       # Narrative system
+│   │   │   └── security.py           # Auth utilities (JWT, password hashing)
 │   │   ├── models/                   # SQLAlchemy models
+│   │   │   ├── user.py               # User authentication model
 │   │   │   ├── player.py
 │   │   │   ├── lesson.py
 │   │   │   ├── challenge.py
@@ -348,14 +354,49 @@ Purpose: Validate data integrity across all systems
 ### Core Tables
 
 ```sql
--- Players
+-- Users (Authentication)
+CREATE TABLE users (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    email VARCHAR(255) UNIQUE NOT NULL,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    hashed_password VARCHAR(255) NOT NULL,
+    is_active BOOLEAN DEFAULT TRUE,
+    is_verified BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW(),
+    last_login TIMESTAMP
+);
+
+-- Password Reset Tokens
+CREATE TABLE password_reset_tokens (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    token VARCHAR(255) UNIQUE NOT NULL,
+    expires_at TIMESTAMP NOT NULL,
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- Refresh Tokens (for JWT)
+CREATE TABLE refresh_tokens (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    token VARCHAR(255) UNIQUE NOT NULL,
+    expires_at TIMESTAMP NOT NULL,
+    created_at TIMESTAMP DEFAULT NOW(),
+    revoked BOOLEAN DEFAULT FALSE
+);
+
+-- Players (Game Profile)
 CREATE TABLE players (
     id UUID PRIMARY KEY,
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
     username VARCHAR(50) UNIQUE NOT NULL,
-    email VARCHAR(255),
+    display_name VARCHAR(100),
+    avatar_url VARCHAR(255),
     created_at TIMESTAMP DEFAULT NOW(),
     current_level VARCHAR(20),
-    total_xp INTEGER DEFAULT 0
+    total_xp INTEGER DEFAULT 0,
+    UNIQUE(user_id)
 );
 
 -- Lessons
@@ -537,45 +578,79 @@ GROUP BY command, lesson_id;
 
 1. **FastAPI Application**
    - [ ] Project structure with Poetry
-   - [ ] SQLAlchemy models (Player, Lesson, Challenge, etc.)
+   - [ ] SQLAlchemy models (User, Player, Lesson, Challenge, etc.)
    - [ ] Pydantic schemas for validation
    - [ ] CRUD operations for all models
 
-2. **Core Game Engine (Python)**
+2. **Authentication & Security**
+   - [ ] JWT token generation and validation (python-jose)
+   - [ ] Password hashing with bcrypt (passlib)
+   - [ ] OAuth2 password flow implementation
+   - [ ] User registration and login endpoints
+   - [ ] Token refresh mechanism
+   - [ ] Password reset workflow (email optional for MVP)
+   - [ ] Protected route dependencies (get_current_user)
+   - [ ] Role-based access control (optional)
+
+3. **Core Game Engine (Python)**
    - [ ] Game state manager
    - [ ] Lesson progression logic
    - [ ] Git command simulator (GitPython)
    - [ ] Challenge validation engine
    - [ ] Achievement unlock system
 
-3. **API Endpoints**
+4. **API Endpoints**
    ```python
+   # app/api/auth.py
+   @router.post("/auth/register")
+   async def register(user_data: UserCreate)
+
+   @router.post("/auth/login")
+   async def login(credentials: OAuth2PasswordRequestForm)
+
+   @router.post("/auth/refresh")
+   async def refresh_token(refresh_token: str)
+
+   @router.post("/auth/logout")
+   async def logout(current_user: User = Depends(get_current_user))
+
+   @router.post("/auth/forgot-password")
+   async def forgot_password(email: str)
+
+   @router.post("/auth/reset-password")
+   async def reset_password(token: str, new_password: str)
+
+   @router.get("/auth/me")
+   async def get_current_user_info(current_user: User = Depends(get_current_user))
+
    # app/api/lessons.py
    @router.get("/lessons")
-   async def get_lessons(level: str = None)
+   async def get_lessons(level: str = None, current_user: User = Depends(get_current_user))
 
    @router.get("/lessons/{lesson_id}")
-   async def get_lesson(lesson_id: str)
+   async def get_lesson(lesson_id: str, current_user: User = Depends(get_current_user))
 
    @router.post("/lessons/{lesson_id}/start")
-   async def start_lesson(lesson_id: str, player_id: UUID)
+   async def start_lesson(lesson_id: str, current_user: User = Depends(get_current_user))
 
    # app/api/game.py
    @router.post("/execute-command")
-   async def execute_git_command(command: str, session_id: UUID)
+   async def execute_git_command(command: str, session_id: UUID, current_user: User = Depends(get_current_user))
 
    # app/api/challenges.py
    @router.post("/challenges/{challenge_id}/submit")
-   async def submit_challenge(challenge_id: str, solution: dict)
+   async def submit_challenge(challenge_id: str, solution: dict, current_user: User = Depends(get_current_user))
    ```
 
-4. **Event Tracking**
+5. **Event Tracking**
    - [ ] Player event logging (commands, completions, errors)
    - [ ] Real-time event streaming to PostgreSQL
    - [ ] Redis session management
 
 **Deliverables:**
-- [ ] FastAPI application with 20+ endpoints
+- [ ] FastAPI application with 30+ endpoints (including auth)
+- [ ] JWT authentication system with refresh tokens
+- [ ] User registration and login flow
 - [ ] Git command simulator
 - [ ] Game engine core logic
 - [ ] pytest test suite (>80% coverage)
@@ -623,21 +698,31 @@ GROUP BY command, lesson_id;
    - [ ] Vite + TypeScript + TailwindCSS
    - [ ] React Router for navigation
    - [ ] State management (Zustand/Redux)
-   - [ ] API client (Axios/Fetch)
+   - [ ] API client (Axios/Fetch) with JWT interceptors
 
-2. **Core Components**
+2. **Authentication UI**
+   - [ ] Login page/modal
+   - [ ] Registration page/modal
+   - [ ] Password reset flow
+   - [ ] Protected route wrapper
+   - [ ] Auth context/state management
+   - [ ] Token refresh handling
+   - [ ] Logout functionality
+   - [ ] User profile dropdown
+
+3. **Core Components**
    - [ ] Terminal component (xterm.js)
    - [ ] Lesson viewer
    - [ ] Challenge interface
    - [ ] Progress dashboard
 
-3. **Git Visualization (D3.js)**
+4. **Git Visualization (D3.js)**
    - [ ] Commit graph renderer
    - [ ] Branch diagram
    - [ ] Interactive repository explorer
    - [ ] Before/after state comparison
 
-4. **Game UI**
+5. **Game UI**
    - [ ] Story dialogue system
    - [ ] Achievement notifications
    - [ ] XP/level progress bars
@@ -645,6 +730,8 @@ GROUP BY command, lesson_id;
 
 **Deliverables:**
 - [ ] Fully functional React frontend
+- [ ] Complete authentication UI (login, register, password reset)
+- [ ] JWT token management with auto-refresh
 - [ ] Terminal emulator integration
 - [ ] Git visualization components
 - [ ] Responsive design
@@ -777,6 +864,7 @@ GROUP BY command, lesson_id;
    - [ ] Backend: pytest (>80% coverage)
    - [ ] Frontend: Jest + React Testing Library
    - [ ] E2E: Playwright/Cypress
+   - [ ] Security testing: Authentication flows, SQL injection, XSS
    - [ ] Load testing: Locust (API performance)
    - [ ] Data quality: Great Expectations
 
@@ -791,6 +879,10 @@ GROUP BY command, lesson_id;
 3. **Deployment**
    - [ ] Docker Compose for production
    - [ ] GitHub Actions CI/CD pipeline
+   - [ ] Environment variables management (.env, secrets)
+   - [ ] HTTPS/SSL certificate setup
+   - [ ] CORS configuration
+   - [ ] Rate limiting (API protection)
    - [ ] Cloud deployment (AWS/GCP/Azure or VPS)
    - [ ] Monitoring (Prometheus + Grafana)
    - [ ] Logging (ELK stack or CloudWatch)
@@ -807,6 +899,91 @@ GROUP BY command, lesson_id;
 - [ ] Deployed application
 - [ ] Monitoring dashboards
 - [ ] Launch materials
+
+---
+
+## 🔒 Security Considerations
+
+### Authentication & Authorization
+
+1. **Password Security**
+   - Bcrypt hashing with salt (min 12 rounds)
+   - Password strength requirements (min 8 chars, complexity)
+   - Account lockout after failed attempts
+   - Secure password reset with time-limited tokens
+
+2. **JWT Token Security**
+   - Short-lived access tokens (15-30 minutes)
+   - Longer-lived refresh tokens (7 days, stored securely)
+   - Token rotation on refresh
+   - Blacklist/revoke tokens on logout
+   - HttpOnly cookies for token storage (frontend)
+
+3. **Session Management**
+   - Redis-based session storage
+   - Session timeout and cleanup
+   - Concurrent session limits
+   - Device/IP tracking for suspicious activity
+
+### API Security
+
+1. **Input Validation**
+   - Pydantic schemas for all inputs
+   - SQL injection prevention (SQLAlchemy ORM)
+   - XSS prevention (sanitize outputs)
+   - Command injection protection (Git simulator sandboxing)
+
+2. **Rate Limiting**
+   - API endpoint rate limits (per IP/user)
+   - Sliding window algorithm
+   - DDoS protection
+   - Exponential backoff for repeated failures
+
+3. **CORS & Headers**
+   - Strict CORS policy (whitelist origins)
+   - Security headers (CSP, X-Frame-Options, etc.)
+   - HTTPS enforcement
+   - Secure cookie flags (HttpOnly, Secure, SameSite)
+
+### Data Security
+
+1. **Database Security**
+   - Parameterized queries (prevent SQL injection)
+   - Principle of least privilege (DB user permissions)
+   - Encrypted connections (SSL/TLS)
+   - Regular backups with encryption
+
+2. **PII Protection**
+   - Email encryption at rest (optional)
+   - GDPR compliance (data deletion, export)
+   - Anonymized analytics data
+   - No logging of sensitive data
+
+3. **Git Simulator Security**
+   - Sandboxed execution environment
+   - No access to host filesystem
+   - Command whitelist (only allow safe Git commands)
+   - Resource limits (CPU, memory, disk)
+
+### Infrastructure Security
+
+1. **Environment**
+   - Environment variables for secrets
+   - No hardcoded credentials
+   - Secret rotation policy
+   - Vault/secrets manager (production)
+
+2. **Container Security**
+   - Minimal base images (Alpine)
+   - Non-root user in containers
+   - Image vulnerability scanning
+   - Regular dependency updates
+
+3. **Monitoring & Auditing**
+   - Authentication event logging
+   - Failed login attempt tracking
+   - Admin action audit trail
+   - Anomaly detection alerts
 
 ---
 
