@@ -36,6 +36,8 @@ def hash_password(password: str) -> str:
     Returns:
         Hashed password string
     """
+    import bcrypt
+
     # Ensure password is a proper string type
     if isinstance(password, bytes):
         password = password.decode('utf-8')
@@ -43,13 +45,26 @@ def hash_password(password: str) -> str:
     # Convert to string if not already
     password = str(password)
 
-    # Hash the password - passlib handles encoding internally
-    return pwd_context.hash(password)
+    # Use bcrypt directly instead of passlib
+    # This avoids any passlib encoding issues
+    password_bytes = password.encode('utf-8')
+    salt = bcrypt.gensalt(rounds=12)
+    hashed = bcrypt.hashpw(password_bytes, salt)
+
+    # Return as string (bcrypt returns bytes)
+    return hashed.decode('utf-8')
 
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
     """Verify a password against a hash"""
-    return pwd_context.verify(plain_password, hashed_password)
+    import bcrypt
+
+    # Encode password and hash to bytes
+    password_bytes = plain_password.encode('utf-8')
+    hash_bytes = hashed_password.encode('utf-8')
+
+    # Use bcrypt directly for verification
+    return bcrypt.checkpw(password_bytes, hash_bytes)
 
 
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -> str:
