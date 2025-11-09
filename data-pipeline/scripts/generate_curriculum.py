@@ -197,6 +197,8 @@ Return ONLY the JSON, no other text.
         lesson_mappings = self._get_lesson_mappings()
 
         generated_lessons = []
+        skipped_count = 0
+        new_count = 0
 
         for level_dir in ['Introduction', 'Intermediate', 'Advanced']:
             level_path = tutorials_path / level_dir
@@ -214,6 +216,19 @@ Return ONLY the JSON, no other text.
                 metadata = lesson_mappings.get(lesson_id)
                 if not metadata:
                     print(f"⚠ Skipping {lesson_id} - no mapping found")
+                    continue
+
+                # Check if lesson already exists
+                output_file = output_path / f"{lesson_id}.json"
+                if output_file.exists():
+                    print(f"\n✓ Skipping {metadata['title']} - already generated")
+                    print(f"   (Delete {output_file} to regenerate)")
+
+                    # Load existing lesson for count
+                    with open(output_file, 'r') as f:
+                        existing_lesson = json.load(f)
+                        generated_lessons.append(existing_lesson)
+                    skipped_count += 1
                     continue
 
                 print(f"\n📝 Generating: {metadata['title']}")
@@ -240,6 +255,7 @@ Return ONLY the JSON, no other text.
                     print(f"   ✓ Saved to {output_file}")
 
                     generated_lessons.append(lesson_data)
+                    new_count += 1
 
                 except Exception as e:
                     print(f"   ✗ Error: {e}")
@@ -248,7 +264,12 @@ Return ONLY the JSON, no other text.
                     continue
 
         print(f"\n{'='*60}")
-        print(f"✓ Generated {len(generated_lessons)} lessons")
+        print(f"Curriculum Generation Complete!")
+        print(f"{'='*60}")
+        print(f"  Total lessons: {len(generated_lessons)}")
+        print(f"  Newly generated: {new_count}")
+        print(f"  Skipped (already exist): {skipped_count}")
+        print(f"  Output directory: {output_path}")
         print(f"{'='*60}")
 
         return generated_lessons
