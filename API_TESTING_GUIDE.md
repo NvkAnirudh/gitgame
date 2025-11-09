@@ -222,7 +222,7 @@ curl -X GET "http://localhost:8000/api/players/me/stats" \
 **Get all available lessons:**
 
 ```bash
-curl -X GET "http://localhost:8000/api/lessons"
+curl -X GET "http://localhost:8000/api/lessons/"
 ```
 
 **Expected Response:**
