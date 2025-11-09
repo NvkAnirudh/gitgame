@@ -31,20 +31,19 @@ def hash_password(password: str) -> str:
     Hash a password using bcrypt
 
     Args:
-        password: Plain text password (max 72 bytes for bcrypt)
+        password: Plain text password
 
     Returns:
         Hashed password string
     """
-    # Ensure password is a string and encode to handle any special characters
+    # Ensure password is a proper string type
     if isinstance(password, bytes):
         password = password.decode('utf-8')
 
-    # Truncate to 72 bytes if needed (bcrypt limitation)
-    password_bytes = password.encode('utf-8')
-    if len(password_bytes) > 72:
-        password = password_bytes[:72].decode('utf-8', errors='ignore')
+    # Convert to string if not already
+    password = str(password)
 
+    # Hash the password - passlib handles encoding internally
     return pwd_context.hash(password)
 
 
