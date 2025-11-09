@@ -122,6 +122,7 @@ CREATE TABLE challenges (
     scenario TEXT NOT NULL,
     success_criteria JSONB NOT NULL,
     hints JSONB,
+    git_state JSONB,
     time_limit_seconds INTEGER,
     max_score INTEGER DEFAULT 100,
     created_at TIMESTAMP DEFAULT NOW()

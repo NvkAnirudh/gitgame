@@ -61,6 +61,7 @@ class Challenge(Base):
     scenario = Column(Text, nullable=False)
     success_criteria = Column(JSON, nullable=False)
     hints = Column(JSON, nullable=True)
+    git_state = Column(JSON, nullable=True)
     time_limit_seconds = Column(Integer, nullable=True)
     max_score = Column(Integer, default=100)
     created_at = Column(DateTime(timezone=True), server_default=func.now())

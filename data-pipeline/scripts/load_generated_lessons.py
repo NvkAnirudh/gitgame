@@ -132,7 +132,8 @@ def load_generated_lessons(lessons_dir: str):
 
             # Create/update challenge if crisis_scenario exists
             if 'crisis_scenario' in lesson_data:
-                create_challenge(cursor, lesson_id, lesson_data['crisis_scenario'])
+                git_state = lesson_data.get('git_state')
+                create_challenge(cursor, lesson_id, lesson_data['crisis_scenario'], git_state)
 
             conn.commit()
 
@@ -155,7 +156,7 @@ def load_generated_lessons(lessons_dir: str):
     print(f"{'='*60}\n")
 
 
-def create_challenge(cursor, lesson_id: str, crisis_data: dict):
+def create_challenge(cursor, lesson_id: str, crisis_data: dict, git_state: dict = None):
     """Create or update a challenge from crisis scenario data"""
 
     challenge_id = f"{lesson_id}_crisis"
@@ -176,6 +177,7 @@ def create_challenge(cursor, lesson_id: str, crisis_data: dict):
                 type = %s,
                 scenario = %s,
                 success_criteria = %s,
+                git_state = %s,
                 max_score = %s
             WHERE id = %s
         """, (
@@ -183,15 +185,16 @@ def create_challenge(cursor, lesson_id: str, crisis_data: dict):
             'crisis',
             crisis_data.get('description', ''),
             Json(success_criteria),
+            Json(git_state) if git_state else None,
             crisis_data.get('xp_reward', 50),
             challenge_id
         ))
     else:
         cursor.execute("""
             INSERT INTO challenges (
-                id, lesson_id, title, type, scenario, success_criteria, max_score
+                id, lesson_id, title, type, scenario, success_criteria, git_state, max_score
             ) VALUES (
-                %s, %s, %s, %s, %s, %s, %s
+                %s, %s, %s, %s, %s, %s, %s, %s
             )
         """, (
             challenge_id,
@@ -200,6 +203,7 @@ def create_challenge(cursor, lesson_id: str, crisis_data: dict):
             'crisis',
             crisis_data.get('description', ''),
             Json(success_criteria),
+            Json(git_state) if git_state else None,
             crisis_data.get('xp_reward', 50)
         ))
 
