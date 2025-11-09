@@ -1,0 +1,92 @@
+{
+  "id": "advanced-git-filter-repo",
+  "filename": "git_filter_repo.txt",
+  "level": "advanced",
+  "title": "Git Filter Repo",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Git Filter Repo",
+      "timestamp_start": "00:00",
+      "timestamp_end": "00:20",
+      "content": "Hey! Sometimes we need to rewrite history—whether it's to remove sensitive data, clean up unnecessary files, or restructure the repository. Git Filter-Repo is a powerful tool that rewrites repository history efficiently and safely.",
+      "git_commands": [
+        "git filter-repo is a powerful tool that rewrites repository history efficiently and safely."
+      ]
+    },
+    {
+      "section_number": 2,
+      "title": "What is git filter-repo?",
+      "timestamp_start": "00:20",
+      "timestamp_end": "01:21",
+      "content": "Git Filter-Repo is a command-line tool for rewriting Git repository history. It is a separate library, but Git recommends using it rather than filter-branch. It's quicker, more reliable, and easier to use than filter-branch. Its features allows us to remove files, replace sensitive information, rename directories, and more—all across the entire commit history. During development we might accidentally commit sensitive information like API keys or database passwords. Leaving this data in the repository history can pose a security risk. With `git filter-repo`, we can remove this sensitive information from every commit in the repository's history. It ensures that no traces of the data remain while keeping the rest of the repository intact.",
+      "git_commands": [
+        "git filter-repo is a command-line tool for rewriting git repository history. it is a separate library",
+        "git recommends using it rather than filter-branch. it"
+      ]
+    },
+    {
+      "section_number": 3,
+      "title": "Filter-Repo process",
+      "timestamp_start": "01:21",
+      "timestamp_end": "02:21",
+      "content": "Assume a file called `secrets.txt` was accidentally committed to our flight data pipeline project. We can use filter-repo to remove all traces of it from our git repository and its history. To use the tool, first, we'll need to install the library using pip if we haven't already done so. Then, we can run `git filter-repo --path secrets.txt --invert-paths`. This tells Git to rewrite the history and exclude `secrets.txt` from every commit. The --path option specifies which paths to operate on, and the --invert-paths option tells Git to operate on all paths except the ones specified. After running this command, all traces of `secrets.txt` will be gone from our repository's history.",
+      "git_commands": [
+        "git to rewrite the history and exclude",
+        "git to operate on all paths except the ones specified. after running this command",
+        "git repository and its history. to use the tool"
+      ]
+    },
+    {
+      "section_number": 4,
+      "title": "Filter-Repo result",
+      "timestamp_start": "02:21",
+      "timestamp_end": "03:46",
+      "content": "The filter-repo operation affects all branches and tags, not just the current branch. Importantly, all commit hashes change, even for indirect modifications. This is because each Git commit depends on its parent commit's hash. The result is a clean repository with no traces of the file in any commit. We can verify this by searching for the file in our commit history — it’s completely gone! Using `git filter-repo` has several significant implications. We'll have to force push the changes to update remote repositories, since the history has been rewritten. Force pushing is not a clean operation. In order to avoid conflicts between old and new history records, all collaborators must clone a fresh copy of the repository after updating the remote repository. As a result, other developers can be hindered in their work. Additionally, git filter-repo removes the specified files, but doesn't update references to those files in other files, so we need to do this manually.",
+      "git_commands": [
+        "git commit depends on its parent commit",
+        "git filter-repo removes the specified files"
+      ]
+    },
+    {
+      "section_number": 5,
+      "title": "When to use filter-repo",
+      "timestamp_start": "03:46",
+      "timestamp_end": "04:13",
+      "content": "We use `git filter-repo` when we need to rewrite history for tasks like removing sensitive data, cleaning up large repositories, or restructuring files and directories. However, we need to be cautious as it rewrites history permanently, so coordinate with your team before pushing changes to shared repositories.",
+      "git_commands": []
+    },
+    {
+      "section_number": 6,
+      "title": "Let's practice!",
+      "timestamp_start": "04:13",
+      "timestamp_end": "04:18",
+      "content": "Let's rewrite history using git filter-repo.",
+      "git_commands": [
+        "git filter-repo"
+      ]
+    }
+  ],
+  "total_sections": 6,
+  "git_commands_used": [
+    "git commit depends on its parent commit",
+    "git filter-repo",
+    "git filter-repo is a command-line tool for rewriting git repository history. it is a separate library",
+    "git filter-repo is a powerful tool that rewrites repository history efficiently and safely.",
+    "git filter-repo removes the specified files",
+    "git recommends using it rather than filter-branch. it",
+    "git repository and its history. to use the tool",
+    "git to operate on all paths except the ones specified. after running this command",
+    "git to rewrite the history and exclude"
+  ],
+  "learning_objectives": [
+    "Git Filter Repo",
+    "What is git filter-repo?",
+    "Filter-Repo process",
+    "Filter-Repo result",
+    "When to use filter-repo"
+  ],
+  "practice_prompt": "Let's rewrite history using git filter-repo.",
+  "word_count": 508,
+  "parsed_at": "2025-11-09T05:47:30.402324"
+}

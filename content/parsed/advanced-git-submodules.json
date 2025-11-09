@@ -1,0 +1,101 @@
+{
+  "id": "advanced-git-submodules",
+  "filename": "git_submodules.txt",
+  "level": "advanced",
+  "title": "Git Submodules",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Git Submodules",
+      "timestamp_start": "00:00",
+      "timestamp_end": "00:11",
+      "content": "This video will cover Git submodules, which offer a powerful way to manage external libraries and shared components within our data projects.",
+      "git_commands": [
+        "git submodules"
+      ]
+    },
+    {
+      "section_number": 2,
+      "title": "What is a Git Submodule?",
+      "timestamp_start": "00:11",
+      "timestamp_end": "01:11",
+      "content": "A Git submodule is a Git repository nested inside another repository. It allows us to keep a Git repository as a subdirectory of another Git repository. This is perfect for our projects when we want to include external libraries or shared components while maintaining separate version control. By using submodules, each submodule retains its own Git repository, allowing it to have its independent commit history and versioning. This means changes made within a submodule do not affect the main repository's history, and updates to the submodule can be tracked separately. This keeps the main project linked to a specific submodule version, independent of its development cycle.",
+      "git_commands": [
+        "git submodule is a git repository nested inside another repository. it allows us to keep a git repository as a subdirectory of another git repository. this is perfect for our projects when we want to include external libraries or shared components while maintaining separate version control. by using submodules",
+        "git repository"
+      ]
+    },
+    {
+      "section_number": 3,
+      "title": "Adding a submodule",
+      "timestamp_start": "01:11",
+      "timestamp_end": "01:33",
+      "content": "To add a submodule to our data pipeline project, we use the `git submodule add` command. Let's say we want to add a data validation library. This command clones the repository into the `libs/validator` directory and stages the changes in the main repository.",
+      "git_commands": []
+    },
+    {
+      "section_number": 4,
+      "title": "Listing submodules",
+      "timestamp_start": "01:33",
+      "timestamp_end": "01:43",
+      "content": "To list all submodules in our project, we can use `git submodule status`. Here's an example.",
+      "git_commands": []
+    },
+    {
+      "section_number": 5,
+      "title": "Updating submodules",
+      "timestamp_start": "01:43",
+      "timestamp_end": "02:33",
+      "content": "When we want to pull the latest changes from a submodule's local or remote repository, we'll use the 'git submodule update' command with some specific options. There are several options. If we want to update a submodule with the source code stored locally, we use the following command using the `init` flag. For submodules with code stored on a remote repo, we use the `remote` flag. These two commands will update all submodules that fit this criteria. If we only want to update a specific submodule, we just need to provide the submodule path and any additional flags from above.",
+      "git_commands": []
+    },
+    {
+      "section_number": 6,
+      "title": "Removing submodules",
+      "timestamp_start": "02:33",
+      "timestamp_end": "02:44",
+      "content": "To remove a submodule, it's a multi-step process: first we deinitialize it, then we remove it from the index.",
+      "git_commands": []
+    },
+    {
+      "section_number": 7,
+      "title": "Extracting a submodule from a large repo",
+      "timestamp_start": "02:44",
+      "timestamp_end": "03:32",
+      "content": "Sometimes, we may need to separate a part of our codebase from the rest of the project. This can be accomplished using `git filter-repo`. First, we need to move the files that will be the new submodule into a seperate folder outside of the repo folder. After this, we create a new repository for the submodule by using `git init` inside the new submodule folder. Next, we extract the relevant files and history using `filter-repo` from the main project. Finally, we add the new repository as a submodule to our main project.",
+      "git_commands": []
+    },
+    {
+      "section_number": 8,
+      "title": "When to use submodules and best practices",
+      "timestamp_start": "03:32",
+      "timestamp_end": "04:38",
+      "content": "Submodules are great for managing external dependencies, especially when we need a specific version of a library and sharing code across multiple projects. Submodules can be useful when dealing with third-party libraries that are not frequently updated but are essential for our project. Additionally, they are ideal for collaborative projects where different teams work on separate components that are integrated into the main repository. However, there are situations when using `git submodule` might not be ideal. If the project requires frequent updates to external dependencies or relies on rapid development cycles, submodules could create unnecessary complexity and overhead. Additionally, for projects where tight integration and seamless updates are crucial, using a package manager might be more efficient.",
+      "git_commands": []
+    },
+    {
+      "section_number": 9,
+      "title": "Let's practice!",
+      "timestamp_start": "04:38",
+      "timestamp_end": "04:42",
+      "content": "Let's dive into submodules.",
+      "git_commands": []
+    }
+  ],
+  "total_sections": 9,
+  "git_commands_used": [
+    "git repository",
+    "git submodule is a git repository nested inside another repository. it allows us to keep a git repository as a subdirectory of another git repository. this is perfect for our projects when we want to include external libraries or shared components while maintaining separate version control. by using submodules",
+    "git submodules"
+  ],
+  "learning_objectives": [
+    "Git Submodules",
+    "What is a Git Submodule?",
+    "Adding a submodule",
+    "Listing submodules",
+    "Updating submodules"
+  ],
+  "practice_prompt": "Submodules are great for managing external dependencies, especially when we need a specific version of a library and sharing code across multiple projects. Submodules can be useful when dealing with third-party libraries that are not frequently updated but are essential for our project. Additionally, they are ideal for collaborative projects where different teams work on separate components that are integrated into the main repository. However, there are situations when using `git submodule` might not be ideal. If the project requires frequent updates to external dependencies or relies on rapid development cycles, submodules could create unnecessary complexity and overhead. Additionally, for projects where tight integration and seamless updates are crucial, using a package manager might be more efficient.",
+  "word_count": 587,
+  "parsed_at": "2025-11-09T05:47:30.403297"
+}

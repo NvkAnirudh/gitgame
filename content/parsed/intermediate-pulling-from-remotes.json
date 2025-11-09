@@ -1,0 +1,125 @@
+{
+  "id": "intermediate-pulling-from-remotes",
+  "filename": "pulling_from_remotes.txt",
+  "level": "intermediate",
+  "title": "Pulling from remotes",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Pulling from remotes",
+      "timestamp_start": "00:00",
+      "timestamp_end": "00:08",
+      "content": "We've seen how to clone remote repos, now let's look at how to get content from a remote into our local repo.",
+      "git_commands": []
+    },
+    {
+      "section_number": 2,
+      "title": "Remote vs. local",
+      "timestamp_start": "00:08",
+      "timestamp_end": "00:22",
+      "content": "Say we have been working in our local repo, but others have been working in the remote. Here, we can see additional files and subdirectories in the remote that aren't in the local repo.",
+      "git_commands": []
+    },
+    {
+      "section_number": 3,
+      "title": "Collaborating on Git projects",
+      "timestamp_start": "00:22",
+      "timestamp_end": "00:45",
+      "content": "If several people are collaborating on a project then they will access the remote, work locally, save files, and synchronize their changes between the remote and local repos. This means that the remote repo should be the project's source of truth, where the latest versions of files that are not drafts can be located.",
+      "git_commands": []
+    },
+    {
+      "section_number": 4,
+      "title": "Fetching from a remote",
+      "timestamp_start": "00:45",
+      "timestamp_end": "01:23",
+      "content": "To synchronize the files in a remote to a local repo we need to fetch branches from the remote. We do this using git fetch, providing the name of the remote. Here, we fetch from the origin remote. This fetches all branches from the remote into the local repo. If a branch only exists in the remote it will be created in the local repo as a result of this command. Note this doesn't merge the remote repo's contents into our local repo. We'll see how to do this shortly.",
+      "git_commands": [
+        "git fetch"
+      ]
+    },
+    {
+      "section_number": 5,
+      "title": "Fetching a remote branch",
+      "timestamp_start": "01:23",
+      "timestamp_end": "01:45",
+      "content": "If we want to fetch a particular branch only, we specify it after the remote name. Here, we only fetch from the remote's main branch. The output displays the URL or path we are fetching from, the branch, and that we are fetching the HEAD, or last commit.",
+      "git_commands": []
+    },
+    {
+      "section_number": 6,
+      "title": "Synchronizing content",
+      "timestamp_start": "01:45",
+      "timestamp_end": "02:18",
+      "content": "After fetching, we need to synchronize content between the remote and local repos. To do this, we perform a merge of the remote into our local repo. If we don't specify a local branch, the merge will be from the remote's main branch into the local branch that we are currently located in. The output is the same as if we merged two local branches, showing parent commit hashes, the type of merge, and what files changed.",
+      "git_commands": []
+    },
+    {
+      "section_number": 7,
+      "title": "Pulling from a remote",
+      "timestamp_start": "02:18",
+      "timestamp_end": "02:52",
+      "content": "In collaborative projects, synchronizing between remote and local repos is very common. To simplify this process, Git allows us to fetch and merge using a single command. We execute git pull followed by the remote repo's name, which will fetch the default branch from the remote, typically main, and merge it into the local repo's current branch. Here, we pull from origin into our current local branch.",
+      "git_commands": [
+        "git allows us to fetch and merge using a single command. we execute git pull followed by the remote repo"
+      ]
+    },
+    {
+      "section_number": 8,
+      "title": "Pulling a remote branch",
+      "timestamp_start": "02:52",
+      "timestamp_end": "03:15",
+      "content": "As with git fetch, we can specify which remote branch to pull from by including the branch name after the remote name. Here, we pull from the remote's dev branch. This will still merge into the local branch that we are located in, so we should switch to the local dev branch before running this!",
+      "git_commands": [
+        "git fetch"
+      ]
+    },
+    {
+      "section_number": 9,
+      "title": "Git pull output",
+      "timestamp_start": "03:15",
+      "timestamp_end": "03:25",
+      "content": "The output is a combination of git fetch and git merge, which makes sense because git pull is a shortcut to run both of these commands!",
+      "git_commands": [
+        "git fetch and git merge",
+        "git pull is a shortcut to run both of these commands"
+      ]
+    },
+    {
+      "section_number": 10,
+      "title": "A word of caution",
+      "timestamp_start": "03:25",
+      "timestamp_end": "03:46",
+      "content": "Note that if we have been working locally and not yet committed our changes, then Git won't allow us to pull from a remote. We are instructed to commit our changes and told that the pull command was aborted. Therefore, it's important to save our work locally before we pull from a remote.",
+      "git_commands": [
+        "git won"
+      ]
+    },
+    {
+      "section_number": 11,
+      "title": "Let's practice!",
+      "timestamp_start": "03:46",
+      "timestamp_end": "03:52",
+      "content": "Time to practice fetching and pulling in Git!",
+      "git_commands": []
+    }
+  ],
+  "total_sections": 11,
+  "git_commands_used": [
+    "git allows us to fetch and merge using a single command. we execute git pull followed by the remote repo",
+    "git fetch",
+    "git fetch and git merge",
+    "git pull is a shortcut to run both of these commands",
+    "git won"
+  ],
+  "learning_objectives": [
+    "Fetching from a remote",
+    "Pulling from a remote",
+    "Pulling a remote branch",
+    "Git pull output",
+    "A word of caution"
+  ],
+  "practice_prompt": "Time to practice fetching and pulling in Git!",
+  "word_count": 615,
+  "parsed_at": "2025-11-09T05:47:30.399599"
+}

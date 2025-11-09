@@ -1,0 +1,167 @@
+{
+  "id": "introduction-restoring-and-reverting-files",
+  "filename": "restoring_and_reverting_files.txt",
+  "level": "introduction",
+  "title": "Restoring and reverting files",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Restoring and reverting files",
+      "timestamp_start": "00:00",
+      "timestamp_end": "00:09",
+      "content": "We've learned several ways to compare files; now, let's look at how to use Git commands to resolve problems.",
+      "git_commands": [
+        "git commands to resolve problems."
+      ]
+    },
+    {
+      "section_number": 2,
+      "title": "Making an error",
+      "timestamp_start": "00:09",
+      "timestamp_end": "00:20",
+      "content": "Suppose we've modified a file, added it to the staging area, and made a commit. However, we've realized the last edit has a typo.",
+      "git_commands": []
+    },
+    {
+      "section_number": 3,
+      "title": "Reverting files",
+      "timestamp_start": "00:20",
+      "timestamp_end": "01:09",
+      "content": "We need to undo our most recent changes, restoring this file to the state before the last commit. To do this, we use the git revert command, which reinstates previous versions of files and creates a new commit with these older versions. Note that it will restore all files updated in that commit. We need to provide a reference, through a commit hash or HEAD, to the changes that we want to undo. Referencing HEAD, means undoing changes made in the last commit, while adding tilde-one would undo, or revert, the second-most recent commit. Let's run this and see what happens.",
+      "git_commands": [
+        "git revert command"
+      ]
+    },
+    {
+      "section_number": 4,
+      "title": "Reverting files",
+      "timestamp_start": "01:09",
+      "timestamp_end": "01:20",
+      "content": "By default, this opens a text editor where we are prompted to add a commit message. We can save and exit using these commands.",
+      "git_commands": []
+    },
+    {
+      "section_number": 5,
+      "title": "Reverting files",
+      "timestamp_start": "01:20",
+      "timestamp_end": "01:31",
+      "content": "Exiting the text editor, we see a terminal output confirming the revert, including the number of files and lines that were changed.",
+      "git_commands": []
+    },
+    {
+      "section_number": 6,
+      "title": "git revert flags",
+      "timestamp_start": "01:31",
+      "timestamp_end": "01:55",
+      "content": "If we want to avoid the text editor opening when we revert, we can include the --no-edit flag. If we want to revert without making a commit at that point, allowing us to review and modify the changes before finalizing with a commit, we can include the -n flag, which is short for 'no commit'.",
+      "git_commands": []
+    },
+    {
+      "section_number": 7,
+      "title": "Revert a single file",
+      "timestamp_start": "01:55",
+      "timestamp_end": "02:45",
+      "content": "The git revert command only reverts a commit. It worked for us in this scenario because we only committed a single file, but if we had updated more files, then those would have been reverted, too. To revert a single file, we need a different command. We use git checkout. It is a versatile command, which, in this scenario, allows us to check out one or more files from a specific commit, again using the commit hash or HEAD syntax. Here, we refer to the second most recent commit and narrow the command to a single file by including two dashes, a space, and the filename.",
+      "git_commands": [
+        "git revert command only reverts a commit. it worked for us in this scenario because we only committed a single file",
+        "git checkout"
+      ]
+    },
+    {
+      "section_number": 8,
+      "title": "Checking the checkout",
+      "timestamp_start": "02:45",
+      "timestamp_end": "02:55",
+      "content": "We won't get an output, but we can confirm the file has been modified to its previous state and is in the staging area by running git status.",
+      "git_commands": [
+        "git status"
+      ]
+    },
+    {
+      "section_number": 9,
+      "title": "Making a commit",
+      "timestamp_start": "02:55",
+      "timestamp_end": "03:00",
+      "content": "We then make a new commit to save the file's latest state.",
+      "git_commands": []
+    },
+    {
+      "section_number": 10,
+      "title": "Unstaging a file",
+      "timestamp_start": "03:00",
+      "timestamp_end": "03:12",
+      "content": "We now know how to restore files to versions from previous commits. But what if we need to restore a file in the staging area before the update has been committed?",
+      "git_commands": []
+    },
+    {
+      "section_number": 11,
+      "title": "Unstaging a file",
+      "timestamp_start": "03:12",
+      "timestamp_end": "03:21",
+      "content": "We need to remove this file from the staging area or, to put it another way, unstage it so it is back in the repo.",
+      "git_commands": []
+    },
+    {
+      "section_number": 12,
+      "title": "Unstaging a single file",
+      "timestamp_start": "03:21",
+      "timestamp_end": "03:39",
+      "content": "To unstage a single file, we can use the git restore command with the --staged flag, followed by the filename. This will move the file back to the working directory, allowing us to edit it before restaging and committing.",
+      "git_commands": [
+        "git restore command with the --staged flag"
+      ]
+    },
+    {
+      "section_number": 13,
+      "title": "Unstaging all files",
+      "timestamp_start": "03:39",
+      "timestamp_end": "03:51",
+      "content": "Alternatively, to move all files in the staging area back to the repo, we execute git restore --staged without specifying any filenames.",
+      "git_commands": [
+        "git restore --staged without specifying any filenames."
+      ]
+    },
+    {
+      "section_number": 14,
+      "title": "Summary",
+      "timestamp_start": "03:51",
+      "timestamp_end": "04:03",
+      "content": "We covered three new commands with several flags: git revert, git checkout, and git restore. This table summarizes their usage.",
+      "git_commands": [
+        "git restore",
+        "git revert",
+        "git checkout"
+      ]
+    },
+    {
+      "section_number": 15,
+      "title": "Let's practice!",
+      "timestamp_start": "04:03",
+      "timestamp_end": "04:07",
+      "content": "Let's practice reverting and restoring files!",
+      "git_commands": []
+    }
+  ],
+  "total_sections": 15,
+  "git_commands_used": [
+    "git checkout",
+    "git commands to resolve problems.",
+    "git restore",
+    "git restore --staged without specifying any filenames.",
+    "git restore command with the --staged flag",
+    "git revert",
+    "git revert command",
+    "git revert command only reverts a commit. it worked for us in this scenario because we only committed a single file",
+    "git status"
+  ],
+  "learning_objectives": [
+    "Restoring and reverting files",
+    "Reverting files",
+    "Revert a single file",
+    "Checking the checkout",
+    "Unstaging a single file"
+  ],
+  "practice_prompt": "Let's practice reverting and restoring files!",
+  "word_count": 636,
+  "parsed_at": "2025-11-09T05:47:30.396384"
+}

@@ -1,0 +1,124 @@
+{
+  "id": "introduction-vh-tips-and-tricks",
+  "filename": "vh_tips_and_tricks.txt",
+  "level": "introduction",
+  "title": "Version history tips and tricks",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Version history tips and tricks",
+      "timestamp_start": "00:00",
+      "timestamp_end": "00:08",
+      "content": "We've seen how to view the history of a repo; now, let's examine how we can customize this to suit our needs.",
+      "git_commands": []
+    },
+    {
+      "section_number": 2,
+      "title": "Projects grow!",
+      "timestamp_start": "00:08",
+      "timestamp_end": "00:21",
+      "content": "Git log is great, but the longer our project goes on, the more commits we will make, and the more difficult and time-consuming it will become to find what we are looking for.",
+      "git_commands": [
+        "git log is great"
+      ]
+    },
+    {
+      "section_number": 3,
+      "title": "Restricting the number of commits",
+      "timestamp_start": "00:21",
+      "timestamp_end": "00:37",
+      "content": "We have a few options for customizing the git log output. We can restrict the number of commits displayed by including a dash followed by the number of commits. Here, we show the three most recent commits.",
+      "git_commands": [
+        "git log output. we can restrict the number of commits displayed by including a dash followed by the number of commits. here"
+      ]
+    },
+    {
+      "section_number": 4,
+      "title": "Restricting the file",
+      "timestamp_start": "00:37",
+      "timestamp_end": "00:50",
+      "content": "Another option is to restrict the output to a specific file. Here, we include the filename report.md, which would restrict the output to the history of this file.",
+      "git_commands": []
+    },
+    {
+      "section_number": 5,
+      "title": "Combining techniques",
+      "timestamp_start": "00:50",
+      "timestamp_end": "01:01",
+      "content": "We can even combine these two techniques! Here, we change into the data directory and display our CSV file's two most recent commits!",
+      "git_commands": []
+    },
+    {
+      "section_number": 6,
+      "title": "git log output",
+      "timestamp_start": "01:01",
+      "timestamp_end": "01:06",
+      "content": "We see both of these commits added more data to the file.",
+      "git_commands": []
+    },
+    {
+      "section_number": 7,
+      "title": "Customizing the date range",
+      "timestamp_start": "01:06",
+      "timestamp_end": "02:05",
+      "content": "Another way to restrict the git log output is by date. Adding the dash-dash-since equals flag, followed by a date in single or double quotation marks, shows only the commits since the specified date. We use the format of month, day, and year, where month is a three-letter abbreviation, day is one or two digits, and year is four digits. For example, to see commits since the second of April 2024 we execute git log dash-dash-since equals April two, 2024. We can add an end for the date range too. Here, we show commits between the second and eleventh of April 2024 by including the dash-dash-until flag at the end, followed by the date range to filter on.",
+      "git_commands": [
+        "git log output is by date. adding the dash-dash-since equals flag",
+        "git log dash-dash-since equals april two"
+      ]
+    },
+    {
+      "section_number": 8,
+      "title": "Acceptable filter formats",
+      "timestamp_start": "02:05",
+      "timestamp_end": "03:07",
+      "content": "The since and until flags are very flexible in the date and time formatting that they accept. We can use natural language such as 2 weeks ago. We can also provide a date using a numeric format, like 07-15-2024. While various date formats can be used, we recommend following ISO Format 6801, providing year, month, then day, separated by hyphens. We should also check our system settings to avoid unexpected results, such as 12-06-2024 being 6th December or 12th June! We can also provide month in written format, either abbreviated or in full, such as 15 July 2024. Note that we must not use other characters here, such as commas. 1 https://www.iso.org/iso-8601-date-and-time-format.html",
+      "git_commands": []
+    },
+    {
+      "section_number": 9,
+      "title": "Finding a particular commit",
+      "timestamp_start": "03:07",
+      "timestamp_end": "03:33",
+      "content": "Suppose we have observed issues since a particular date. We need to see what changed in a specific commit on that day. We run git log and note the commit hash of interest. Generally, the first 8-10 characters of the hash are enough to be unique, so this is all we need. We can then use the git show command with the partial commit hash. 1 https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection#Short-SHA-1",
+      "git_commands": [
+        "git show command with the partial commit hash.",
+        "git log and note the commit hash of interest. generally"
+      ]
+    },
+    {
+      "section_number": 10,
+      "title": "git show output",
+      "timestamp_start": "03:33",
+      "timestamp_end": "04:05",
+      "content": "The output displays the log entry for that commit at the top, followed by a diff output showing changes between the file in that commit and the current version in the repo. In the following video, we'll discuss diffs and how to interpret them. At the bottom, the added line appears to have data in the wrong order, with gender in the first column instead of the second. This looks like the source of the issue!",
+      "git_commands": []
+    },
+    {
+      "section_number": 11,
+      "title": "Let's practice!",
+      "timestamp_start": "04:05",
+      "timestamp_end": "04:09",
+      "content": "Time to practice customizing our logs.",
+      "git_commands": []
+    }
+  ],
+  "total_sections": 11,
+  "git_commands_used": [
+    "git log and note the commit hash of interest. generally",
+    "git log dash-dash-since equals april two",
+    "git log is great",
+    "git log output is by date. adding the dash-dash-since equals flag",
+    "git log output. we can restrict the number of commits displayed by including a dash followed by the number of commits. here",
+    "git show command with the partial commit hash."
+  ],
+  "learning_objectives": [
+    "Projects grow!",
+    "Restricting the number of commits",
+    "Customizing the date range",
+    "Finding a particular commit"
+  ],
+  "practice_prompt": "Time to practice customizing our logs.",
+  "word_count": 614,
+  "parsed_at": "2025-11-09T05:47:30.397810"
+}

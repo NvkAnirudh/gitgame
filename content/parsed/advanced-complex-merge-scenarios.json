@@ -1,0 +1,132 @@
+{
+  "id": "advanced-complex-merge-scenarios",
+  "filename": "complex_merge_scenarios.txt",
+  "level": "advanced",
+  "title": "Complex Merge Scenarios",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Complex Merge Scenarios",
+      "timestamp_start": "00:00",
+      "timestamp_end": "00:12",
+      "content": "We covered fast-forward and recursive merging. Now, we'll explore two more advanced merge strategies: squash merge and octopus merge.",
+      "git_commands": []
+    },
+    {
+      "section_number": 2,
+      "title": "Flight travel data pipeline repo",
+      "timestamp_start": "00:12",
+      "timestamp_end": "00:40",
+      "content": "Assume we're collaborating with our team to build a flight travel data pipeline. We will be using git to manage tracing and merging our feature development, as shown in this diagram. In our working directory, we have our main script, etl.py, as well as several others. The data folder contains our flight CSV data. Now, let's dive into our merge strategies.",
+      "git_commands": [
+        "git to manage tracing and merging our feature development"
+      ]
+    },
+    {
+      "section_number": 3,
+      "title": "Git squash merging",
+      "timestamp_start": "00:40",
+      "timestamp_end": "01:20",
+      "content": "Squash merging takes all commit changes from a feature branch and combines them into a single new commit on the target branch, like a main branch. Unlike the recursive strategy that produces a merge commit, this strategy adds a regular commit with only one parent. The squashed commit is added to the target branch and not the feature branch. So, we will lose the feature branch's commit history. The advantage of this method is that it reduce \"noise\" in our target branch. It gives us a clean, linear history.",
+      "git_commands": []
+    },
+    {
+      "section_number": 4,
+      "title": "Merge squash example",
+      "timestamp_start": "01:20",
+      "timestamp_end": "01:41",
+      "content": "We might use squash merge to consolidate a complex feature, such as a new data cleanup process for our flight data project, if we have already completed development and do not need to retain history. Here's our main branch and a feature branch `data-cleanup` with multiple commits.",
+      "git_commands": []
+    },
+    {
+      "section_number": 5,
+      "title": "Merge squash process",
+      "timestamp_start": "01:41",
+      "timestamp_end": "02:12",
+      "content": "To perform a squash merge, we will check out our main branch, squash all of data-cleanup commits into a single new commit with a new commit message using the 'squash' flag. Finally we'll commit this squash commit to our main branch. To note, if we do not commit this squash commit using `git commit`, then our changes will only stay in the staging area. We must complete this step.",
+      "git_commands": []
+    },
+    {
+      "section_number": 6,
+      "title": "Merge squash result",
+      "timestamp_start": "02:12",
+      "timestamp_end": "02:33",
+      "content": "After the squash merge, notice how the `main` branch has a single new commit representing all changes from `data-cleanup`. The original branch and its commit history remain untouched. Now let's discuss the git merge octopus strategy.",
+      "git_commands": [
+        "git merge octopus strategy."
+      ]
+    },
+    {
+      "section_number": 7,
+      "title": "Git octopus merge",
+      "timestamp_start": "02:33",
+      "timestamp_end": "03:03",
+      "content": "Octopus merge allows us to merge three or more branches at the same time. It creates a single merge commit with parents from all the merged branches. When using this strategy, the branches should not contain any conflicts. If there is a conflict between any of the branches, this strategy will fail. This is useful for integrating multiple independent changes at once.",
+      "git_commands": []
+    },
+    {
+      "section_number": 8,
+      "title": "Octopus merge example",
+      "timestamp_start": "03:03",
+      "timestamp_end": "03:28",
+      "content": "In our flight data project, we might use an octopus merge to integrate our independently developed ingest, transform, and load functions all at once. Here's our main branch with three feature branches: `ingest`, `transform`, and `load`, each representing a component of our ETL process.",
+      "git_commands": []
+    },
+    {
+      "section_number": 9,
+      "title": "Octopus merge commands",
+      "timestamp_start": "03:28",
+      "timestamp_end": "03:46",
+      "content": "To perform an octopus merge, we need to switch to the main branch. Then we perform git merge using the `s` flag and passing in `octopus` as the next word. After that, we can list the branches we want to merge.",
+      "git_commands": [
+        "git merge using the"
+      ]
+    },
+    {
+      "section_number": 10,
+      "title": "Octopus merge result",
+      "timestamp_start": "03:46",
+      "timestamp_end": "03:58",
+      "content": "The result is this 'octopus-like' graph, where all three feature branches converge into a single merge commit on the main branch.",
+      "git_commands": []
+    },
+    {
+      "section_number": 11,
+      "title": "Summary",
+      "timestamp_start": "03:58",
+      "timestamp_end": "04:16",
+      "content": "Both squash and octopus merges offer powerful ways to manage our Git history. Squash merges provide a clean, simplified history, while octopus merges allows for efficient integration of multiple parallel developments.",
+      "git_commands": [
+        "git history"
+      ]
+    },
+    {
+      "section_number": 12,
+      "title": "Let's practice!",
+      "timestamp_start": "04:16",
+      "timestamp_end": "04:24",
+      "content": "Let's test your knowledge on git squash and octopus merges.",
+      "git_commands": [
+        "git squash and octopus merges."
+      ]
+    }
+  ],
+  "total_sections": 12,
+  "git_commands_used": [
+    "git history",
+    "git merge octopus strategy.",
+    "git merge using the",
+    "git squash and octopus merges.",
+    "git to manage tracing and merging our feature development"
+  ],
+  "learning_objectives": [
+    "Flight travel data pipeline repo",
+    "Merge squash process",
+    "Merge squash result",
+    "Octopus merge commands",
+    "Summary"
+  ],
+  "practice_prompt": "Let's test your knowledge on git squash and octopus merges.",
+  "word_count": 613,
+  "parsed_at": "2025-11-09T05:47:30.401714"
+}

@@ -1,0 +1,111 @@
+{
+  "id": "advanced-bisect",
+  "filename": "bisect.txt",
+  "level": "advanced",
+  "title": "Bisect",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Bisect",
+      "timestamp_start": "00:00",
+      "timestamp_end": "00:14",
+      "content": "Let's talk about Git Bisect. Sometimes we encounter bugs that aren't immediately apparent. Git bisect is a powerful tool for tracking down the commit that introduced a bug.",
+      "git_commands": [
+        "git bisect is a powerful tool for tracking down the commit that introduced a bug.",
+        "git bisect"
+      ]
+    },
+    {
+      "section_number": 2,
+      "title": "What is git bisect?",
+      "timestamp_start": "00:14",
+      "timestamp_end": "00:57",
+      "content": "Git bisect is a debugging tool that performs a binary search through our project's commit history to find the exact commit that introduced a bug. It's like a time machine that helps us pinpoint when things went wrong in our codebase. In data projects, bugs can have serious consequences. Git bisect helps us quickly identify when a bug was introduced, which is crucial for understanding what caused it and how to fix it. This is especially useful when dealing with complex issues that weren't caught immediately.",
+      "git_commands": [
+        "git bisect helps us quickly identify when a bug was introduced",
+        "git bisect is a debugging tool that performs a binary search through our project"
+      ]
+    },
+    {
+      "section_number": 3,
+      "title": "Bisect - start",
+      "timestamp_start": "00:57",
+      "timestamp_end": "01:34",
+      "content": "Let's walk through the bisect process. We start by initiating bisect mode with 'git bisect start'. Next, we need to tell Git which version or commit that is broken. Assuming the current HEAD has the bug, we use 'git bisect bad' to mark the current state as bad. Afterwards, we also identify a known good commit - perhaps the last release version - and mark it with 'git bisect good <commit-hash>'.",
+      "git_commands": [
+        "git which version or commit that is broken. assuming the current head has the bug"
+      ]
+    },
+    {
+      "section_number": 4,
+      "title": "Bisect - search",
+      "timestamp_start": "01:34",
+      "timestamp_end": "02:16",
+      "content": "Git checks out a commit halfway between the specified good and bad commits. We need to inform Git whether or not the current commit is good or bad. We would manually use our testing process to verify whether a specific version is working as expected or if a bug exists. When the test fails and the bug exists, we run 'git bisect bad'. When the test passes, 'git bisect good' is run. Afterward, Git selects the next commit to test until it finds the closest commit that introduced the bug.",
+      "git_commands": [
+        "git checks out a commit halfway between the specified good and bad commits. we need to inform git whether or not the current commit is good or bad. we would manually use our testing process to verify whether a specific version is working as expected or if a bug exists. when the test fails and the bug exists",
+        "git selects the next commit to test until it finds the closest commit that introduced the bug."
+      ]
+    },
+    {
+      "section_number": 5,
+      "title": "Bisect - automated search",
+      "timestamp_start": "02:16",
+      "timestamp_end": "02:47",
+      "content": "Data projects with automated test scripts that return 0 if the tests pass or 1 if they fail can be inspected with `git bisect run <script_name>`. It provides a more automatic way to determine whether a bug exists in a particular state of the project. Instead of running `git bisect good` or `git bisect bad` manually, it replaces that step.",
+      "git_commands": []
+    },
+    {
+      "section_number": 6,
+      "title": "Bisect - result",
+      "timestamp_start": "02:47",
+      "timestamp_end": "03:12",
+      "content": "The search process continues until Git identifies the first bad commit. Once found, we can examine the changes in this commit to understand what introduced the bug using the 'git log` command. Once done, we use 'git bisect reset' to exit bisect mode and return to our original HEAD.",
+      "git_commands": [
+        "git identifies the first bad commit. once found"
+      ]
+    },
+    {
+      "section_number": 7,
+      "title": "When to use git bisect",
+      "timestamp_start": "03:12",
+      "timestamp_end": "03:52",
+      "content": "Git bisect shines when dealing with regressions - bugs that break previously working functionality. It's particularly useful in our data projects when we encounter data inconsistencies or processing errors that weren't present in earlier versions. Remember, bisect is most effective when we can easily test for bugs at each step. As an ideal practice, consider providing a test script to automate the bisect process. Additionally, use descriptive messages to help find bugs and track development history.",
+      "git_commands": [
+        "git bisect shines when dealing with regressions - bugs that break previously working functionality. it"
+      ]
+    },
+    {
+      "section_number": 8,
+      "title": "Let's practice!",
+      "timestamp_start": "03:52",
+      "timestamp_end": "03:59",
+      "content": "Time to go bug hunting with git bisect!",
+      "git_commands": [
+        "git bisect"
+      ]
+    }
+  ],
+  "total_sections": 8,
+  "git_commands_used": [
+    "git bisect",
+    "git bisect helps us quickly identify when a bug was introduced",
+    "git bisect is a debugging tool that performs a binary search through our project",
+    "git bisect is a powerful tool for tracking down the commit that introduced a bug.",
+    "git bisect shines when dealing with regressions - bugs that break previously working functionality. it",
+    "git checks out a commit halfway between the specified good and bad commits. we need to inform git whether or not the current commit is good or bad. we would manually use our testing process to verify whether a specific version is working as expected or if a bug exists. when the test fails and the bug exists",
+    "git identifies the first bad commit. once found",
+    "git selects the next commit to test until it finds the closest commit that introduced the bug.",
+    "git which version or commit that is broken. assuming the current head has the bug"
+  ],
+  "learning_objectives": [
+    "Bisect",
+    "What is git bisect?",
+    "Bisect - start",
+    "Bisect - search",
+    "Bisect - automated search"
+  ],
+  "practice_prompt": "Time to go bug hunting with git bisect!",
+  "word_count": 525,
+  "parsed_at": "2025-11-09T05:47:30.401112"
+}

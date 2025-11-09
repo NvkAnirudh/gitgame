@@ -1,0 +1,122 @@
+{
+  "id": "advanced-git-rebasing",
+  "filename": "git_rebasing.txt",
+  "level": "advanced",
+  "title": "Advanced Branch Integration: Git Rebasing",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Advanced Branch Integration: Git Rebasing",
+      "timestamp_start": "00:00",
+      "timestamp_end": "00:08",
+      "content": "Welcome back! Let's discuss what rebasing is, how to use it, and how it differs from merging.",
+      "git_commands": []
+    },
+    {
+      "section_number": 2,
+      "title": "Git rebase",
+      "timestamp_start": "00:08",
+      "timestamp_end": "00:23",
+      "content": "Git rebase is another way to integrate changes between branches, besides merge. Rebasing allows us to reorganize a branch's history, to create a clean and linear graph of commits.",
+      "git_commands": [
+        "git rebase is another way to integrate changes between branches"
+      ]
+    },
+    {
+      "section_number": 3,
+      "title": "Rebase example - before",
+      "timestamp_start": "00:23",
+      "timestamp_end": "00:28",
+      "content": "Let's take our `data-cleanup` feature branch and `main` as an example.",
+      "git_commands": []
+    },
+    {
+      "section_number": 4,
+      "title": "Rebase process",
+      "timestamp_start": "00:28",
+      "timestamp_end": "00:58",
+      "content": "To rebase `main` onto `data-cleanup`, use `git rebase main`. Rebase will move all new commits from `main` into the `data-cleanup` branch. Then `data-cleanup` commits will be recreated after `main`'s latest commit. Each `data-cleanup`'s recreated commits will have a new hash. Note, if there are any merge conflicts, we would need to resolve them manually.",
+      "git_commands": []
+    },
+    {
+      "section_number": 5,
+      "title": "Rebase example - after",
+      "timestamp_start": "00:58",
+      "timestamp_end": "01:06",
+      "content": "The result is a linear graph for the `data-cleanup` branch. Our`main` branch will remain unchanged.",
+      "git_commands": []
+    },
+    {
+      "section_number": 6,
+      "title": "Interactive rebase",
+      "timestamp_start": "01:06",
+      "timestamp_end": "01:41",
+      "content": "Interactive rebase is great for curating feature history before merging. It lets us edit multiple commits in our history at one time. Use `git rebase -i commit-hash` to open an editor and select and modify commits after the specified hash. Word of caution! Rebasing public branches can disrupt collaborators' workflow, and cause significant merge conflicts, so establish clear team rules on when to rebase.",
+      "git_commands": []
+    },
+    {
+      "section_number": 7,
+      "title": "Interactive rebase - before",
+      "timestamp_start": "01:41",
+      "timestamp_end": "01:54",
+      "content": "Let's walk through an example where want to edit the commit history after we performed a rebase. Here is our data-validation branch history after rebasing onto `main`.",
+      "git_commands": []
+    },
+    {
+      "section_number": 8,
+      "title": "Interactive rebase editor",
+      "timestamp_start": "01:54",
+      "timestamp_end": "02:32",
+      "content": "During interactive rebase we will modify the last 3 commits using git rebase -i HEAD~3. In the editor, we will see the three commits that we can edit. We will squash these three commits into one commit using the rebase commands `pick` and `fixup`. 'Pick' means we keep the commit as is, while 'fixup' combines the commit with the previous pick commit, discarding the fixup commit's message. In this case we'll 'pick' the first, and 'fixup' for the others.",
+      "git_commands": [
+        "git rebase -i head"
+      ]
+    },
+    {
+      "section_number": 9,
+      "title": "Interactive rebase - after",
+      "timestamp_start": "02:32",
+      "timestamp_end": "02:59",
+      "content": "The result is four clean commits where the \"Add data validation\" commit now includes the validation bug fix and optimize performance commit changes. This clean history helps team members understand our data pipeline, focusing on major features rather than small changes. This can be extremely helpful when reverting if issues are found.",
+      "git_commands": []
+    },
+    {
+      "section_number": 10,
+      "title": "Merge versus rebase",
+      "timestamp_start": "02:59",
+      "timestamp_end": "03:42",
+      "content": "Let's compare merge and rebase. In our data pipeline, merge preserves the context of when we started the data cleanup feature relative to main's progress. In contrast, rebase makes it appear as if we started the cleanup after all main changes. Merge provides a clear picture of parallel development, useful for understanding how different data processing features evolved simultaneously. Rebase creates a cleaner, linear history, making it easier to track the sequence of changes to our pipeline, but loses some contextual information.",
+      "git_commands": []
+    },
+    {
+      "section_number": 11,
+      "title": "When to use merge versus rebase",
+      "timestamp_start": "03:42",
+      "timestamp_end": "04:01",
+      "content": "Use merge to integrate completed features and preserve development context. Use rebase to update feature branches with main or to clean up before merging. Remember: Rebase rewrites history, so use it sparingly.",
+      "git_commands": []
+    },
+    {
+      "section_number": 12,
+      "title": "Let's practice!",
+      "timestamp_start": "04:01",
+      "timestamp_end": "04:13",
+      "content": "Now that we've covered the essentials of rebasing, it's time to put your knowledge to the test. Let's dive into some hands-on coding exercises.",
+      "git_commands": []
+    }
+  ],
+  "total_sections": 12,
+  "git_commands_used": [
+    "git rebase -i head",
+    "git rebase is another way to integrate changes between branches"
+  ],
+  "learning_objectives": [
+    "Git rebase",
+    "Rebase process",
+    "Interactive rebase",
+    "Interactive rebase editor"
+  ],
+  "practice_prompt": "Now that we've covered the essentials of rebasing, it's time to put your knowledge to the test. Let's dive into some hands-on coding exercises.",
+  "word_count": 575,
+  "parsed_at": "2025-11-09T05:47:30.402669"
+}

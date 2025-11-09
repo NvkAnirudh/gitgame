@@ -1,0 +1,110 @@
+{
+  "id": "introduction-version-history",
+  "filename": "version_history.txt",
+  "level": "introduction",
+  "title": "Viewing the version history",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Viewing the version history",
+      "timestamp_start": "00:00",
+      "timestamp_end": "00:12",
+      "content": "Welcome back! So, how can we see the version history of our files using Git? To do this, we need to understand how Git is storing data.",
+      "git_commands": [
+        "git is storing data."
+      ]
+    },
+    {
+      "section_number": 2,
+      "title": "The commit structure",
+      "timestamp_start": "00:12",
+      "timestamp_end": "01:08",
+      "content": "Git stores data through commits, which have three parts: the commit itself, the tree, and blobs. Let's examine each of these components. The commit contains metadata such as the author, log message, and commit time. The tree tracks the names and locations of files and directories when that commit happened. Think of it like a dictionary, with keys represented as unique identifiers, mapping to files or directories. For each file in the tree, there is a blob, which means binary large object. A blob may contain data of any kind. Blobs contain a compressed snapshot of the file's contents when the commit happened.",
+      "git_commands": [
+        "git stores data through commits"
+      ]
+    },
+    {
+      "section_number": 3,
+      "title": "Visualizing the commit structure",
+      "timestamp_start": "01:08",
+      "timestamp_end": "01:14",
+      "content": "Here, we visualize three commits to our repo to see these three components.",
+      "git_commands": []
+    },
+    {
+      "section_number": 4,
+      "title": "Visualizing the commit structure",
+      "timestamp_start": "01:14",
+      "timestamp_end": "01:40",
+      "content": "In the first commit, we see a unique identifier ending in six-five. This identifier is known as a hash, which we will discuss later. Two files were modified in the tree - report.md and mental-health-survey.csv. The blob shows a snapshot of what the files contained at that time.",
+      "git_commands": []
+    },
+    {
+      "section_number": 5,
+      "title": "Visualizing the commit structure",
+      "timestamp_start": "01:40",
+      "timestamp_end": "02:03",
+      "content": "In the second commit, three files are in the tree, but only two were modified - mental-health-survey.csv and a newly created summary statistics file. Therefore, the tree links report.md to the blob from the previous commit, as it wasn't modified in this commit.",
+      "git_commands": []
+    },
+    {
+      "section_number": 6,
+      "title": "Visualizing the commit structure",
+      "timestamp_start": "02:03",
+      "timestamp_end": "02:22",
+      "content": "In the third and most recent commit, report-dot-md and mental-health-survey.csv are modified, with updated blobs created and linked to the tree. The summary statistics file wasn't changed, so the tree links to the blob in the second commit.",
+      "git_commands": []
+    },
+    {
+      "section_number": 7,
+      "title": "Git hash",
+      "timestamp_start": "02:22",
+      "timestamp_end": "03:04",
+      "content": "Earlier, we mentioned a unique identifier called a hash. This is a 40-character string of numbers and letters like this. It is called a hash because Git produces it using a pseudo-random number generator called a hash function. Hashes enable Git to share data efficiently between repos. If two files are the same, their hashes will be the same. Therefore, Git can tell what information needs to be saved in which location by comparing hashes rather than entire files.",
+      "git_commands": [
+        "git can tell what information needs to be saved in which location by comparing hashes rather than entire files.",
+        "git produces it using a pseudo-random number generator called a hash function. hashes enable git to share data efficiently between repos. if two files are the same"
+      ]
+    },
+    {
+      "section_number": 8,
+      "title": "Git log",
+      "timestamp_start": "03:04",
+      "timestamp_end": "03:40",
+      "content": "We can view commit information using the git log command, displaying all commits made to the repo in reverse chronological order, starting with the most recent commit. It will show the commit hash, author, date, and commit message. If the output doesn't fit in the terminal window, a colon will be at the end, indicating more commits. We can see more by pressing the space bar. To exit the log, we can press q and return to the terminal.",
+      "git_commands": [
+        "git log command"
+      ]
+    },
+    {
+      "section_number": 9,
+      "title": "Let's practice!",
+      "timestamp_start": "03:40",
+      "timestamp_end": "03:47",
+      "content": "Now let's use the commands we have learned to navigate the Git commit structure!",
+      "git_commands": [
+        "git commit structure"
+      ]
+    }
+  ],
+  "total_sections": 9,
+  "git_commands_used": [
+    "git can tell what information needs to be saved in which location by comparing hashes rather than entire files.",
+    "git commit structure",
+    "git is storing data.",
+    "git log command",
+    "git produces it using a pseudo-random number generator called a hash function. hashes enable git to share data efficiently between repos. if two files are the same",
+    "git stores data through commits"
+  ],
+  "learning_objectives": [
+    "Viewing the version history",
+    "The commit structure",
+    "Git hash",
+    "Git log",
+    "Let's practice!"
+  ],
+  "practice_prompt": "Now let's use the commands we have learned to navigate the Git commit structure!",
+  "word_count": 509,
+  "parsed_at": "2025-11-09T05:47:30.397437"
+}

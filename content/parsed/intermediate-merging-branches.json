@@ -1,0 +1,107 @@
+{
+  "id": "intermediate-merging-branches",
+  "filename": "merging_branches.txt",
+  "level": "intermediate",
+  "title": "Merging branches",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Merging branches",
+      "timestamp_start": "00:00",
+      "timestamp_end": "00:08",
+      "content": "We've talked about combining, or merging, branches together. Let's explore how we can do this using Git!",
+      "git_commands": []
+    },
+    {
+      "section_number": 2,
+      "title": "The purpose of branches",
+      "timestamp_start": "00:08",
+      "timestamp_end": "00:33",
+      "content": "Recall that each branch should have a particular purpose, such as developing a new feature, or debugging an error. Once we are finished, we need to incorporate these changes into the live system, typically hosted in the main branch. We can think of main as the ground truth for our project, so it should be kept up to date.",
+      "git_commands": []
+    },
+    {
+      "section_number": 3,
+      "title": "Source and destination",
+      "timestamp_start": "00:33",
+      "timestamp_end": "01:02",
+      "content": "When we merge two branches, the last commits from each branch are called parent commits. One branch is known as the source, the branch we want to merge from, and the other is known as the destination, the branch we want to merge into. So, when we merge ai-assistant back into main, the ai-assistant branch is the source, and main is the destination.",
+      "git_commands": []
+    },
+    {
+      "section_number": 4,
+      "title": "Merging branches",
+      "timestamp_start": "01:02",
+      "timestamp_end": "01:45",
+      "content": "To merge branches, we first switch to the destination branch. Here, we switch to main, where we want to merge our changes from the ai-assistant branch into. From here, we can merge the source branch into the destination branch, where we are currently located, by using the git merge command followed by the source branch. Therefore, if we want to merge ai-assistant into main we execute git merge ai-assistant. If we're in a different branch we can still perform a merge, but need to include the source and destination branches, in that order, like so.",
+      "git_commands": [
+        "git merge ai-assistant. if we",
+        "git merge command followed by the source branch. therefore"
+      ]
+    },
+    {
+      "section_number": 5,
+      "title": "Git merge output",
+      "timestamp_start": "01:45",
+      "timestamp_end": "01:53",
+      "content": "The output provides some key information about what happened as part of the merge. Let's break the output down.",
+      "git_commands": []
+    },
+    {
+      "section_number": 6,
+      "title": "Git merge output",
+      "timestamp_start": "01:53",
+      "timestamp_end": "02:04",
+      "content": "First, we can see the first seven characters from the each branch's latest commit hashes at the top. These are the parent commits.",
+      "git_commands": []
+    },
+    {
+      "section_number": 7,
+      "title": "Git merge output",
+      "timestamp_start": "02:04",
+      "timestamp_end": "02:38",
+      "content": "Next is the type of merge. In this case, it is a fast-forward merge. This means that the commit history across the two branches is linear, where we have branched off main into ai-assistant, then only made commits in that branch. Therefore, Git can \"fast-forward\" the main branch, pointing to the last commit in the ai-assistant branch when the merge occurs. There are other types of merges, but these are out of scope for the course.",
+      "git_commands": [
+        "git can"
+      ]
+    },
+    {
+      "section_number": 8,
+      "title": "Git merge output",
+      "timestamp_start": "02:38",
+      "timestamp_end": "02:50",
+      "content": "The output also shows the number of lines added or deleted per file. In this case, a Python file called main was modified with 11 extra lines added.",
+      "git_commands": []
+    },
+    {
+      "section_number": 9,
+      "title": "Git merge output",
+      "timestamp_start": "02:50",
+      "timestamp_end": "03:11",
+      "content": "The final line of the output shows the phrase \"create mode\", indicating a new file has been created. It then mentions the Python file main.py, located in the source directory, highlighting that this is the new file that has been created in the ai-assistant branch.",
+      "git_commands": []
+    },
+    {
+      "section_number": 10,
+      "title": "Let's practice!",
+      "timestamp_start": "03:11",
+      "timestamp_end": "03:16",
+      "content": "Let's merge this video into some exercises!",
+      "git_commands": []
+    }
+  ],
+  "total_sections": 10,
+  "git_commands_used": [
+    "git can",
+    "git merge ai-assistant. if we",
+    "git merge command followed by the source branch. therefore"
+  ],
+  "learning_objectives": [
+    "Merging branches",
+    "Merging branches",
+    "Git merge output"
+  ],
+  "practice_prompt": "Let's merge this video into some exercises!",
+  "word_count": 500,
+  "parsed_at": "2025-11-09T05:47:30.398986"
+}

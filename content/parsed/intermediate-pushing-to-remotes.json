@@ -1,0 +1,183 @@
+{
+  "id": "intermediate-pushing-to-remotes",
+  "filename": "pushing_to_remotes.txt",
+  "level": "intermediate",
+  "title": "Pushing to remotes",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Pushing to remotes",
+      "timestamp_start": "00:00",
+      "timestamp_end": "00:08",
+      "content": "We know how to pull from a remote into a local repo, but what about getting our local changes into a remote repo?",
+      "git_commands": []
+    },
+    {
+      "section_number": 2,
+      "title": "Pulling from a remote",
+      "timestamp_start": "00:08",
+      "timestamp_end": "00:16",
+      "content": "To recap, we use git pull to gather content from a remote and merge it into our local repo.",
+      "git_commands": [
+        "git pull to gather content from a remote and merge it into our local repo."
+      ]
+    },
+    {
+      "section_number": 3,
+      "title": "Pushing to a remote",
+      "timestamp_start": "00:16",
+      "timestamp_end": "00:24",
+      "content": "The opposite of pulling is pushing, where we merge our local's repo content into a remote.",
+      "git_commands": []
+    },
+    {
+      "section_number": 4,
+      "title": "git push",
+      "timestamp_start": "00:24",
+      "timestamp_end": "01:06",
+      "content": "As with pulling contents from a remote, we need to commit local changes before we can push to the remote. Once we have done this, we can push to a remote using the git push command, supplying two arguments. First we provide the remote, followed by the local branch. The order that we supply the remote repo and the local branch is the same as git pull. So, we can think of it as pushing content into the remote repo from the local branch. Here, we push changes into origin from our local main branch.",
+      "git_commands": [
+        "git pull",
+        "git push command"
+      ]
+    },
+    {
+      "section_number": 5,
+      "title": "Push/pull workflow",
+      "timestamp_start": "01:06",
+      "timestamp_end": "01:13",
+      "content": "The typical push/pull workflow starts with pulling the remote into our local repo.",
+      "git_commands": []
+    },
+    {
+      "section_number": 6,
+      "title": "Push/pull workflow",
+      "timestamp_start": "01:13",
+      "timestamp_end": "01:18",
+      "content": "We then work on our project locally, committing changes as we go.",
+      "git_commands": []
+    },
+    {
+      "section_number": 7,
+      "title": "Push/pull workflow",
+      "timestamp_start": "01:18",
+      "timestamp_end": "01:29",
+      "content": "Lastly, we push our updated local repo to the remote. This workflow is repeated throughout our time working on the project.",
+      "git_commands": []
+    },
+    {
+      "section_number": 8,
+      "title": "Pushing first",
+      "timestamp_start": "01:29",
+      "timestamp_end": "01:39",
+      "content": "What happens if we don't start the workflow by pulling from the remote? Here, we try to push the contents of our local repo's main branch to the remote.",
+      "git_commands": []
+    },
+    {
+      "section_number": 9,
+      "title": "Remote/local conflicts",
+      "timestamp_start": "01:39",
+      "timestamp_end": "01:44",
+      "content": "Git gives us a large output! Let's break it down.",
+      "git_commands": [
+        "git gives us a large output"
+      ]
+    },
+    {
+      "section_number": 10,
+      "title": "Remote/local conflicts",
+      "timestamp_start": "01:44",
+      "timestamp_end": "01:49",
+      "content": "The first line shows us the remote repo URL we are trying to push to.",
+      "git_commands": []
+    },
+    {
+      "section_number": 11,
+      "title": "Remote/local conflicts",
+      "timestamp_start": "01:49",
+      "timestamp_end": "01:57",
+      "content": "The second and third lines show us the outcome of the command - it was rejected and failed.",
+      "git_commands": []
+    },
+    {
+      "section_number": 12,
+      "title": "Remote/local conflicts",
+      "timestamp_start": "01:57",
+      "timestamp_end": "02:39",
+      "content": "In the third to seventh lines, Git provides hints. This is where Git tells us why the command failed, and recommends what we should do to resolve the issue. In this case, we see that the tip, or the end, of our current branch is behind its remote counterpart and the suggestion is to pull from the remote before trying to push our local changes again. This can typically occur because while we've been working locally, our colleagues have been pushing their changes to the remote. So, if we don't pull from the remote at the start of the workflow then our local repo won't be synchronized with the remote.",
+      "git_commands": [
+        "git provides hints. this is where git tells us why the command failed"
+      ]
+    },
+    {
+      "section_number": 13,
+      "title": "Avoiding a conflict",
+      "timestamp_start": "02:39",
+      "timestamp_end": "03:15",
+      "content": "Previously we saw that git pull used a fast-forward merge. In this case it's slightly different, as there are different commits on the local and remote repos, so Git can't just bring them in line with one another. It will use a recursive merge. So, when we try to pull, Git will automatically open the nano text editor and ask us to add a message for the merge. We leave a message that we are pulling the latest report from the remote, then save and exit nano.",
+      "git_commands": [
+        "git can",
+        "git will automatically open the nano text editor and ask us to add a message for the merge. we leave a message that we are pulling the latest report from the remote",
+        "git pull used a fast-forward merge. in this case it"
+      ]
+    },
+    {
+      "section_number": 14,
+      "title": "Pulling without editing",
+      "timestamp_start": "03:15",
+      "timestamp_end": "03:26",
+      "content": "We can avoid providing a message by including dash-dash-no-edit when executing git pull, however, this is not recommended!",
+      "git_commands": [
+        "git pull"
+      ]
+    },
+    {
+      "section_number": 15,
+      "title": "Pushing a new local branch",
+      "timestamp_start": "03:26",
+      "timestamp_end": "03:31",
+      "content": "What if we have a local branch that doesn't exist in the remote?",
+      "git_commands": []
+    },
+    {
+      "section_number": 16,
+      "title": "Creating a new remote branch",
+      "timestamp_start": "03:31",
+      "timestamp_end": "03:41",
+      "content": "We can still use git push origin followed by the name of our local branch. This will result in a new branch in the remote with the same name!",
+      "git_commands": [
+        "git push origin followed by the name of our local branch. this will result in a new branch in the remote with the same name"
+      ]
+    },
+    {
+      "section_number": 17,
+      "title": "Let's practice!",
+      "timestamp_start": "03:41",
+      "timestamp_end": "03:45",
+      "content": "Let's push on with some exercises!",
+      "git_commands": []
+    }
+  ],
+  "total_sections": 17,
+  "git_commands_used": [
+    "git can",
+    "git gives us a large output",
+    "git provides hints. this is where git tells us why the command failed",
+    "git pull",
+    "git pull to gather content from a remote and merge it into our local repo.",
+    "git pull used a fast-forward merge. in this case it",
+    "git push command",
+    "git push origin followed by the name of our local branch. this will result in a new branch in the remote with the same name",
+    "git will automatically open the nano text editor and ask us to add a message for the merge. we leave a message that we are pulling the latest report from the remote"
+  ],
+  "learning_objectives": [
+    "Pulling from a remote",
+    "git push",
+    "Remote/local conflicts",
+    "Remote/local conflicts",
+    "Avoiding a conflict"
+  ],
+  "practice_prompt": "Let's push on with some exercises!",
+  "word_count": 649,
+  "parsed_at": "2025-11-09T05:47:30.399957"
+}

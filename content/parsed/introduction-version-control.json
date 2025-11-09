@@ -1,0 +1,144 @@
+{
+  "id": "introduction-version-control",
+  "filename": "version_control.txt",
+  "level": "introduction",
+  "title": "Introduction to version control",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Introduction to version control",
+      "timestamp_start": "00:00",
+      "timestamp_end": "00:16",
+      "content": "Hi, my name is George. I'm a Curriculum Manager at DataCamp, and I use Git on a daily basis for version control in my projects. In this course, we'll discover the benefits of version control and why Git is so popular for this!",
+      "git_commands": [
+        "git on a daily basis for version control in my projects. in this course",
+        "git is so popular for this"
+      ]
+    },
+    {
+      "section_number": 2,
+      "title": "What is version control?",
+      "timestamp_start": "00:16",
+      "timestamp_end": "00:28",
+      "content": "Let's start by defining version control, which is a group of systems and processes to manage changes made to documents, programs, and directories.",
+      "git_commands": []
+    },
+    {
+      "section_number": 3,
+      "title": "What should be version controlled?",
+      "timestamp_start": "00:28",
+      "timestamp_end": "00:40",
+      "content": "Version control is helpful for anything that changes over time or needs to be shared, such as code and data. In this course, we'll focus on version control for code.",
+      "git_commands": []
+    },
+    {
+      "section_number": 4,
+      "title": "What can version control do?",
+      "timestamp_start": "00:40",
+      "timestamp_end": "00:51",
+      "content": "Version control allows us to track files in different states, combine different versions, identify a particular version of a file, and revert changes.",
+      "git_commands": []
+    },
+    {
+      "section_number": 5,
+      "title": "Why is version control important?",
+      "timestamp_start": "00:51",
+      "timestamp_end": "01:07",
+      "content": "So why should we care about version control for our software or data projects? Well, a project without version control is like cooking without a recipe - it'll be difficult to remember how to produce the same results again. 1 Image credit: https://unsplash.com/@mvdheuvel",
+      "git_commands": []
+    },
+    {
+      "section_number": 6,
+      "title": "Why is version control important?",
+      "timestamp_start": "01:07",
+      "timestamp_end": "01:32",
+      "content": "Imagine we work for an e-commerce company and release a new feature on our website that recommends products to customers. However, there is a bug in our code, and the website stops working! With version control, we can easily revert our website to a previous working version, then work separately to identify the issue before safely re-releasing the new feature.",
+      "git_commands": []
+    },
+    {
+      "section_number": 7,
+      "title": "Introducing Git",
+      "timestamp_start": "01:32",
+      "timestamp_end": "01:50",
+      "content": "So, how do we perform version control? One popular program for version control is called Git. Git is open source and scalable to easily track everything from small solo projects to complex collaborative efforts with large teams!",
+      "git_commands": [
+        "git is open source and scalable to easily track everything from small solo projects to complex collaborative efforts with large teams"
+      ]
+    },
+    {
+      "section_number": 8,
+      "title": "Benefits of Git",
+      "timestamp_start": "01:50",
+      "timestamp_end": "02:14",
+      "content": "A key benefit of Git is that it stores everything, so nothing is ever lost. It allows us to compare the contents of files at different times. We can even examine what changes have been made, who made them, and when. Critically, if our software has issues, we can revert to a previous version that is known to work correctly! 1 Image credit: https://unsplash.com/@wilsonjim",
+      "git_commands": [
+        "git is that it stores everything"
+      ]
+    },
+    {
+      "section_number": 9,
+      "title": "Using Git",
+      "timestamp_start": "02:14",
+      "timestamp_end": "02:42",
+      "content": "A common method to use Git is via the shell, also known as the terminal. The shell is a program for executing commands. Before we use Git, we'll run through some shell commands that will often be used in our version control workflow, such as previewing and inspecting files or directories. Note that a directory is often referred to on a computer as a folder.",
+      "git_commands": [
+        "git is via the shell"
+      ]
+    },
+    {
+      "section_number": 10,
+      "title": "Useful terminal commands",
+      "timestamp_start": "02:42",
+      "timestamp_end": "03:10",
+      "content": "To see our location, we can execute pwd, which prints the current working directory. Here, we are in the Documents directory of a user called Repl. We can use the ls command to see what is in our current directory. The output returns a list of all files and directories. There is a directory called archive and three csv files.",
+      "git_commands": []
+    },
+    {
+      "section_number": 11,
+      "title": "Changing directory",
+      "timestamp_start": "03:10",
+      "timestamp_end": "03:26",
+      "content": "If we need to change directory, we can execute cd followed by the directory we want to move into. Here, we navigate to the archive directory. Rechecking our location confirms we have successfully moved.",
+      "git_commands": []
+    },
+    {
+      "section_number": 12,
+      "title": "Checking Git version",
+      "timestamp_start": "03:26",
+      "timestamp_end": "03:41",
+      "content": "Let's learn our first Git command! Different versions of software have different functionality, and Git is no exception. We can check which version of Git we have installed by typing git dash-dash-version in the shell.",
+      "git_commands": [
+        "git command",
+        "git is no exception. we can check which version of git we have installed by typing git dash-dash-version in the shell."
+      ]
+    },
+    {
+      "section_number": 13,
+      "title": "Let's practice!",
+      "timestamp_start": "03:41",
+      "timestamp_end": "03:46",
+      "content": "Now, let's check our understanding of version control!",
+      "git_commands": []
+    }
+  ],
+  "total_sections": 13,
+  "git_commands_used": [
+    "git command",
+    "git is no exception. we can check which version of git we have installed by typing git dash-dash-version in the shell.",
+    "git is open source and scalable to easily track everything from small solo projects to complex collaborative efforts with large teams",
+    "git is so popular for this",
+    "git is that it stores everything",
+    "git is via the shell",
+    "git on a daily basis for version control in my projects. in this course"
+  ],
+  "learning_objectives": [
+    "Introduction to version control",
+    "Introducing Git",
+    "Benefits of Git",
+    "Using Git",
+    "Checking Git version"
+  ],
+  "practice_prompt": "Now, let's check our understanding of version control!",
+  "word_count": 622,
+  "parsed_at": "2025-11-09T05:47:30.397148"
+}

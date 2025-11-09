@@ -1,0 +1,147 @@
+{
+  "id": "advanced-understanding-merge-types",
+  "filename": "understanding_merge_types.txt",
+  "level": "advanced",
+  "title": "Understanding Merge Types",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Understanding Merge Types",
+      "timestamp_start": "00:00",
+      "timestamp_end": "00:13",
+      "content": "Welcome to this advanced Git course where you will learn to master complex merging, build and manipulate repository history and optimize Git for large data projects.",
+      "git_commands": [
+        "git for large data projects.",
+        "git course where you will learn to master complex merging"
+      ]
+    },
+    {
+      "section_number": 2,
+      "title": "I'm Amanda",
+      "timestamp_start": "00:13",
+      "timestamp_end": "00:30",
+      "content": "I'm Amanda, a data and software engineer with over 10 years of Git experience at companies like Microsoft and Dropbox. I've managed complex data systems and CI/CD processes, and I'm excited to share my expertise with you.",
+      "git_commands": [
+        "git experience at companies like microsoft and dropbox. i"
+      ]
+    },
+    {
+      "section_number": 3,
+      "title": "What is git merge?",
+      "timestamp_start": "00:30",
+      "timestamp_end": "01:11",
+      "content": "You should already know merging. Now, we will cover fast-forward and recursive merges. We'll explore their functionality and use in data engineering projects. Git merge is like combining two work streams. At its core, git merge combines changes from one branch into another. Git will take two branch pointers and attempt to find a common base commit between them. A merge strategy is a method Git uses to find a base commit and create a new base commit. `git merge` will select a merge strategy automatically unless a different strategy is specified.",
+      "git_commands": [
+        "git merge combines changes from one branch into another. git will take two branch pointers and attempt to find a common base commit between them. a merge strategy is a method git uses to find a base commit and create a new base commit.",
+        "git merge is like combining two work streams. at its core"
+      ]
+    },
+    {
+      "section_number": 4,
+      "title": "Fast-forward merge",
+      "timestamp_start": "01:11",
+      "timestamp_end": "01:41",
+      "content": "Fast-forward merges keep a simple, straight history. They're perfect for short branches with simple changes, like bug fixes, and when the main branch is unchanged. However, they don't preserve the lineage of a commit, which is crucial for tracing complex feature development on long-lived branches. If there's a conflict or if main has been updated since creating the feature branch, fast-forward merges won't work.",
+      "git_commands": []
+    },
+    {
+      "section_number": 5,
+      "title": "Fast-forward merge (before)",
+      "timestamp_start": "01:41",
+      "timestamp_end": "01:51",
+      "content": "Imagine a graph where the main branch hasn't moved since we created our feature branch. Our feature branch extends from the tip of main.",
+      "git_commands": []
+    },
+    {
+      "section_number": 6,
+      "title": "Fast-forward merge syntax",
+      "timestamp_start": "01:51",
+      "timestamp_end": "02:13",
+      "content": "A fast-forward merge is the simplest merge strategy. It occurs when there is a linear path from the current branch to the target branch. When running `git merge` Git will attempt to use this merge strategy by default. If you want to force Git to use this strategy, you'll need to add the `--ff-only` flag.",
+      "git_commands": [
+        "git will attempt to use this merge strategy by default. if you want to force git to use this strategy"
+      ]
+    },
+    {
+      "section_number": 7,
+      "title": "Fast-forward merge (after)",
+      "timestamp_start": "02:13",
+      "timestamp_end": "02:41",
+      "content": "After performing a merge using fast forward, notice how the main branch pointer moves forward and adds only the final commit from the feature branch, B3. This aligns with the latest commit in the feature branch. No additional commits are created; the history remains linear. However, if the commit is overwritten, we would not be able identify that B3 was created on the feature branch.",
+      "git_commands": []
+    },
+    {
+      "section_number": 8,
+      "title": "Recursive merge",
+      "timestamp_start": "02:41",
+      "timestamp_end": "02:57",
+      "content": "Recursive merges create merge commit objects with two parents. This allows us to preserve the full history of a feature branch. They're ideal for long-lived branches or when maintaining branching structure is important.",
+      "git_commands": []
+    },
+    {
+      "section_number": 9,
+      "title": "Recursive merge (before)",
+      "timestamp_start": "02:57",
+      "timestamp_end": "03:07",
+      "content": "Sometimes, the main branch progresses after we create our feature branch. In this case, fast-forward is impossible.",
+      "git_commands": []
+    },
+    {
+      "section_number": 10,
+      "title": "Recursive merge syntax",
+      "timestamp_start": "03:07",
+      "timestamp_end": "03:21",
+      "content": "The `--no-ff` flag forces a new merge commit, even if a fast-forward merge is possible. This is useful for preserving the feature branch's history after merging it into the main branch.",
+      "git_commands": []
+    },
+    {
+      "section_number": 11,
+      "title": "Recursive merge (after)",
+      "timestamp_start": "03:21",
+      "timestamp_end": "03:35",
+      "content": "In a recursive merge, Git creates a new commit that combines changes from both branches. The graph now shows an additional commit with two parents: one from main and one from feature.",
+      "git_commands": [
+        "git creates a new commit that combines changes from both branches. the graph now shows an additional commit with two parents"
+      ]
+    },
+    {
+      "section_number": 12,
+      "title": "Summary",
+      "timestamp_start": "03:35",
+      "timestamp_end": "03:57",
+      "content": "It's vital to know these merge strategies. They help keep a clean, informative Git history. Fast-forward merges keep things simple and linear when possible. Recursive merges preserve the historical context of feature development and are needed for complex development workflows.",
+      "git_commands": [
+        "git history"
+      ]
+    },
+    {
+      "section_number": 13,
+      "title": "Let's practice!",
+      "timestamp_start": "03:57",
+      "timestamp_end": "04:01",
+      "content": "Let's merge!",
+      "git_commands": []
+    }
+  ],
+  "total_sections": 13,
+  "git_commands_used": [
+    "git course where you will learn to master complex merging",
+    "git creates a new commit that combines changes from both branches. the graph now shows an additional commit with two parents",
+    "git experience at companies like microsoft and dropbox. i",
+    "git for large data projects.",
+    "git history",
+    "git merge combines changes from one branch into another. git will take two branch pointers and attempt to find a common base commit between them. a merge strategy is a method git uses to find a base commit and create a new base commit.",
+    "git merge is like combining two work streams. at its core",
+    "git will attempt to use this merge strategy by default. if you want to force git to use this strategy"
+  ],
+  "learning_objectives": [
+    "Understanding Merge Types",
+    "I'm Amanda",
+    "What is git merge?",
+    "Fast-forward merge syntax",
+    "Recursive merge (after)"
+  ],
+  "practice_prompt": "Let's merge!",
+  "word_count": 604,
+  "parsed_at": "2025-11-09T05:47:30.403936"
+}

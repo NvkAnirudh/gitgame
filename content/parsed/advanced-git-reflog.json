@@ -1,0 +1,137 @@
+{
+  "id": "advanced-git-reflog",
+  "filename": "git_reflog.txt",
+  "level": "advanced",
+  "title": "Git reflog",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Git reflog",
+      "timestamp_start": "00:00",
+      "timestamp_end": "00:13",
+      "content": "Welcome back! Today, we'll explore how Git Reflog acts as a time machine for our Git repository, allowing us to navigate and recover our project's history with ease.",
+      "git_commands": [
+        "git reflog acts as a time machine for our git repository"
+      ]
+    },
+    {
+      "section_number": 2,
+      "title": "What is Git Reflog?",
+      "timestamp_start": "00:13",
+      "timestamp_end": "00:58",
+      "content": "Git Reflog is a log of all reference updates in our local repository. A git reference can be a pointer to a specific commit, a branch, a tag, or the HEAD pointer. The reflog data is stored in the .git/logs/refs/heads/ directory. Reflog records every change to branch tips and HEAD positions, acting as a safety net for our Git operations. It provides us with the ability to recover from mistakes, such as mistakenly deleting branches, and to understand complex changes to our repository.",
+      "git_commands": [
+        "git reflog is a log of all reference updates in our local repository. a git reference can be a pointer to a specific commit",
+        "git operations"
+      ]
+    },
+    {
+      "section_number": 3,
+      "title": "Git Reflog versus Git Log",
+      "timestamp_start": "00:58",
+      "timestamp_end": "01:19",
+      "content": "Comparing Git reflog and Git log: reflog shows all reference updates locally and is temporary, while log shows commit history both locally and remotely and is permanent. Reflog can show 'lost' commits, while log only shows reachable ones.",
+      "git_commands": [
+        "git reflog and git log"
+      ]
+    },
+    {
+      "section_number": 4,
+      "title": "Reflog Commands",
+      "timestamp_start": "01:19",
+      "timestamp_end": "01:48",
+      "content": "Let's look at essential Git Reflog commands. To display log data, use `git reflog` or `git reflog show`. These commands will show us the history of HEAD reference updates. If we need to delete older items in our log, use `git reflog expire`. These commands give us fine-grained control over our reflog.",
+      "git_commands": [
+        "git reflog commands. to display log data"
+      ]
+    },
+    {
+      "section_number": 5,
+      "title": "Reflog Output Structure",
+      "timestamp_start": "01:48",
+      "timestamp_end": "02:32",
+      "content": "Each reflog entry shows a commit hash, the reference (usually HEAD), the action taken, and a description. This structure helps us understand what happened and when in our local repository. The first part list the short-hash of the reference pointer and index in the reflog. Second, we can see the action taken. These actions may include commit, reset, or merge. It will not contain actions such as push, or fetch. Finally, the description is shown for each entry. 1 https://hackernoon.com/time-to-rewrite-your-git-history-effectively-with-git-reflog",
+      "git_commands": []
+    },
+    {
+      "section_number": 6,
+      "title": "Filtering: Since and Until",
+      "timestamp_start": "02:32",
+      "timestamp_end": "02:46",
+      "content": "We can filter Reflog history using 'since' and 'until' parameters, like 'git reflog --since=\"1 week ago\"'. This will show entries from the past week.",
+      "git_commands": []
+    },
+    {
+      "section_number": 7,
+      "title": "Recovering Deleted Branches",
+      "timestamp_start": "02:46",
+      "timestamp_end": "03:26",
+      "content": "Let's consider a common scenario: we accidentally delete an `etl-feature` branch with important work. Don't panic! Git Reflog can help. First, use `git reflog` to identify the commit hash at the tip of the deleted branch. Then, use `git checkout` with that hash to move HEAD to that commit. Finally, create another branch from that point using `git checkout -b`. This process effectively recovers our deleted branch and all its commits. 1 https://stackoverflow.com/questions/3640764/can-i-recover-a-branch-after-its-deletion-in-git",
+      "git_commands": [
+        "git reflog can help. first"
+      ]
+    },
+    {
+      "section_number": 8,
+      "title": "Git Reset",
+      "timestamp_start": "03:26",
+      "timestamp_end": "03:46",
+      "content": "Let's discuss another concept, Git Reset. Git reset command moves HEAD to a specific commit. It has three types: soft (no changes to working directory or staging area), mixed (unstages changes), and hard (discards all changes).",
+      "git_commands": [
+        "git reset command moves head to a specific commit. it has three types",
+        "git reset"
+      ]
+    },
+    {
+      "section_number": 9,
+      "title": "Finding A Loss Commit",
+      "timestamp_start": "03:46",
+      "timestamp_end": "04:18",
+      "content": "Sometimes, we need to revert to a previous working state, after several commits. First, we use `git reflog` to identify the hash of the last working commit. Then, we use `git reset --soft HEAD@{1}` to move back to that commit. The `--soft` option keeps our changes staged, allowing us to review them before recommitting. This technique gives us a safety net when changing our code.",
+      "git_commands": []
+    },
+    {
+      "section_number": 10,
+      "title": "Best Practices",
+      "timestamp_start": "04:18",
+      "timestamp_end": "04:39",
+      "content": "Practices like using descriptive commit messages, pushing regularly, and being cautious with force pushes can help us manage our repository and tracking our changes. Even if we use these techniques, mistakes can and will happen and git reflog will be here to help.",
+      "git_commands": [
+        "git reflog will be here to help."
+      ]
+    },
+    {
+      "section_number": 11,
+      "title": "Let's practice!",
+      "timestamp_start": "04:39",
+      "timestamp_end": "04:45",
+      "content": "Let's see git reflog in action!",
+      "git_commands": [
+        "git reflog in action"
+      ]
+    }
+  ],
+  "total_sections": 11,
+  "git_commands_used": [
+    "git operations",
+    "git reflog acts as a time machine for our git repository",
+    "git reflog and git log",
+    "git reflog can help. first",
+    "git reflog commands. to display log data",
+    "git reflog in action",
+    "git reflog is a log of all reference updates in our local repository. a git reference can be a pointer to a specific commit",
+    "git reflog will be here to help.",
+    "git reset",
+    "git reset command moves head to a specific commit. it has three types"
+  ],
+  "learning_objectives": [
+    "Git reflog",
+    "What is Git Reflog?",
+    "Git Reflog versus Git Log",
+    "Reflog Commands",
+    "Reflog Output Structure"
+  ],
+  "practice_prompt": "Practices like using descriptive commit messages, pushing regularly, and being cautious with force pushes can help us manage our repository and tracking our changes. Even if we use these techniques, mistakes can and will happen and git reflog will be here to help.",
+  "word_count": 605,
+  "parsed_at": "2025-11-09T05:47:30.403003"
+}

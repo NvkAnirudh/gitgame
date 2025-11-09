@@ -1,0 +1,152 @@
+{
+  "id": "introduction-comparing-versions",
+  "filename": "comparing_versions.txt",
+  "level": "introduction",
+  "title": "Comparing versions",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Comparing versions",
+      "timestamp_start": "00:00",
+      "timestamp_end": "00:05",
+      "content": "Now it's time to compare versions of files at different points in time!",
+      "git_commands": []
+    },
+    {
+      "section_number": 2,
+      "title": "git show output",
+      "timestamp_start": "00:05",
+      "timestamp_end": "00:12",
+      "content": "In the last video, we saw the output of git show, which contains a diff section.",
+      "git_commands": [
+        "git show"
+      ]
+    },
+    {
+      "section_number": 3,
+      "title": "git diff",
+      "timestamp_start": "00:12",
+      "timestamp_end": "00:33",
+      "content": "A diff is how git shows us the difference between versions! We can perform comparisons using the git diff command. Here, we compare the last committed version of our report with a modified version that is not in the staging area by running git diff report.md.",
+      "git_commands": [
+        "git shows us the difference between versions",
+        "git diff report.md.",
+        "git diff command. here"
+      ]
+    },
+    {
+      "section_number": 4,
+      "title": "Comparing to an unstaged file",
+      "timestamp_start": "00:33",
+      "timestamp_end": "00:51",
+      "content": "The output shows two versions of the report: A is the last version that has been committed, and B is the version that we still need to add to the staging area. Generally speaking, version B will be the newest version.",
+      "git_commands": []
+    },
+    {
+      "section_number": 5,
+      "title": "git diff output",
+      "timestamp_start": "00:51",
+      "timestamp_end": "01:17",
+      "content": "The line starting with two at symbols tells us what changed between the two versions. The minus 1 and 5 indicate that version A starts at line 1 and has 5 lines, and the plus 1 and 5 show that version B also starts at line 1 and has 5 lines. This makes sense when we look at the next part of the output.",
+      "git_commands": []
+    },
+    {
+      "section_number": 6,
+      "title": "git diff output",
+      "timestamp_start": "01:17",
+      "timestamp_end": "01:36",
+      "content": "We finished our executive summary and deleted this task from the report in our latest commit, for version A. This is shown by the red text starting with a minus symbol, representing a line in version A that is not in version B.",
+      "git_commands": []
+    },
+    {
+      "section_number": 7,
+      "title": "git diff output",
+      "timestamp_start": "01:36",
+      "timestamp_end": "01:48",
+      "content": "We added a task in version B of the report, which is not in version A. It is shown in the final line with green text starting with a plus symbol.",
+      "git_commands": []
+    },
+    {
+      "section_number": 8,
+      "title": "Comparing to a staged file",
+      "timestamp_start": "01:48",
+      "timestamp_end": "02:07",
+      "content": "What if the latest version, B, is now in the staging area? We can still compare it to the last committed version using git diff, but we need to add the --staged flag to indicate we want to look at a particular revision of the file.",
+      "git_commands": [
+        "git diff"
+      ]
+    },
+    {
+      "section_number": 9,
+      "title": "Comparing to a staged file",
+      "timestamp_start": "02:07",
+      "timestamp_end": "02:15",
+      "content": "We get the exact same output as previously, given no further changes were made to the file now in the staging area.",
+      "git_commands": []
+    },
+    {
+      "section_number": 10,
+      "title": "Comparing multiple staged files",
+      "timestamp_start": "02:15",
+      "timestamp_end": "02:25",
+      "content": "Note that if we omit the file name we'll get a comparison of all staged files versus their last committed versions.",
+      "git_commands": []
+    },
+    {
+      "section_number": 11,
+      "title": "Comparing two commits",
+      "timestamp_start": "02:25",
+      "timestamp_end": "03:36",
+      "content": "We can also compare versions between commits! We have two options for this. First, we can find the commit hashes of interest using git log. Then we can run git diff followed by the two commit hashes. Git will show what changed from the first commit to the second one. So, generally, we should put the most recent commit hash second. Alternatively, Git has a shortcut for us! The word HEAD, in capitals, can be used to refer to the most recent commit! To look at older commits we can reference them to HEAD by using a tilde, then a number. So, to compare the second most recent commit with the latest commit, we replace the first hash with HEAD-tilde-one and the second hash with HEAD. Tilde-one equates to the last commit minus one, so it represents one commit prior to the latest.",
+      "git_commands": [
+        "git has a shortcut for us",
+        "git diff followed by the two commit hashes. git will show what changed from the first commit to the second one. so",
+        "git log"
+      ]
+    },
+    {
+      "section_number": 12,
+      "title": "Comparing two commits",
+      "timestamp_start": "03:36",
+      "timestamp_end": "03:46",
+      "content": "The output shows version B, the version from the most recent commit, has one more line than version A, which is from the second most recent commit.",
+      "git_commands": []
+    },
+    {
+      "section_number": 13,
+      "title": "Summary",
+      "timestamp_start": "03:46",
+      "timestamp_end": "03:55",
+      "content": "We've covered a lot! This table summarizes the commands and syntax that we discussed; please use it for reference.",
+      "git_commands": []
+    },
+    {
+      "section_number": 14,
+      "title": "Let's practice!",
+      "timestamp_start": "03:55",
+      "timestamp_end": "03:59",
+      "content": "Now it's your turn to compare some files!",
+      "git_commands": []
+    }
+  ],
+  "total_sections": 14,
+  "git_commands_used": [
+    "git diff",
+    "git diff command. here",
+    "git diff followed by the two commit hashes. git will show what changed from the first commit to the second one. so",
+    "git diff report.md.",
+    "git has a shortcut for us",
+    "git log",
+    "git show",
+    "git shows us the difference between versions"
+  ],
+  "learning_objectives": [
+    "git show output",
+    "git diff",
+    "Comparing to a staged file",
+    "Comparing two commits"
+  ],
+  "practice_prompt": "Now it's your turn to compare some files!",
+  "word_count": 640,
+  "parsed_at": "2025-11-09T05:47:30.395498"
+}

@@ -1,0 +1,106 @@
+{
+  "id": "advanced-git-worktrees",
+  "filename": "git_worktrees.txt",
+  "level": "advanced",
+  "title": "Git Worktrees",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Git Worktrees",
+      "timestamp_start": "00:00",
+      "timestamp_end": "00:16",
+      "content": "Welcome back! Data projects often require simultaneous development of multiple features or fixes. Git Worktrees offer a powerful method to parallelize your development workflows.",
+      "git_commands": [
+        "git worktrees offer a powerful method to parallelize your development workflows."
+      ]
+    },
+    {
+      "section_number": 2,
+      "title": "What is a Git Worktree?",
+      "timestamp_start": "00:16",
+      "timestamp_end": "00:57",
+      "content": "Think of it as a separate checkout of our project with the same Git history but on a different branch. Git worktrees are linked, parallel workspaces in your repository, allowing us to work on multiple branches simultaneously without stashing changes or duplicating files. We can easily switch between branches, work on a feature branch while fixing bugs on the main branch, and update the main branch without manual merges. It's especially helpful for projects with long-running tests, enabling uninterrupted development of other features.",
+      "git_commands": [
+        "git history but on a different branch. git worktrees are linked"
+      ]
+    },
+    {
+      "section_number": 3,
+      "title": "Git Worktree versus Git Switch",
+      "timestamp_start": "00:57",
+      "timestamp_end": "01:54",
+      "content": "To switch to another development item in a different branch, we can use either `git switch` or `git worktree`. Git switch only allows us to checkout one active branch at a time. So, if we use git switch, we would need to stash any incomplete changes, and switch to the new branch. Using git worktree, we can \"checkout\" the new branch into a separate directory, allowing us to work on it without disrupting or altering the development on the previous branch. No need for stashing changes! Worktrees give us isolated environments for each branch that avoids this. We can have multiple branches checked out and active at the same time, each in its own directory.",
+      "git_commands": [
+        "git worktree",
+        "git switch only allows us to checkout one active branch at a time. so",
+        "git switch"
+      ]
+    },
+    {
+      "section_number": 4,
+      "title": "Creating a Git Worktree",
+      "timestamp_start": "01:54",
+      "timestamp_end": "02:23",
+      "content": "To create a new worktree, use the command `git worktree add`. Assume we're working again on our main ETL pipeline and need to fix a bug in the data validation module. We can create a new worktree for this bug fix using this command. This creates a new directory 'etl-bugfix' with the 'bugfix/data-validation' branch checked out.",
+      "git_commands": []
+    },
+    {
+      "section_number": 5,
+      "title": "Listing and Removing Worktrees",
+      "timestamp_start": "02:23",
+      "timestamp_end": "02:45",
+      "content": "To see all our active worktrees, use `git worktree list`. This shows each worktree's path and the branch it's on. When we're done with a worktree, we can remove it using `git worktree remove`. Remember, this doesn't delete the branch, just the separate working directory.",
+      "git_commands": []
+    },
+    {
+      "section_number": 6,
+      "title": "When to use Git Worktrees",
+      "timestamp_start": "02:45",
+      "timestamp_end": "03:54",
+      "content": "Git worktrees are particularly useful in various scenarios, such as working on multiple features simultaneously, handling urgent bug fixes without disrupting ongoing work, running tests on different branches in parallel, and conducting code reviews while continuing development. In our data pipeline project, we could use worktrees to develop new data sources while maintaining the existing pipeline in a separate directory. While Git worktrees offer significant advantages, they may not be suitable in scenarios where disk space is limited, as each worktree requires additional storage. They can also introduce complexity when dealing with very large repositories, making it challenging to manage multiple active branches. Additionally, for projects with frequent and complex merge operations, worktrees might complicate the process, potentially leading to merge conflicts.",
+      "git_commands": [
+        "git worktrees are particularly useful in various scenarios",
+        "git worktrees offer significant advantages"
+      ]
+    },
+    {
+      "section_number": 7,
+      "title": "Best practices for Git Worktrees",
+      "timestamp_start": "03:54",
+      "timestamp_end": "04:33",
+      "content": "When using Git worktrees, it's important to follow best practices to maintain an organized and efficient workflow. Use clear naming conventions for our worktree directories to avoid confusion. Regularly prune unused worktrees to keep our workspace clean and manageable. Be mindful of disk space, especially with large projects. Additionally, use worktrees for short-lived parallel work to prevent complexity and potential merge conflicts.",
+      "git_commands": [
+        "git worktrees"
+      ]
+    },
+    {
+      "section_number": 8,
+      "title": "Let's practice!",
+      "timestamp_start": "04:33",
+      "timestamp_end": "04:39",
+      "content": "Come along to setup worktrees!",
+      "git_commands": []
+    }
+  ],
+  "total_sections": 8,
+  "git_commands_used": [
+    "git history but on a different branch. git worktrees are linked",
+    "git switch",
+    "git switch only allows us to checkout one active branch at a time. so",
+    "git worktree",
+    "git worktrees",
+    "git worktrees are particularly useful in various scenarios",
+    "git worktrees offer a powerful method to parallelize your development workflows.",
+    "git worktrees offer significant advantages"
+  ],
+  "learning_objectives": [
+    "Git Worktrees",
+    "What is a Git Worktree?",
+    "Git Worktree versus Git Switch",
+    "Creating a Git Worktree",
+    "Listing and Removing Worktrees"
+  ],
+  "practice_prompt": "When using Git worktrees, it's important to follow best practices to maintain an organized and efficient workflow. Use clear naming conventions for our worktree directories to avoid confusion. Regularly prune unused worktrees to keep our workspace clean and manageable. Be mindful of disk space, especially with large projects. Additionally, use worktrees for short-lived parallel work to prevent complexity and potential merge conflicts.",
+  "word_count": 576,
+  "parsed_at": "2025-11-09T05:47:30.403589"
+}

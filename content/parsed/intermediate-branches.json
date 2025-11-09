@@ -1,0 +1,162 @@
+{
+  "id": "intermediate-branches",
+  "filename": "branches.txt",
+  "level": "intermediate",
+  "title": "Introduction to branches",
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Introduction to branches",
+      "timestamp_start": "00:00",
+      "timestamp_end": "00:06",
+      "content": "Hi, I'm George, a Curriculum Manager at DataCamp. Welcome to the course!",
+      "git_commands": []
+    },
+    {
+      "section_number": 2,
+      "title": "What we will cover",
+      "timestamp_start": "00:06",
+      "timestamp_end": "00:16",
+      "content": "We will introduce several concepts and techniques for working with Git, including branches, remotes, and handling conflicts.",
+      "git_commands": []
+    },
+    {
+      "section_number": 3,
+      "title": "What you should know",
+      "timestamp_start": "00:16",
+      "timestamp_end": "00:29",
+      "content": "Before getting started, you should be familiar with how Git stores data, how to create repos, make commits, compare versions, and revert files to previous states.",
+      "git_commands": [
+        "git stores data"
+      ]
+    },
+    {
+      "section_number": 4,
+      "title": "Branches",
+      "timestamp_start": "00:29",
+      "timestamp_end": "00:58",
+      "content": "Let's dive in! We'll start by exploring what branches are, why they are useful, and how to use them. Branches are like their own versions of repos, like parallel universes! They enable us to have multiple versions of our files and track each version systematically. In each branch, some files might be the same, others might be different, or some may not exist.",
+      "git_commands": []
+    },
+    {
+      "section_number": 5,
+      "title": "Why use branches?",
+      "timestamp_start": "00:58",
+      "timestamp_end": "01:36",
+      "content": "Branches are essential for continuous software development. By default, every repo has a branch called main. Generally, this branch is where we store our working application, with everything functioning as expected, such as the DataCamp website. In a separate branch, we can develop and test a new feature, an AI assistant, to help learners find the content they need. During development, the new feature might not work correctly, but this won't affect the live system because it continues to run from the main branch!",
+      "git_commands": []
+    },
+    {
+      "section_number": 6,
+      "title": "Why use branches?",
+      "timestamp_start": "01:36",
+      "timestamp_end": "02:01",
+      "content": "So, branches are beneficial because they allow multiple developers to work on a project simultaneously! Git makes it easy to compare a repo's state between branches, and to combine contents between branches, allowing us to push new features to our live software. Generally, each branch should have a specific purpose.",
+      "git_commands": [
+        "git makes it easy to compare a repo"
+      ]
+    },
+    {
+      "section_number": 7,
+      "title": "Visualizing branches",
+      "timestamp_start": "02:01",
+      "timestamp_end": "02:10",
+      "content": "Let's see what software development using branches looks like. Here, we see the main branch, where our live system is stored.",
+      "git_commands": []
+    },
+    {
+      "section_number": 8,
+      "title": "Branching off",
+      "timestamp_start": "02:10",
+      "timestamp_end": "02:19",
+      "content": "We create a new branch from main called ai-assistant. Each box in diagram represents a commit.",
+      "git_commands": []
+    },
+    {
+      "section_number": 9,
+      "title": "Merging back into main",
+      "timestamp_start": "02:19",
+      "timestamp_end": "02:37",
+      "content": "Once the new feature has been developed and tested, we merge our ai-assistant branch back into main, which combines the contents of the branches, making the new feature available to users. We'll discuss merging at the end of the chapter.",
+      "git_commands": []
+    },
+    {
+      "section_number": 10,
+      "title": "Fixing a bug",
+      "timestamp_start": "02:37",
+      "timestamp_end": "02:51",
+      "content": "Later, we notice a bug in our production system. So we create another branch called bug-fix, make commits to resolve the issue, and merge that branch back into main.",
+      "git_commands": []
+    },
+    {
+      "section_number": 11,
+      "title": "Identifying branches",
+      "timestamp_start": "02:51",
+      "timestamp_end": "03:11",
+      "content": "To identify what branches exist for our project, we execute the git branch command in the terminal. We see two branches in the output: main and ai-assistant. The ai-assistant branch has an asterisk, which is how Git tells us we are currently in this branch.",
+      "git_commands": [
+        "git tells us we are currently in this branch.",
+        "git branch command in the terminal. we see two branches in the output"
+      ]
+    },
+    {
+      "section_number": 12,
+      "title": "Switching between branches",
+      "timestamp_start": "03:11",
+      "timestamp_end": "03:23",
+      "content": "What if we need to move back to main? We can run git switch, followed by the branch we want to move to. The output confirms we have switched to main.",
+      "git_commands": [
+        "git switch"
+      ]
+    },
+    {
+      "section_number": 13,
+      "title": "Creating a new branch",
+      "timestamp_start": "03:23",
+      "timestamp_end": "03:46",
+      "content": "What if we need a new branch? We use the git branch command, followed by the name of the new branch. We can then use git switch again, and the output confirms we've switched to this branch! Alternatively, we can create a new branch and switch to it by using git switch with the -c flag.",
+      "git_commands": [
+        "git switch with the -c flag.",
+        "git switch again",
+        "git branch command"
+      ]
+    },
+    {
+      "section_number": 14,
+      "title": "Terminology",
+      "timestamp_start": "03:46",
+      "timestamp_end": "03:59",
+      "content": "Note that when we create a new branch, it is common to say that we are \"branching off\". If we create the speed-test branch from the main branch, then we are branching off main.",
+      "git_commands": []
+    },
+    {
+      "section_number": 15,
+      "title": "Let's practice!",
+      "timestamp_start": "03:59",
+      "timestamp_end": "04:04",
+      "content": "Let's branch out of the video and into some exercises!",
+      "git_commands": []
+    }
+  ],
+  "total_sections": 15,
+  "git_commands_used": [
+    "git branch command",
+    "git branch command in the terminal. we see two branches in the output",
+    "git makes it easy to compare a repo",
+    "git stores data",
+    "git switch",
+    "git switch again",
+    "git switch with the -c flag.",
+    "git tells us we are currently in this branch."
+  ],
+  "learning_objectives": [
+    "What we will cover",
+    "What you should know",
+    "Why use branches?",
+    "Identifying branches",
+    "Switching between branches"
+  ],
+  "practice_prompt": "Let's branch out of the video and into some exercises!",
+  "word_count": 635,
+  "parsed_at": "2025-11-09T05:47:30.398393"
+}
