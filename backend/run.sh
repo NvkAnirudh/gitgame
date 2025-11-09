@@ -11,23 +11,22 @@ if [ ! -f "app/main.py" ]; then
     exit 1
 fi
 
-# Check if virtual environment exists
-if [ ! -d "venv" ]; then
-    echo "📦 Creating virtual environment..."
-    uv venv .venv
+# Check if root virtual environment exists
+if [ ! -d "../.venv" ]; then
+    echo "❌ Virtual environment not found!"
+    echo "   Please run: cd .. && ./setup.sh"
+    exit 1
 fi
 
-# Activate virtual environment
-source .venv/bin/activate
-
-# Install dependencies
-echo "📥 Installing dependencies..."
-uv pip install -r requirements.txt
+# Activate root virtual environment
+echo "🔌 Activating virtual environment..."
+source ../.venv/bin/activate
 
 # Run the server from backend directory
 echo "🌐 Starting server on http://localhost:8000"
 echo "📖 API docs available at http://localhost:8000/api/docs"
 echo "================================"
+echo ""
 
 # Important: Run from backend directory so Python can find 'app' module
 python3 -m uvicorn app.main:app --host 0.0.0.0 --port 8000
