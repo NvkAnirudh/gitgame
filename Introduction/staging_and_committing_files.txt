@@ -1,0 +1,23 @@
+1. Staging and committing files
+00:00 - 00:08
+We've set up our repo. In this video, we will build a workflow for updating and tracking our files using Git.
+
+2. The Git workflow
+00:08 - 00:54
+There are three core steps to our Git workflow. First, we edit and save one or more files to our computer, as usual. Next, using Git, we add the file or files to a staging area. The staging area is created when we initialize a Git repository and it keeps track of what has been modified. Lastly, to save the files using Git, we make a commit. When we make a commit, Git will take a snapshot of the files at that point in time. This is essential in allowing us to compare files at different points in time and, if necessary, revert to previous versions!
+
+3. Staging versus committing
+00:54 - 01:16
+We can think of adding files to the staging area as placing a letter in an envelope. By contrast, making a commit is like putting the envelope in a mailbox. We can add more things to the envelope or take things out as often as we want, but once we put it in the mailbox, we can't make further changes.
+
+4. Adding to the staging area
+01:16 - 01:50
+So how do we track files using Git? Using the terminal, we can add a single file to the staging area using the command git add followed by the filename and extension. Here, we add our README Markdown file to the staging area. Alternatively, we can add all modified files in the current directory and any sub-directories using git add dot, as a dot represents all files and directories in our current location.
+
+5. Making a commit
+01:50 - 02:43
+We then commit our draft file using git commit. We add the -m flag to allow us to include a log message about our commit, placing it in quotes. We include -m because it allows us to include a log message as part of the command. If we just wrote git commit it would open a text editor, which we would need to add a message to, save the file, then exit to return to the terminal. The output shows one file was changed and includes a series of characters called a hash. We'll learn about commit hashes in the next chapter. The log message is important, as we can refer to it later. The best practice is to keep it concise.
+
+6. Let's practice!
+02:43 - 02:47
+Now it's your turn to save files using Git!
