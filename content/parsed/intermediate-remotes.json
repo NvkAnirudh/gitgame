@@ -10,9 +10,7 @@
       "timestamp_start": "00:00",
       "timestamp_end": "00:09",
       "content": "Now we're going to learn about a fundamental feature for collaboration in Git - remote repos, also known as remotes.",
-      "git_commands": [
-        "git - remote repos"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 2,
@@ -45,7 +43,7 @@
       "timestamp_end": "01:43",
       "content": "We can also make multiple copies of a repo on our local computer or network. This concept is known as having local remotes. It can be useful for collaboration where cloud storage is prohibited, such as in enterprises with strict data privacy rules. We can make copies of a repo by using the git clone command followed by the path to the project repo. Here, we clone a local project from home/george/repo. We can also give the cloned repo a name by specifying it after the path, such as here, where we call it new_repo.",
       "git_commands": [
-        "git clone command followed by the path to the project repo. here"
+        "git clone"
       ]
     },
     {
@@ -55,7 +53,7 @@
       "timestamp_end": "02:19",
       "content": "While remotes can exist locally, it is more common to store them in an online repo hosting service such as GitHub, Bitbucket, or GitLab. If we have a GitHub account then we can access a remote stored on their server by cloning it on to our local computer. To do this we again use the git clone command, this time providing a URL rather than a local path. For example, here we clone a repo from github.com/datacamp/project.",
       "git_commands": [
-        "git clone command"
+        "git clone"
       ]
     },
     {
@@ -65,7 +63,6 @@
       "timestamp_end": "02:43",
       "content": "When we clone a repo, Git remembers where the original repo was. It does this by storing a remote tag in the new repo's configuration. If we are in a repo, we can list the names of its remotes using git remote. The output confirms we have cloned the datacamp GitHub project.",
       "git_commands": [
-        "git remembers where the original repo was. it does this by storing a remote tag in the new repo",
         "git remote"
       ]
     },
@@ -84,7 +81,7 @@
       "timestamp_end": "03:51",
       "content": "When cloning, Git will automatically name the remote as origin. We can add more remotes by specifying a name for Git to assign. We do this using the git remote add command, and provide two pieces of information - the name that we would like to assign to the remote repo, and the URL, or the path to the directory. Here, we create a remote called george, which points to the url github.com/george_datacamp/repo. It is useful to define the remote name as we can use it as a shortcut when merging rather than listing the URL or path.",
       "git_commands": [
-        "git will automatically name the remote as origin. we can add more remotes by specifying a name for git to assign. we do this using the git remote add command"
+        "git remote"
       ]
     },
     {
@@ -98,12 +95,8 @@
   ],
   "total_sections": 10,
   "git_commands_used": [
-    "git - remote repos",
-    "git clone command",
-    "git clone command followed by the path to the project repo. here",
-    "git remembers where the original repo was. it does this by storing a remote tag in the new repo",
-    "git remote",
-    "git will automatically name the remote as origin. we can add more remotes by specifying a name for git to assign. we do this using the git remote add command"
+    "git clone",
+    "git remote"
   ],
   "learning_objectives": [
     "Introduction to remotes",
@@ -114,5 +107,5 @@
   ],
   "practice_prompt": "Now it's time to practice working with remotes!",
   "word_count": 587,
-  "parsed_at": "2025-11-09T05:47:30.400248"
+  "parsed_at": "2025-11-09T05:59:27.896711"
 }

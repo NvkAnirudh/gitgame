@@ -10,10 +10,7 @@
       "timestamp_start": "00:00",
       "timestamp_end": "00:13",
       "content": "Welcome to this advanced Git course where you will learn to master complex merging, build and manipulate repository history and optimize Git for large data projects.",
-      "git_commands": [
-        "git for large data projects.",
-        "git course where you will learn to master complex merging"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 2,
@@ -21,9 +18,7 @@
       "timestamp_start": "00:13",
       "timestamp_end": "00:30",
       "content": "I'm Amanda, a data and software engineer with over 10 years of Git experience at companies like Microsoft and Dropbox. I've managed complex data systems and CI/CD processes, and I'm excited to share my expertise with you.",
-      "git_commands": [
-        "git experience at companies like microsoft and dropbox. i"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 3,
@@ -32,8 +27,7 @@
       "timestamp_end": "01:11",
       "content": "You should already know merging. Now, we will cover fast-forward and recursive merges. We'll explore their functionality and use in data engineering projects. Git merge is like combining two work streams. At its core, git merge combines changes from one branch into another. Git will take two branch pointers and attempt to find a common base commit between them. A merge strategy is a method Git uses to find a base commit and create a new base commit. `git merge` will select a merge strategy automatically unless a different strategy is specified.",
       "git_commands": [
-        "git merge combines changes from one branch into another. git will take two branch pointers and attempt to find a common base commit between them. a merge strategy is a method git uses to find a base commit and create a new base commit.",
-        "git merge is like combining two work streams. at its core"
+        "git merge"
       ]
     },
     {
@@ -59,7 +53,7 @@
       "timestamp_end": "02:13",
       "content": "A fast-forward merge is the simplest merge strategy. It occurs when there is a linear path from the current branch to the target branch. When running `git merge` Git will attempt to use this merge strategy by default. If you want to force Git to use this strategy, you'll need to add the `--ff-only` flag.",
       "git_commands": [
-        "git will attempt to use this merge strategy by default. if you want to force git to use this strategy"
+        "git merge"
       ]
     },
     {
@@ -100,9 +94,7 @@
       "timestamp_start": "03:21",
       "timestamp_end": "03:35",
       "content": "In a recursive merge, Git creates a new commit that combines changes from both branches. The graph now shows an additional commit with two parents: one from main and one from feature.",
-      "git_commands": [
-        "git creates a new commit that combines changes from both branches. the graph now shows an additional commit with two parents"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 12,
@@ -110,9 +102,7 @@
       "timestamp_start": "03:35",
       "timestamp_end": "03:57",
       "content": "It's vital to know these merge strategies. They help keep a clean, informative Git history. Fast-forward merges keep things simple and linear when possible. Recursive merges preserve the historical context of feature development and are needed for complex development workflows.",
-      "git_commands": [
-        "git history"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 13,
@@ -125,14 +115,7 @@
   ],
   "total_sections": 13,
   "git_commands_used": [
-    "git course where you will learn to master complex merging",
-    "git creates a new commit that combines changes from both branches. the graph now shows an additional commit with two parents",
-    "git experience at companies like microsoft and dropbox. i",
-    "git for large data projects.",
-    "git history",
-    "git merge combines changes from one branch into another. git will take two branch pointers and attempt to find a common base commit between them. a merge strategy is a method git uses to find a base commit and create a new base commit.",
-    "git merge is like combining two work streams. at its core",
-    "git will attempt to use this merge strategy by default. if you want to force git to use this strategy"
+    "git merge"
   ],
   "learning_objectives": [
     "Understanding Merge Types",
@@ -143,5 +126,5 @@
   ],
   "practice_prompt": "Let's merge!",
   "word_count": 604,
-  "parsed_at": "2025-11-09T05:47:30.403936"
+  "parsed_at": "2025-11-09T05:59:27.953275"
 }

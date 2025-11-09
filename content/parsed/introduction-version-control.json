@@ -10,10 +10,7 @@
       "timestamp_start": "00:00",
       "timestamp_end": "00:16",
       "content": "Hi, my name is George. I'm a Curriculum Manager at DataCamp, and I use Git on a daily basis for version control in my projects. In this course, we'll discover the benefits of version control and why Git is so popular for this!",
-      "git_commands": [
-        "git on a daily basis for version control in my projects. in this course",
-        "git is so popular for this"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 2,
@@ -61,9 +58,7 @@
       "timestamp_start": "01:32",
       "timestamp_end": "01:50",
       "content": "So, how do we perform version control? One popular program for version control is called Git. Git is open source and scalable to easily track everything from small solo projects to complex collaborative efforts with large teams!",
-      "git_commands": [
-        "git is open source and scalable to easily track everything from small solo projects to complex collaborative efforts with large teams"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 8,
@@ -71,9 +66,7 @@
       "timestamp_start": "01:50",
       "timestamp_end": "02:14",
       "content": "A key benefit of Git is that it stores everything, so nothing is ever lost. It allows us to compare the contents of files at different times. We can even examine what changes have been made, who made them, and when. Critically, if our software has issues, we can revert to a previous version that is known to work correctly! 1 Image credit: https://unsplash.com/@wilsonjim",
-      "git_commands": [
-        "git is that it stores everything"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 9,
@@ -81,9 +74,7 @@
       "timestamp_start": "02:14",
       "timestamp_end": "02:42",
       "content": "A common method to use Git is via the shell, also known as the terminal. The shell is a program for executing commands. Before we use Git, we'll run through some shell commands that will often be used in our version control workflow, such as previewing and inspecting files or directories. Note that a directory is often referred to on a computer as a folder.",
-      "git_commands": [
-        "git is via the shell"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 10,
@@ -107,10 +98,7 @@
       "timestamp_start": "03:26",
       "timestamp_end": "03:41",
       "content": "Let's learn our first Git command! Different versions of software have different functionality, and Git is no exception. We can check which version of Git we have installed by typing git dash-dash-version in the shell.",
-      "git_commands": [
-        "git command",
-        "git is no exception. we can check which version of git we have installed by typing git dash-dash-version in the shell."
-      ]
+      "git_commands": []
     },
     {
       "section_number": 13,
@@ -122,15 +110,7 @@
     }
   ],
   "total_sections": 13,
-  "git_commands_used": [
-    "git command",
-    "git is no exception. we can check which version of git we have installed by typing git dash-dash-version in the shell.",
-    "git is open source and scalable to easily track everything from small solo projects to complex collaborative efforts with large teams",
-    "git is so popular for this",
-    "git is that it stores everything",
-    "git is via the shell",
-    "git on a daily basis for version control in my projects. in this course"
-  ],
+  "git_commands_used": [],
   "learning_objectives": [
     "Introduction to version control",
     "Introducing Git",
@@ -140,5 +120,5 @@
   ],
   "practice_prompt": "Now, let's check our understanding of version control!",
   "word_count": 622,
-  "parsed_at": "2025-11-09T05:47:30.397148"
+  "parsed_at": "2025-11-09T05:59:27.851007"
 }

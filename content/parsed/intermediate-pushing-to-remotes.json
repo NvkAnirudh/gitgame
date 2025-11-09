@@ -19,7 +19,7 @@
       "timestamp_end": "00:16",
       "content": "To recap, we use git pull to gather content from a remote and merge it into our local repo.",
       "git_commands": [
-        "git pull to gather content from a remote and merge it into our local repo."
+        "git pull"
       ]
     },
     {
@@ -38,7 +38,7 @@
       "content": "As with pulling contents from a remote, we need to commit local changes before we can push to the remote. Once we have done this, we can push to a remote using the git push command, supplying two arguments. First we provide the remote, followed by the local branch. The order that we supply the remote repo and the local branch is the same as git pull. So, we can think of it as pushing content into the remote repo from the local branch. Here, we push changes into origin from our local main branch.",
       "git_commands": [
         "git pull",
-        "git push command"
+        "git push"
       ]
     },
     {
@@ -79,9 +79,7 @@
       "timestamp_start": "01:39",
       "timestamp_end": "01:44",
       "content": "Git gives us a large output! Let's break it down.",
-      "git_commands": [
-        "git gives us a large output"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 10,
@@ -105,9 +103,7 @@
       "timestamp_start": "01:57",
       "timestamp_end": "02:39",
       "content": "In the third to seventh lines, Git provides hints. This is where Git tells us why the command failed, and recommends what we should do to resolve the issue. In this case, we see that the tip, or the end, of our current branch is behind its remote counterpart and the suggestion is to pull from the remote before trying to push our local changes again. This can typically occur because while we've been working locally, our colleagues have been pushing their changes to the remote. So, if we don't pull from the remote at the start of the workflow then our local repo won't be synchronized with the remote.",
-      "git_commands": [
-        "git provides hints. this is where git tells us why the command failed"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 13,
@@ -116,9 +112,7 @@
       "timestamp_end": "03:15",
       "content": "Previously we saw that git pull used a fast-forward merge. In this case it's slightly different, as there are different commits on the local and remote repos, so Git can't just bring them in line with one another. It will use a recursive merge. So, when we try to pull, Git will automatically open the nano text editor and ask us to add a message for the merge. We leave a message that we are pulling the latest report from the remote, then save and exit nano.",
       "git_commands": [
-        "git can",
-        "git will automatically open the nano text editor and ask us to add a message for the merge. we leave a message that we are pulling the latest report from the remote",
-        "git pull used a fast-forward merge. in this case it"
+        "git pull"
       ]
     },
     {
@@ -146,7 +140,7 @@
       "timestamp_end": "03:41",
       "content": "We can still use git push origin followed by the name of our local branch. This will result in a new branch in the remote with the same name!",
       "git_commands": [
-        "git push origin followed by the name of our local branch. this will result in a new branch in the remote with the same name"
+        "git push"
       ]
     },
     {
@@ -160,15 +154,8 @@
   ],
   "total_sections": 17,
   "git_commands_used": [
-    "git can",
-    "git gives us a large output",
-    "git provides hints. this is where git tells us why the command failed",
     "git pull",
-    "git pull to gather content from a remote and merge it into our local repo.",
-    "git pull used a fast-forward merge. in this case it",
-    "git push command",
-    "git push origin followed by the name of our local branch. this will result in a new branch in the remote with the same name",
-    "git will automatically open the nano text editor and ask us to add a message for the merge. we leave a message that we are pulling the latest report from the remote"
+    "git push"
   ],
   "learning_objectives": [
     "Pulling from a remote",
@@ -179,5 +166,5 @@
   ],
   "practice_prompt": "Let's push on with some exercises!",
   "word_count": 649,
-  "parsed_at": "2025-11-09T05:47:30.399957"
+  "parsed_at": "2025-11-09T05:59:27.892058"
 }

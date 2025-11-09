@@ -61,7 +61,7 @@
       "timestamp_end": "02:52",
       "content": "In collaborative projects, synchronizing between remote and local repos is very common. To simplify this process, Git allows us to fetch and merge using a single command. We execute git pull followed by the remote repo's name, which will fetch the default branch from the remote, typically main, and merge it into the local repo's current branch. Here, we pull from origin into our current local branch.",
       "git_commands": [
-        "git allows us to fetch and merge using a single command. we execute git pull followed by the remote repo"
+        "git pull"
       ]
     },
     {
@@ -81,8 +81,9 @@
       "timestamp_end": "03:25",
       "content": "The output is a combination of git fetch and git merge, which makes sense because git pull is a shortcut to run both of these commands!",
       "git_commands": [
-        "git fetch and git merge",
-        "git pull is a shortcut to run both of these commands"
+        "git fetch",
+        "git merge",
+        "git pull"
       ]
     },
     {
@@ -91,9 +92,7 @@
       "timestamp_start": "03:25",
       "timestamp_end": "03:46",
       "content": "Note that if we have been working locally and not yet committed our changes, then Git won't allow us to pull from a remote. We are instructed to commit our changes and told that the pull command was aborted. Therefore, it's important to save our work locally before we pull from a remote.",
-      "git_commands": [
-        "git won"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 11,
@@ -106,11 +105,9 @@
   ],
   "total_sections": 11,
   "git_commands_used": [
-    "git allows us to fetch and merge using a single command. we execute git pull followed by the remote repo",
     "git fetch",
-    "git fetch and git merge",
-    "git pull is a shortcut to run both of these commands",
-    "git won"
+    "git merge",
+    "git pull"
   ],
   "learning_objectives": [
     "Fetching from a remote",
@@ -121,5 +118,5 @@
   ],
   "practice_prompt": "Time to practice fetching and pulling in Git!",
   "word_count": 615,
-  "parsed_at": "2025-11-09T05:47:30.399599"
+  "parsed_at": "2025-11-09T05:59:27.886770"
 }

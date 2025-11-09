@@ -18,10 +18,7 @@
       "timestamp_start": "00:14",
       "timestamp_end": "00:48",
       "content": "In the last chapter we successfully merged one branch into another, and the merge went smoothly, but this isn't always the case. A conflict is a scenario where Git is unable to resolve differences in contents of one or more files between branches. For example, if we edit the same file in two different branches, then try to merge, Git won't know which version should be kept. This results in a conflict. Let's see an example.",
-      "git_commands": [
-        "git won",
-        "git is unable to resolve differences in contents of one or more files between branches. for example"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 3,
@@ -45,10 +42,7 @@
       "timestamp_start": "01:38",
       "timestamp_end": "02:04",
       "content": "We can open the file from the terminal by running the nano command, followed by the filename and extension. When we do this something interesting happens! New characters have appeared, which have been added by Git to highlight where the conflict occurs. Put another way, Git shows us how the contents differ between branches.",
-      "git_commands": [
-        "git to highlight where the conflict occurs. put another way",
-        "git shows us how the contents differ between branches."
-      ]
+      "git_commands": []
     },
     {
       "section_number": 6,
@@ -72,10 +66,7 @@
       "timestamp_start": "03:28",
       "timestamp_end": "04:00",
       "content": "We add our updated README to the staging area, then commit it to our current branch. Now, we can try to merge the documentation branch into main again. As we've resolved the conflict, Git informs us that the two branches are already up to date, which is a relief! Remember, we should avoid editing the same file in multiple branches. Prevention is better than cure when it comes to Git conflicts!",
-      "git_commands": [
-        "git informs us that the two branches are already up to date",
-        "git conflicts"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 9,
@@ -87,14 +78,7 @@
     }
   ],
   "total_sections": 9,
-  "git_commands_used": [
-    "git conflicts",
-    "git informs us that the two branches are already up to date",
-    "git is unable to resolve differences in contents of one or more files between branches. for example",
-    "git shows us how the contents differ between branches.",
-    "git to highlight where the conflict occurs. put another way",
-    "git won"
-  ],
+  "git_commands_used": [],
   "learning_objectives": [
     "Merge conflicts",
     "Conflicts",
@@ -104,5 +88,5 @@
   ],
   "practice_prompt": "Now let's practice dealing with conflicts in Git!",
   "word_count": 600,
-  "parsed_at": "2025-11-09T05:47:30.398696"
+  "parsed_at": "2025-11-09T05:59:27.872786"
 }

@@ -68,19 +68,29 @@ git-quest/
 - ✅ Project structure setup
 - ✅ Tutorial content parser (Python)
   - Parses 25 .txt tutorial transcripts
-  - Extracts sections, timestamps, Git commands
+  - Extracts sections, timestamps, Git commands (LLM-enhanced extraction)
   - Outputs structured JSON (264 sections total)
   - Generates summary statistics
+- ✅ PostgreSQL database schema
+  - 12 core tables (users, lessons, challenges, progress, etc.)
+  - Authentication tables (JWT, password reset, refresh tokens)
+  - Analytics tables (events, sessions)
+  - Views for leaderboard and player stats
+- ✅ Docker Compose infrastructure
+  - PostgreSQL + Redis + pgAdmin
+  - Local development environment
+- ✅ Database loader script
+  - Loads parsed tutorials to PostgreSQL
+  - Extracts and catalogs Git commands
 
 **In Progress:**
-- 🔨 PostgreSQL database schema
 - 🔨 Great Expectations data quality suite
 - 🔨 Airflow ETL pipeline
 
 **Next Up:**
-- Database migrations (Alembic)
+- Great Expectations test suite
+- Airflow DAG for content pipeline
 - dbt transformation models
-- Docker Compose infrastructure
 
 ### 📊 Content Statistics
 
@@ -95,7 +105,7 @@ git-quest/
 
 ## 🛠️ Quick Start (Phase 1)
 
-### Run the Tutorial Parser
+### 1. Run the Tutorial Parser
 
 ```bash
 # Parse all tutorials and generate JSON
@@ -106,8 +116,55 @@ ls content/parsed/
 ```
 
 **Output:**
-- `content/parsed/*.json` - Individual tutorial files
+- `content/parsed/*.json` - Individual tutorial files (25 tutorials, 264 sections)
 - `content/parsed/summary.json` - Statistics and metadata
+
+### 2. Start the Database Infrastructure
+
+```bash
+# Start PostgreSQL + Redis with Docker Compose
+docker-compose up -d
+
+# Verify services are running
+docker-compose ps
+
+# Access pgAdmin at http://localhost:5050
+# Email: admin@gitquest.local | Password: admin
+```
+
+### 3. Load Tutorials into Database
+
+```bash
+# Set up environment variables
+cp .env.example .env
+
+# Install database dependencies
+pip install -r database/requirements.txt
+
+# Load parsed tutorials to PostgreSQL
+python3 data-pipeline/scripts/load_to_db.py
+```
+
+**Database Stats:**
+- ✅ 25 lessons loaded
+- ✅ 28 Git commands cataloged
+- ✅ 5 default achievements seeded
+
+### 4. Database Access
+
+**PostgreSQL:**
+- Host: `localhost:5432`
+- Database: `gitquest`
+- User: `gitquest`
+- Password: `gitquest_dev_password`
+
+**Redis:**
+- Host: `localhost:6379`
+
+**pgAdmin UI:**
+- URL: `http://localhost:5050`
+- Email: `admin@gitquest.local`
+- Password: `admin`
 
 ---
 

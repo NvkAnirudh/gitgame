@@ -18,10 +18,7 @@
       "timestamp_start": "00:02",
       "timestamp_end": "00:20",
       "content": "Throughout the course, we'll work on a project about mental health in tech. The files and directories are shown here. To use Git for version control in our project, we first need to create a Git repository, often referred to as a repo.",
-      "git_commands": [
-        "git for version control in our project",
-        "git repository"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 3,
@@ -37,11 +34,7 @@
       "timestamp_start": "00:38",
       "timestamp_end": "01:07",
       "content": "The second part is the extra information that Git records about the project's history. The combination of these two things is called a repository. Git stores all of its extra information in a directory called dot-git, located in the repo's main directory. Git expects this information to be laid out in a particular way, so we should not edit or delete dot-git.",
-      "git_commands": [
-        "git records about the project",
-        "git expects this information to be laid out in a particular way",
-        "git stores all of its extra information in a directory called dot-git"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 5,
@@ -49,9 +42,7 @@
       "timestamp_start": "01:07",
       "timestamp_end": "01:28",
       "content": "There are many benefits to creating a Git repo, including the ability to systematically track the versions of files, to revert to previous versions, and to compare versions at different points in time. If we host our repo in the cloud, then it also enables easy collaboration with colleagues! 1 Image credit: https://unsplash.com/@jasongoodman_youxventures",
-      "git_commands": [
-        "git repo"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 6,
@@ -60,12 +51,9 @@
       "timestamp_end": "02:12",
       "content": "To create a new Git repo for our project, we use the git init command in the terminal, followed by the name of our project, mental-health-workspace. When we run the git init command with the name we provided for the repo, Git creates a new repo within the directory we ran the command from. We can use cd to change into this new repo. We can check that the Git repo has been initialized correctly by running the git status command. Success! The output confirms we have a Git repo, and suggests that once we've created files we can use the git add command to track them using Git.",
       "git_commands": [
-        "git init command with the name we provided for the repo",
-        "git repo for our project",
-        "git creates a new repo within the directory we ran the command from. we can use cd to change into this new repo. we can check that the git repo has been initialized correctly by running the git status command. success",
-        "git add command to track them using git.",
-        "git repo",
-        "git init command in the terminal"
+        "git add",
+        "git init",
+        "git status"
       ]
     },
     {
@@ -75,9 +63,7 @@
       "timestamp_end": "02:45",
       "content": "Now we know how to create a Git repo from scratch, let's look at how to convert an existing project into a repo. Let's say we started working on the mental health in tech project without first creating a new Git repo. We can convert the existing directory to a Git repo by executing git init without providing a directory name. We run the command from our project directory. The output confirms that an empty repo has been created and provides the location.",
       "git_commands": [
-        "git repo",
-        "git repo by executing git init without providing a directory name. we run the command from our project directory. the output confirms that an empty repo has been created and provides the location.",
-        "git repo from scratch"
+        "git init"
       ]
     },
     {
@@ -86,9 +72,7 @@
       "timestamp_start": "02:45",
       "timestamp_end": "03:11",
       "content": "Something interesting happens if we check the status of the repo. We can see Git has immediately recognized that there are modified files not being tracked by Git, in this case, the report-dot-md file and files within the data subdirectory. The output encourages us to start tracking these files using Git! We'll discuss how to do this in the next video.",
-      "git_commands": [
-        "git has immediately recognized that there are modified files not being tracked by git"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 9,
@@ -96,11 +80,7 @@
       "timestamp_start": "03:11",
       "timestamp_end": "03:38",
       "content": "One word of caution when creating Git repos. Unless we are working on a very complex project, we should generally avoid creating a Git repo inside another Git repo, also known as nested repos. If we do this, there will be two dot-git directories. Unfortunately, as we try to make commits, Git will get confused about which directory it needs to update.",
-      "git_commands": [
-        "git repo inside another git repo",
-        "git repos",
-        "git will get confused about which directory it needs to update."
-      ]
+      "git_commands": []
     },
     {
       "section_number": 10,
@@ -108,30 +88,14 @@
       "timestamp_start": "03:38",
       "timestamp_end": "03:42",
       "content": "Time to make our own Git repos!",
-      "git_commands": [
-        "git repos"
-      ]
+      "git_commands": []
     }
   ],
   "total_sections": 10,
   "git_commands_used": [
-    "git add command to track them using git.",
-    "git creates a new repo within the directory we ran the command from. we can use cd to change into this new repo. we can check that the git repo has been initialized correctly by running the git status command. success",
-    "git expects this information to be laid out in a particular way",
-    "git for version control in our project",
-    "git has immediately recognized that there are modified files not being tracked by git",
-    "git init command in the terminal",
-    "git init command with the name we provided for the repo",
-    "git records about the project",
-    "git repo",
-    "git repo by executing git init without providing a directory name. we run the command from our project directory. the output confirms that an empty repo has been created and provides the location.",
-    "git repo for our project",
-    "git repo from scratch",
-    "git repo inside another git repo",
-    "git repos",
-    "git repository",
-    "git stores all of its extra information in a directory called dot-git",
-    "git will get confused about which directory it needs to update."
+    "git add",
+    "git init",
+    "git status"
   ],
   "learning_objectives": [
     "Creating repos",
@@ -142,5 +106,5 @@
   ],
   "practice_prompt": "Time to make our own Git repos!",
   "word_count": 604,
-  "parsed_at": "2025-11-09T05:47:30.395951"
+  "parsed_at": "2025-11-09T05:59:27.836776"
 }

@@ -18,11 +18,7 @@
       "timestamp_start": "00:08",
       "timestamp_end": "00:54",
       "content": "There are three core steps to our Git workflow. First, we edit and save one or more files to our computer, as usual. Next, using Git, we add the file or files to a staging area. The staging area is created when we initialize a Git repository and it keeps track of what has been modified. Lastly, to save the files using Git, we make a commit. When we make a commit, Git will take a snapshot of the files at that point in time. This is essential in allowing us to compare files at different points in time and, if necessary, revert to previous versions!",
-      "git_commands": [
-        "git workflow",
-        "git will take a snapshot of the files at that point in time. this is essential in allowing us to compare files at different points in time and",
-        "git repository and it keeps track of what has been modified. lastly"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 3,
@@ -39,8 +35,8 @@
       "timestamp_end": "01:50",
       "content": "So how do we track files using Git? Using the terminal, we can add a single file to the staging area using the command git add followed by the filename and extension. Here, we add our README Markdown file to the staging area. Alternatively, we can add all modified files in the current directory and any sub-directories using git add dot, as a dot represents all files and directories in our current location.",
       "git_commands": [
-        "git add followed by the filename and extension. here",
-        "git add dot"
+        "git add",
+        "git add ."
       ]
     },
     {
@@ -50,7 +46,6 @@
       "timestamp_end": "02:43",
       "content": "We then commit our draft file using git commit. We add the -m flag to allow us to include a log message about our commit, placing it in quotes. We include -m because it allows us to include a log message as part of the command. If we just wrote git commit it would open a text editor, which we would need to add a message to, save the file, then exit to return to the terminal. The output shows one file was changed and includes a series of characters called a hash. We'll learn about commit hashes in the next chapter. The log message is important, as we can refer to it later. The best practice is to keep it concise.",
       "git_commands": [
-        "git commit it would open a text editor",
         "git commit"
       ]
     },
@@ -65,13 +60,9 @@
   ],
   "total_sections": 6,
   "git_commands_used": [
-    "git add dot",
-    "git add followed by the filename and extension. here",
-    "git commit",
-    "git commit it would open a text editor",
-    "git repository and it keeps track of what has been modified. lastly",
-    "git will take a snapshot of the files at that point in time. this is essential in allowing us to compare files at different points in time and",
-    "git workflow"
+    "git add",
+    "git add .",
+    "git commit"
   ],
   "learning_objectives": [
     "Staging and committing files",
@@ -82,5 +73,5 @@
   ],
   "practice_prompt": "Now it's your turn to save files using Git!",
   "word_count": 435,
-  "parsed_at": "2025-11-09T05:47:30.396656"
+  "parsed_at": "2025-11-09T05:59:27.845566"
 }

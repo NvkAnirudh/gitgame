@@ -35,8 +35,7 @@
       "timestamp_end": "01:45",
       "content": "To merge branches, we first switch to the destination branch. Here, we switch to main, where we want to merge our changes from the ai-assistant branch into. From here, we can merge the source branch into the destination branch, where we are currently located, by using the git merge command followed by the source branch. Therefore, if we want to merge ai-assistant into main we execute git merge ai-assistant. If we're in a different branch we can still perform a merge, but need to include the source and destination branches, in that order, like so.",
       "git_commands": [
-        "git merge ai-assistant. if we",
-        "git merge command followed by the source branch. therefore"
+        "git merge"
       ]
     },
     {
@@ -61,9 +60,7 @@
       "timestamp_start": "02:04",
       "timestamp_end": "02:38",
       "content": "Next is the type of merge. In this case, it is a fast-forward merge. This means that the commit history across the two branches is linear, where we have branched off main into ai-assistant, then only made commits in that branch. Therefore, Git can \"fast-forward\" the main branch, pointing to the last commit in the ai-assistant branch when the merge occurs. There are other types of merges, but these are out of scope for the course.",
-      "git_commands": [
-        "git can"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 8,
@@ -92,9 +89,7 @@
   ],
   "total_sections": 10,
   "git_commands_used": [
-    "git can",
-    "git merge ai-assistant. if we",
-    "git merge command followed by the source branch. therefore"
+    "git merge"
   ],
   "learning_objectives": [
     "Merging branches",
@@ -103,5 +98,5 @@
   ],
   "practice_prompt": "Let's merge this video into some exercises!",
   "word_count": 500,
-  "parsed_at": "2025-11-09T05:47:30.398986"
+  "parsed_at": "2025-11-09T05:59:27.877065"
 }

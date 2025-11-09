@@ -29,9 +29,7 @@
       "timestamp_end": "00:33",
       "content": "A diff is how git shows us the difference between versions! We can perform comparisons using the git diff command. Here, we compare the last committed version of our report with a modified version that is not in the staging area by running git diff report.md.",
       "git_commands": [
-        "git shows us the difference between versions",
-        "git diff report.md.",
-        "git diff command. here"
+        "git diff"
       ]
     },
     {
@@ -99,8 +97,7 @@
       "timestamp_end": "03:36",
       "content": "We can also compare versions between commits! We have two options for this. First, we can find the commit hashes of interest using git log. Then we can run git diff followed by the two commit hashes. Git will show what changed from the first commit to the second one. So, generally, we should put the most recent commit hash second. Alternatively, Git has a shortcut for us! The word HEAD, in capitals, can be used to refer to the most recent commit! To look at older commits we can reference them to HEAD by using a tilde, then a number. So, to compare the second most recent commit with the latest commit, we replace the first hash with HEAD-tilde-one and the second hash with HEAD. Tilde-one equates to the last commit minus one, so it represents one commit prior to the latest.",
       "git_commands": [
-        "git has a shortcut for us",
-        "git diff followed by the two commit hashes. git will show what changed from the first commit to the second one. so",
+        "git diff",
         "git log"
       ]
     },
@@ -132,13 +129,8 @@
   "total_sections": 14,
   "git_commands_used": [
     "git diff",
-    "git diff command. here",
-    "git diff followed by the two commit hashes. git will show what changed from the first commit to the second one. so",
-    "git diff report.md.",
-    "git has a shortcut for us",
     "git log",
-    "git show",
-    "git shows us the difference between versions"
+    "git show"
   ],
   "learning_objectives": [
     "git show output",
@@ -148,5 +140,5 @@
   ],
   "practice_prompt": "Now it's your turn to compare some files!",
   "word_count": 640,
-  "parsed_at": "2025-11-09T05:47:30.395498"
+  "parsed_at": "2025-11-09T05:59:27.831700"
 }

@@ -19,7 +19,7 @@
       "timestamp_end": "00:19",
       "content": "Recall that the git diff command can be used to compare the state of files or repos at different points in time, such as between two different commits, or the last commit and the version in the staging area.",
       "git_commands": [
-        "git diff command can be used to compare the state of files or repos at different points in time"
+        "git diff"
       ]
     },
     {
@@ -29,7 +29,7 @@
       "timestamp_end": "00:35",
       "content": "Well, not only this, but git diff can also be used to compare two branches! Here, we provide the names of the two branches we want to compare. In this case, we examine main versus summary-statistics.",
       "git_commands": [
-        "git diff can also be used to compare two branches"
+        "git diff"
       ]
     },
     {
@@ -39,7 +39,7 @@
       "timestamp_end": "00:49",
       "content": "This produces a standard git diff output. It's quite large! This is the first half, with the green text in the output representing new content added in the second branch, summary-statistics.",
       "git_commands": [
-        "git diff output. it"
+        "git diff"
       ]
     },
     {
@@ -48,9 +48,7 @@
       "timestamp_start": "00:49",
       "timestamp_end": "01:17",
       "content": "In the second half of the output we see that git is showing the diff for the summary.txt file within the results directory between the two branches. Hence, the only difference between the branches was the creation of this summary file and the addition of content to it. If there are multiple files that have been modified, or more extensive revisions to existing files, then the diff output will grow!",
-      "git_commands": [
-        "git is showing the diff for the summary.txt file within the results directory between the two branches. hence"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 6,
@@ -67,7 +65,7 @@
       "timestamp_end": "02:05",
       "content": "We know how to view our branches, make new branches, and compare a repo's state between branches. Now, let's look at how we can rename and delete branches. Say we have a branch called feature_dev. However, another team has been assigned to work on an additional feature for our system. To avoid confusion, we should rename our existing branch to be more specific, as well as using a detailed name for the second feature branch. To rename a branch, we use the git branch command with the -m flag.",
       "git_commands": [
-        "git branch command with the -m flag."
+        "git branch"
       ]
     },
     {
@@ -95,7 +93,7 @@
       "timestamp_end": "02:54",
       "content": "Large projects such as open-source software can have a large number of branches at any point! Once we've finished working in a branch and brought the contents back into the main branch, we should delete the redundant branch. To delete a branch, we execute git branch with the lowercase -d flag, followed by the branch to delete. We'll get an output confirming the deletion and referencing the last commit hash for that branch.",
       "git_commands": [
-        "git branch with the lowercase -d flag"
+        "git branch"
       ]
     },
     {
@@ -126,12 +124,7 @@
   "total_sections": 13,
   "git_commands_used": [
     "git branch",
-    "git branch command with the -m flag.",
-    "git branch with the lowercase -d flag",
-    "git diff can also be used to compare two branches",
-    "git diff command can be used to compare the state of files or repos at different points in time",
-    "git diff output. it",
-    "git is showing the diff for the summary.txt file within the results directory between the two branches. hence"
+    "git diff"
   ],
   "learning_objectives": [
     "Diff recap",
@@ -142,5 +135,5 @@
   ],
   "practice_prompt": "Let's practice comparing and modifying branches!",
   "word_count": 591,
-  "parsed_at": "2025-11-09T05:47:30.399278"
+  "parsed_at": "2025-11-09T05:59:27.881943"
 }

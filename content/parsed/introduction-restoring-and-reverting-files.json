@@ -10,9 +10,7 @@
       "timestamp_start": "00:00",
       "timestamp_end": "00:09",
       "content": "We've learned several ways to compare files; now, let's look at how to use Git commands to resolve problems.",
-      "git_commands": [
-        "git commands to resolve problems."
-      ]
+      "git_commands": []
     },
     {
       "section_number": 2,
@@ -29,7 +27,7 @@
       "timestamp_end": "01:09",
       "content": "We need to undo our most recent changes, restoring this file to the state before the last commit. To do this, we use the git revert command, which reinstates previous versions of files and creates a new commit with these older versions. Note that it will restore all files updated in that commit. We need to provide a reference, through a commit hash or HEAD, to the changes that we want to undo. Referencing HEAD, means undoing changes made in the last commit, while adding tilde-one would undo, or revert, the second-most recent commit. Let's run this and see what happens.",
       "git_commands": [
-        "git revert command"
+        "git revert"
       ]
     },
     {
@@ -63,8 +61,8 @@
       "timestamp_end": "02:45",
       "content": "The git revert command only reverts a commit. It worked for us in this scenario because we only committed a single file, but if we had updated more files, then those would have been reverted, too. To revert a single file, we need a different command. We use git checkout. It is a versatile command, which, in this scenario, allows us to check out one or more files from a specific commit, again using the commit hash or HEAD syntax. Here, we refer to the second most recent commit and narrow the command to a single file by including two dashes, a space, and the filename.",
       "git_commands": [
-        "git revert command only reverts a commit. it worked for us in this scenario because we only committed a single file",
-        "git checkout"
+        "git checkout",
+        "git revert"
       ]
     },
     {
@@ -108,7 +106,7 @@
       "timestamp_end": "03:39",
       "content": "To unstage a single file, we can use the git restore command with the --staged flag, followed by the filename. This will move the file back to the working directory, allowing us to edit it before restaging and committing.",
       "git_commands": [
-        "git restore command with the --staged flag"
+        "git restore"
       ]
     },
     {
@@ -118,7 +116,7 @@
       "timestamp_end": "03:51",
       "content": "Alternatively, to move all files in the staging area back to the repo, we execute git restore --staged without specifying any filenames.",
       "git_commands": [
-        "git restore --staged without specifying any filenames."
+        "git restore"
       ]
     },
     {
@@ -128,9 +126,9 @@
       "timestamp_end": "04:03",
       "content": "We covered three new commands with several flags: git revert, git checkout, and git restore. This table summarizes their usage.",
       "git_commands": [
+        "git checkout",
         "git restore",
-        "git revert",
-        "git checkout"
+        "git revert"
       ]
     },
     {
@@ -145,13 +143,8 @@
   "total_sections": 15,
   "git_commands_used": [
     "git checkout",
-    "git commands to resolve problems.",
     "git restore",
-    "git restore --staged without specifying any filenames.",
-    "git restore command with the --staged flag",
     "git revert",
-    "git revert command",
-    "git revert command only reverts a commit. it worked for us in this scenario because we only committed a single file",
     "git status"
   ],
   "learning_objectives": [
@@ -163,5 +156,5 @@
   ],
   "practice_prompt": "Let's practice reverting and restoring files!",
   "word_count": 636,
-  "parsed_at": "2025-11-09T05:47:30.396384"
+  "parsed_at": "2025-11-09T05:59:27.842139"
 }

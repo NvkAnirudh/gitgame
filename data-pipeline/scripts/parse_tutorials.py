@@ -46,7 +46,16 @@ class TutorialParser:
     # Regex patterns
     SECTION_PATTERN = r'^(\d+)\.\s+(.+?)$'
     TIMESTAMP_PATTERN = r'^(\d{2}:\d{2})\s*-\s*(\d{2}:\d{2})$'
-    GIT_COMMAND_PATTERN = r'(?:^|\s)(git\s+[a-z\-]+(?:\s+[a-z\-\.]+)*)'
+
+    # Git command vocabulary (base commands)
+    GIT_COMMANDS = {
+        'init', 'clone', 'add', 'commit', 'status', 'log', 'show', 'diff',
+        'branch', 'checkout', 'switch', 'merge', 'rebase', 'reset', 'revert',
+        'fetch', 'pull', 'push', 'remote', 'tag', 'stash', 'cherry-pick',
+        'reflog', 'bisect', 'submodule', 'worktree', 'filter-repo', 'lfs',
+        'config', 'help', 'version', 'restore', 'clean', 'rm', 'mv', 'grep',
+        'blame', 'describe', 'shortlog', 'archive', 'bundle'
+    }
 
     def __init__(self, tutorial_dirs: Dict[str, str]):
         """
@@ -152,11 +161,88 @@ class TutorialParser:
         }
 
     def _extract_git_commands(self, text: str) -> List[str]:
-        """Extract Git commands from text"""
-        commands = re.findall(self.GIT_COMMAND_PATTERN, text.lower())
-        # Clean up and deduplicate
-        commands = [cmd.strip() for cmd in commands]
-        return list(set(commands))
+        """Extract and normalize Git commands from text using LLM-style understanding"""
+        commands = set()
+        text_lower = text.lower()
+
+        # Pattern 1: Direct command mentions (git <command>)
+        for cmd in self.GIT_COMMANDS:
+            # Look for "git <command>" patterns
+            patterns = [
+                rf'\bgit\s+{cmd}\b',
+                rf'\bgit\s+{cmd}\s+\.',  # e.g., "git add ."
+                rf'\bgit\s+{cmd}\s+-',   # e.g., "git commit -m"
+                rf'\bgit\s+{cmd}\s+--',  # e.g., "git log --oneline"
+            ]
+
+            for pattern in patterns:
+                if re.search(pattern, text_lower):
+                    # Normalize common variations
+                    if 'git add .' in text_lower or 'git add dot' in text_lower:
+                        commands.add('git add .')
+                    elif cmd == 'add':
+                        commands.add(f'git {cmd}')
+                    else:
+                        commands.add(f'git {cmd}')
+                    break
+
+        # Pattern 2: Common command phrases
+        command_mappings = {
+            'git add dot': 'git add .',
+            'git add period': 'git add .',
+            'git add all': 'git add .',
+            'git commit -m': 'git commit',
+            'git commit --amend': 'git commit',
+            'git log --oneline': 'git log',
+            'git log --all': 'git log',
+            'git diff --staged': 'git diff',
+            'git diff --cached': 'git diff',
+            'git branch -d': 'git branch',
+            'git branch -m': 'git branch',
+            'git checkout -b': 'git checkout',
+            'git merge --ff-only': 'git merge',
+            'git merge --no-ff': 'git merge',
+            'git merge --squash': 'git merge',
+            'git rebase -i': 'git rebase',
+            'git rebase --interactive': 'git rebase',
+            'git reset --hard': 'git reset',
+            'git reset --soft': 'git reset',
+            'git push -u': 'git push',
+            'git push --force': 'git push',
+            'git pull origin': 'git pull',
+            'git fetch origin': 'git fetch',
+            'git remote add': 'git remote',
+            'git remote -v': 'git remote',
+            'git lfs track': 'git lfs',
+            'git lfs install': 'git lfs',
+            'git bisect start': 'git bisect',
+            'git bisect good': 'git bisect',
+            'git bisect bad': 'git bisect',
+            'git worktree add': 'git worktree',
+            'git worktree list': 'git worktree',
+            'git submodule add': 'git submodule',
+            'git submodule update': 'git submodule',
+        }
+
+        for phrase, normalized in command_mappings.items():
+            if phrase in text_lower:
+                commands.add(normalized)
+
+        # Pattern 3: Context-based extraction (mentioned as doing something)
+        # "we use git <command>", "run git <command>", "execute git <command>"
+        context_patterns = [
+            r'(?:use|using|run|running|execute|executing|type|typing)\s+git\s+(\w+)',
+            r'git\s+(\w+)\s+command',
+            r'the\s+git\s+(\w+)\s+command',
+        ]
+
+        for pattern in context_patterns:
+            matches = re.findall(pattern, text_lower)
+            for match in matches:
+                if match in self.GIT_COMMANDS:
+                    commands.add(f'git {match}')
+
+        return sorted(list(commands))
 
     def _extract_all_git_commands(self, sections: List[dict]) -> List[str]:
         """Extract all unique Git commands from all sections"""

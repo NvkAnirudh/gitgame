@@ -11,7 +11,6 @@
       "timestamp_end": "00:16",
       "content": "Hey there! Let's discuss Git Cherry-Pick. In our last chapter, we covered merging and rebasing strategies. Now, we're diving into a more surgical Git operation: cherry-picking.",
       "git_commands": [
-        "git operation",
         "git cherry-pick"
       ]
     },
@@ -40,7 +39,7 @@
       "timestamp_end": "02:17",
       "content": "To cherry-pick, we first checkout the target branch, main in this case. Then we run `git cherry-pick def456`. Git applies the changes from this commit to our current branch. If successful, a new commit is created on main with the same changes but a different commit hash from def456.",
       "git_commands": [
-        "git applies the changes from this commit to our current branch. if successful"
+        "git cherry-pick"
       ]
     },
     {
@@ -50,7 +49,7 @@
       "timestamp_end": "02:54",
       "content": "Sometimes, cherry-picking isn't smooth sailing. If the target branch has diverged significantly, we might encounter conflicts. When this happens, Git will stop the cherry-pick process and wait for conflicts to be resolved. To continue the process, we'll need to manually resolve these conflicts, stage the resolved files, and then continue the cherry-pick with `git cherry-pick --continue`. If things go south, we can always abort with `git cherry-pick --abort`.",
       "git_commands": [
-        "git will stop the cherry-pick process and wait for conflicts to be resolved. to continue the process"
+        "git cherry-pick"
       ]
     },
     {
@@ -72,10 +71,7 @@
   ],
   "total_sections": 7,
   "git_commands_used": [
-    "git applies the changes from this commit to our current branch. if successful",
-    "git cherry-pick",
-    "git operation",
-    "git will stop the cherry-pick process and wait for conflicts to be resolved. to continue the process"
+    "git cherry-pick"
   ],
   "learning_objectives": [
     "Cherry-Picking",
@@ -85,5 +81,5 @@
   ],
   "practice_prompt": "Time to go cherry picking.",
   "word_count": 448,
-  "parsed_at": "2025-11-09T05:47:30.401401"
+  "parsed_at": "2025-11-09T05:59:27.910557"
 }

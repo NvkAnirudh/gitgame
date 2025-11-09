@@ -10,9 +10,7 @@
       "timestamp_start": "00:00",
       "timestamp_end": "00:12",
       "content": "Welcome back! So, how can we see the version history of our files using Git? To do this, we need to understand how Git is storing data.",
-      "git_commands": [
-        "git is storing data."
-      ]
+      "git_commands": []
     },
     {
       "section_number": 2,
@@ -20,9 +18,7 @@
       "timestamp_start": "00:12",
       "timestamp_end": "01:08",
       "content": "Git stores data through commits, which have three parts: the commit itself, the tree, and blobs. Let's examine each of these components. The commit contains metadata such as the author, log message, and commit time. The tree tracks the names and locations of files and directories when that commit happened. Think of it like a dictionary, with keys represented as unique identifiers, mapping to files or directories. For each file in the tree, there is a blob, which means binary large object. A blob may contain data of any kind. Blobs contain a compressed snapshot of the file's contents when the commit happened.",
-      "git_commands": [
-        "git stores data through commits"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 3,
@@ -62,10 +58,7 @@
       "timestamp_start": "02:22",
       "timestamp_end": "03:04",
       "content": "Earlier, we mentioned a unique identifier called a hash. This is a 40-character string of numbers and letters like this. It is called a hash because Git produces it using a pseudo-random number generator called a hash function. Hashes enable Git to share data efficiently between repos. If two files are the same, their hashes will be the same. Therefore, Git can tell what information needs to be saved in which location by comparing hashes rather than entire files.",
-      "git_commands": [
-        "git can tell what information needs to be saved in which location by comparing hashes rather than entire files.",
-        "git produces it using a pseudo-random number generator called a hash function. hashes enable git to share data efficiently between repos. if two files are the same"
-      ]
+      "git_commands": []
     },
     {
       "section_number": 8,
@@ -74,7 +67,7 @@
       "timestamp_end": "03:40",
       "content": "We can view commit information using the git log command, displaying all commits made to the repo in reverse chronological order, starting with the most recent commit. It will show the commit hash, author, date, and commit message. If the output doesn't fit in the terminal window, a colon will be at the end, indicating more commits. We can see more by pressing the space bar. To exit the log, we can press q and return to the terminal.",
       "git_commands": [
-        "git log command"
+        "git log"
       ]
     },
     {
@@ -84,18 +77,14 @@
       "timestamp_end": "03:47",
       "content": "Now let's use the commands we have learned to navigate the Git commit structure!",
       "git_commands": [
-        "git commit structure"
+        "git commit"
       ]
     }
   ],
   "total_sections": 9,
   "git_commands_used": [
-    "git can tell what information needs to be saved in which location by comparing hashes rather than entire files.",
-    "git commit structure",
-    "git is storing data.",
-    "git log command",
-    "git produces it using a pseudo-random number generator called a hash function. hashes enable git to share data efficiently between repos. if two files are the same",
-    "git stores data through commits"
+    "git commit",
+    "git log"
   ],
   "learning_objectives": [
     "Viewing the version history",
@@ -106,5 +95,5 @@
   ],
   "practice_prompt": "Now let's use the commands we have learned to navigate the Git commit structure!",
   "word_count": 509,
-  "parsed_at": "2025-11-09T05:47:30.397437"
+  "parsed_at": "2025-11-09T05:59:27.856145"
 }
