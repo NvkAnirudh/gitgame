@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { lessonsService } from '../services/lessons';
 import type { Lesson, LessonSection } from '../types/api';
+import Terminal from '../components/terminal/Terminal';
+import GitGraph from '../components/visualization/GitGraph';
 
 export default function LessonView() {
   const { lessonId } = useParams<{ lessonId: string }>();
@@ -9,6 +11,7 @@ export default function LessonView() {
   const [isLoading, setIsLoading] = useState(true);
   const [currentSection, setCurrentSection] = useState(0);
   const [startTime] = useState(Date.now());
+  const [activeTab, setActiveTab] = useState<'terminal' | 'visualization'>('terminal');
 
   useEffect(() => {
     if (lessonId) {
@@ -247,6 +250,59 @@ export default function LessonView() {
             )}
           </div>
         )}
+
+        {/* Interactive Section - Terminal & Visualization */}
+        <div className="mt-8">
+          <div className="card">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-xl font-bold heading-neon">
+                {'>'} interactive workspace
+              </h3>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setActiveTab('terminal')}
+                  className={`btn ${
+                    activeTab === 'terminal' ? 'btn-primary' : 'btn-ghost'
+                  }`}
+                >
+                  terminal
+                </button>
+                <button
+                  onClick={() => setActiveTab('visualization')}
+                  className={`btn ${
+                    activeTab === 'visualization' ? 'btn-secondary' : 'btn-ghost'
+                  }`}
+                >
+                  git graph
+                </button>
+              </div>
+            </div>
+
+            {activeTab === 'terminal' ? (
+              <div className="min-h-[400px]">
+                <Terminal
+                  onCommand={(cmd) => {
+                    console.log('Command executed:', cmd);
+                  }}
+                />
+              </div>
+            ) : (
+              <GitGraph width={800} height={400} />
+            )}
+          </div>
+
+          {/* Practice Prompt */}
+          {lesson.practice_prompt && (
+            <div className="mt-6 card bg-neon-green/5 border-neon-green/30">
+              <h3 className="text-lg font-bold text-neon-green mb-3">
+                {'>'} practice challenge
+              </h3>
+              <p className="text-text-primary leading-relaxed">
+                {lesson.practice_prompt}
+              </p>
+            </div>
+          )}
+        </div>
       </main>
     </div>
   );
