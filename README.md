@@ -133,7 +133,7 @@ docker-compose up -d
 docker-compose ps
 
 # Access pgAdmin at http://localhost:5050
-# Email: admin@gitquest.local | Password: admin
+# Email: admin@gitquest.com | Password: admin
 ```
 
 ### 3. Validate Data Quality
@@ -179,7 +179,7 @@ python3 data-pipeline/scripts/load_to_db.py
 
 **pgAdmin UI:**
 - URL: `http://localhost:5050`
-- Email: `admin@gitquest.local`
+- Email: `admin@gitquest.com`
 - Password: `admin`
 
 ---
