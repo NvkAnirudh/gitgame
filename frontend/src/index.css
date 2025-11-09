@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  * {
+    @apply border-neon-cyan/20;
+  }
+
+  body {
+    @apply bg-cyber-black text-text-primary font-mono;
+    @apply bg-cyber-gradient-radial;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-cyber-black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-neon-cyan/50;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-neon-cyan;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-neon-cyan/30 text-neon-cyan;
+  }
+}
+
+@layer components {
+  /* Button styles */
+  .btn {
+    @apply px-6 py-3 rounded border font-medium transition-all duration-300;
+    @apply hover:shadow-lg transform hover:-translate-y-0.5;
+  }
+
+  .btn-primary {
+    @apply bg-neon-cyan/10 border-neon-cyan text-neon-cyan;
+    @apply hover:bg-neon-cyan/20 hover:shadow-neon-cyan;
+  }
+
+  .btn-secondary {
+    @apply bg-electric-purple/10 border-electric-purple text-electric-purple;
+    @apply hover:bg-electric-purple/20 hover:shadow-neon-purple;
+  }
+
+  .btn-success {
+    @apply bg-neon-green/10 border-neon-green text-neon-green;
+    @apply hover:bg-neon-green/20 hover:shadow-neon-green;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent border-text-secondary text-text-secondary;
+    @apply hover:border-neon-cyan hover:text-neon-cyan;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-cyber-black/80 border border-neon-cyan/30 rounded-lg p-6;
+    @apply backdrop-blur-sm;
+  }
+
+  .card-hover {
+    @apply card transition-all duration-300;
+    @apply hover:border-neon-cyan hover:shadow-neon-cyan hover:-translate-y-1;
+  }
+
+  /* Input styles */
+  .input {
+    @apply w-full px-4 py-3 bg-cyber-black/50 border border-neon-cyan/30;
+    @apply rounded text-text-primary placeholder-text-muted;
+    @apply focus:outline-none focus:border-neon-cyan focus:shadow-neon-cyan;
+    @apply transition-all duration-300;
+  }
+
+  /* Badge styles */
+  .badge {
+    @apply px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide;
+  }
+
+  .badge-cyan {
+    @apply bg-neon-cyan/10 text-neon-cyan border border-neon-cyan/30;
+  }
+
+  .badge-purple {
+    @apply bg-electric-purple/10 text-electric-purple border border-electric-purple/30;
+  }
+
+  .badge-green {
+    @apply bg-neon-green/10 text-neon-green border border-neon-green/30;
+  }
+
+  .badge-orange {
+    @apply bg-neon-orange/10 text-neon-orange border border-neon-orange/30;
+  }
+
+  /* Heading styles with neon glow */
+  .heading-neon {
+    @apply text-neon-cyan drop-shadow-[0_0_10px_rgba(0,255,255,0.5)];
+  }
+
+  .heading-purple {
+    @apply text-electric-purple drop-shadow-[0_0_10px_rgba(168,85,247,0.5)];
+  }
+
+  /* Terminal style text */
+  .terminal-text {
+    @apply font-mono text-neon-green;
+  }
+
+  /* Loading animation */
+  .loading-dots::after {
+    content: '';
+    animation: dots 1.5s steps(4, end) infinite;
+  }
+
+  @keyframes dots {
+    0%, 20% { content: ''; }
+    40% { content: '.'; }
+    60% { content: '..'; }
+    80%, 100% { content: '...'; }
+  }
+
+  /* Grid pattern background */
+  .grid-pattern {
+    background-image:
+      linear-gradient(#00ffff11 1px, transparent 1px),
+      linear-gradient(90deg, #00ffff11 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  }
+
+  .border-glow {
+    box-shadow: 0 0 5px currentColor, inset 0 0 5px currentColor;
+  }
+
+  .animate-flicker {
+    animation: flicker 3s linear infinite;
+  }
+
+  @keyframes flicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+      opacity: 1;
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+      opacity: 0.8;
+    }
+  }
+}
