@@ -1,0 +1,44 @@
+{
+  "version_control": {
+    "title": "The Awakening: Why Version Control Exists",
+    "level": "introduction",
+    "order_index": 1,
+    "filename": "version_control.txt"
+  },
+  "creating_repos": {
+    "title": "Birth of a Repository: git init",
+    "level": "introduction",
+    "order_index": 2,
+    "filename": "creating_repos.txt"
+  },
+  "staging_and_committing_files": {
+    "title": "The Staging Ritual: git add & git commit",
+    "level": "introduction",
+    "order_index": 3,
+    "filename": "staging_and_committing_files.txt"
+  },
+  "version_history": {
+    "title": "Reading the Timeline: git log",
+    "level": "introduction",
+    "order_index": 4,
+    "filename": "version_history.txt"
+  },
+  "comparing_versions": {
+    "title": "The Time Detective: git diff",
+    "level": "introduction",
+    "order_index": 5,
+    "filename": "comparing_versions.txt"
+  },
+  "restoring_and_reverting_files": {
+    "title": "Undoing Mistakes: git restore & git revert",
+    "level": "introduction",
+    "order_index": 6,
+    "filename": "restoring_and_reverting_files.txt"
+  },
+  "vh_tips_and_tricks": {
+    "title": "Guardian Secrets: Advanced Tips",
+    "level": "introduction",
+    "order_index": 7,
+    "filename": "vh_tips_and_tricks.txt"
+  }
+}
