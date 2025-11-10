@@ -21,6 +21,7 @@ from app.schemas.challenge import (
     ChallengeStatsResponse
 )
 from app.core.dependencies import get_current_player
+from app.services.git_sandbox import get_sandbox_manager, GitSandbox, GitSandboxError
 from datetime import datetime
 
 router = APIRouter(prefix="/challenges", tags=["challenges"])
@@ -103,21 +104,31 @@ async def start_challenge(
             detail=f"Challenge '{request.challenge_id}' not found"
         )
 
+    # Initialize Git sandbox with challenge state
+    sandbox_manager = get_sandbox_manager()
+    try:
+        sandbox = sandbox_manager.create_sandbox(git_state=challenge.git_state)
+        sandbox_id = sandbox.sandbox_id
+    except GitSandboxError as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Failed to create sandbox: {str(e)}"
+        )
+
     # Create new attempt record
+    # Store sandbox_id in commands_used for now (as metadata)
     attempt = ChallengeAttempt(
         player_id=current_player.id,
         challenge_id=request.challenge_id,
         started_at=datetime.utcnow(),
         success=False,
         score=0,
-        hints_used=0
+        hints_used=0,
+        commands_used={'_sandbox_id': sandbox_id}  # Store sandbox ID
     )
     db.add(attempt)
     db.commit()
     db.refresh(attempt)
-
-    # TODO: Initialize git sandbox with challenge.git_state
-    # This will be implemented when we build the Git sandbox service
 
     return ChallengeAttemptResponse(
         id=attempt.id,
@@ -126,11 +137,11 @@ async def start_challenge(
         started_at=attempt.started_at,
         completed_at=attempt.completed_at,
         success=attempt.success,
-        commands_used=attempt.commands_used,
+        commands_used=None,  # Don't expose sandbox_id to client
         score=attempt.score,
         time_taken_seconds=attempt.time_taken_seconds,
         hints_used=attempt.hints_used,
-        feedback="Challenge started! Good luck, Guardian."
+        feedback=f"Challenge started! Sandbox initialized. Good luck, Guardian!"
     )
 
 
@@ -167,38 +178,92 @@ async def submit_challenge(
             detail="No active challenge attempt found. Start the challenge first."
         )
 
-    # TODO: Validate solution against success criteria
-    # This will be implemented when we build the Git sandbox validation service
-    # For now, we'll do a basic validation
-    validation_result = validate_challenge_solution(
-        challenge=challenge,
-        commands_used=request.commands_used,
-        final_state=request.final_state
-    )
+    # Get sandbox from stored attempt data
+    sandbox_manager = get_sandbox_manager()
+    sandbox_id = attempt.commands_used.get('_sandbox_id') if attempt.commands_used else None
 
-    # Update attempt record
-    attempt.completed_at = datetime.utcnow()
-    attempt.success = validation_result.success
-    attempt.commands_used = request.commands_used
-    attempt.score = validation_result.score
-    attempt.time_taken_seconds = request.time_taken_seconds
-    attempt.hints_used = request.hints_used
+    if not sandbox_id:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Challenge session not found. Please restart the challenge."
+        )
 
-    # Award XP if successful
-    if validation_result.success:
-        # Calculate XP: base score minus penalties for hints and time
-        xp_earned = validation_result.score
-        hint_penalty = request.hints_used * 5
-        time_penalty = 0
+    sandbox = sandbox_manager.get_sandbox(sandbox_id)
+    if not sandbox:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Sandbox session expired. Please restart the challenge."
+        )
 
-        if challenge.time_limit_seconds and request.time_taken_seconds > challenge.time_limit_seconds:
-            time_penalty = 10
+    try:
+        # Execute submitted commands in sandbox
+        for command in request.commands_used:
+            try:
+                sandbox.execute_command(command)
+            except Exception as e:
+                # Continue even if command fails - validation will catch issues
+                pass
 
-        xp_earned = max(0, xp_earned - hint_penalty - time_penalty)
-        current_player.total_xp += xp_earned
+        # Validate solution against success criteria
+        validation_result = sandbox.validate_success_criteria(challenge.success_criteria)
 
-    db.commit()
-    db.refresh(attempt)
+        # Calculate score based on validation
+        if validation_result['success']:
+            score = challenge.max_score
+        else:
+            # Partial credit based on criteria met
+            total = validation_result['total_criteria']
+            met = validation_result['met_count']
+            score = int((met / total) * challenge.max_score) if total > 0 else 0
+
+        # Build feedback message
+        feedback_parts = []
+        if validation_result['success']:
+            feedback_parts.append("✅ Challenge completed successfully!")
+        else:
+            feedback_parts.append("❌ Challenge incomplete.")
+
+        feedback_parts.append(f"\n\n📊 Criteria: {validation_result['met_count']}/{validation_result['total_criteria']} met")
+
+        if validation_result['criteria_met']:
+            feedback_parts.append("\n\n✓ Completed:")
+            for criterion in validation_result['criteria_met']:
+                feedback_parts.append(f"  • {criterion}")
+
+        if validation_result['criteria_failed']:
+            feedback_parts.append("\n\n✗ Missing:")
+            for criterion in validation_result['criteria_failed']:
+                feedback_parts.append(f"  • {criterion}")
+
+        feedback = "\n".join(feedback_parts)
+
+        # Update attempt record
+        attempt.completed_at = datetime.utcnow()
+        attempt.success = validation_result['success']
+        attempt.commands_used = request.commands_used
+        attempt.score = score
+        attempt.time_taken_seconds = request.time_taken_seconds
+        attempt.hints_used = request.hints_used
+
+        # Award XP if successful
+        if validation_result['success']:
+            # Calculate XP: base score minus penalties for hints and time
+            xp_earned = score
+            hint_penalty = request.hints_used * 5
+            time_penalty = 0
+
+            if challenge.time_limit_seconds and request.time_taken_seconds > challenge.time_limit_seconds:
+                time_penalty = 10
+
+            xp_earned = max(0, xp_earned - hint_penalty - time_penalty)
+            current_player.total_xp += xp_earned
+
+        db.commit()
+        db.refresh(attempt)
+
+    finally:
+        # Clean up sandbox
+        sandbox_manager.cleanup_sandbox(sandbox_id)
 
     return ChallengeAttemptResponse(
         id=attempt.id,
@@ -211,7 +276,7 @@ async def submit_challenge(
         score=attempt.score,
         time_taken_seconds=attempt.time_taken_seconds,
         hints_used=attempt.hints_used,
-        feedback=validation_result.feedback
+        feedback=feedback
     )
 
 
@@ -348,50 +413,4 @@ async def get_challenge_stats(
         average_score=average_score,
         average_time_seconds=average_time,
         fastest_time_seconds=fastest_time
-    )
-
-
-# Helper function for validation (placeholder until sandbox is built)
-def validate_challenge_solution(
-    challenge: Challenge,
-    commands_used: List[str],
-    final_state: Optional[dict]
-) -> ChallengeValidationResult:
-    """
-    Validate challenge solution against success criteria
-
-    TODO: This is a placeholder. Will be replaced with actual Git sandbox validation
-    """
-    success_criteria = challenge.success_criteria
-    required_commands = success_criteria.get('required_commands', [])
-
-    # Basic validation: check if required commands were used
-    criteria_met = []
-    criteria_failed = []
-
-    for cmd in required_commands:
-        if any(cmd in used_cmd for used_cmd in commands_used):
-            criteria_met.append(f"Used required command: {cmd}")
-        else:
-            criteria_failed.append(f"Missing required command: {cmd}")
-
-    # Determine success
-    success = len(criteria_failed) == 0
-
-    # Calculate score
-    if success:
-        base_score = challenge.max_score
-        # Could add bonuses/penalties based on efficiency, time, etc.
-        score = base_score
-        feedback = "Excellent work, Guardian! Challenge completed successfully."
-    else:
-        score = int((len(criteria_met) / len(required_commands)) * challenge.max_score) if required_commands else 0
-        feedback = f"Challenge incomplete. {len(criteria_failed)} criteria not met."
-
-    return ChallengeValidationResult(
-        success=success,
-        score=score,
-        feedback=feedback,
-        criteria_met=criteria_met,
-        criteria_failed=criteria_failed
     )
