@@ -6,6 +6,7 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import LessonView from './pages/LessonView';
 import Profile from './pages/Profile';
+import Challenges from './pages/Challenges';
 
 // Protected Route Component
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -82,6 +83,22 @@ function App() {
           element={
             <ProtectedRoute>
               <Profile />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/challenges"
+          element={
+            <ProtectedRoute>
+              <Challenges />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/challenges/:lessonId"
+          element={
+            <ProtectedRoute>
+              <Challenges />
             </ProtectedRoute>
           }
         />
