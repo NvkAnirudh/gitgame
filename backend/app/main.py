@@ -9,7 +9,7 @@ from fastapi.responses import JSONResponse
 import os
 from dotenv import load_dotenv
 
-from app.api import auth, lessons, players, challenges, sessions
+from app.api import auth, lessons, players, challenges, sessions, story
 
 # Load environment variables
 load_dotenv()
@@ -65,7 +65,8 @@ async def root():
             "lessons": "/api/lessons",
             "players": "/api/players",
             "challenges": "/api/challenges",
-            "sessions": "/api/sessions"
+            "sessions": "/api/sessions",
+            "story": "/api/story"
         }
     }
 
@@ -76,6 +77,7 @@ app.include_router(lessons.router, prefix="/api")
 app.include_router(players.router, prefix="/api")
 app.include_router(challenges.router, prefix="/api")
 app.include_router(sessions.router, prefix="/api")
+app.include_router(story.router, prefix="/api")
 
 
 # Global exception handler

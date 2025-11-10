@@ -293,6 +293,54 @@ CREATE TRIGGER update_lessons_updated_at BEFORE UPDATE ON lessons
     FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
 
 -- ============================================================================
+-- STORY & NARRATIVE TABLES
+-- ============================================================================
+
+-- Characters (Mentors/Companions)
+CREATE TABLE characters (
+    id VARCHAR(50) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    title VARCHAR(100),
+    avatar_url VARCHAR(255),
+    bio TEXT,
+    personality JSONB,
+    specialization VARCHAR(100),
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- Story Arcs
+CREATE TABLE story_arcs (
+    id VARCHAR(50) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    level VARCHAR(20) NOT NULL CHECK (level IN ('introduction', 'intermediate', 'advanced')),
+    mentor_id VARCHAR(50) REFERENCES characters(id) ON DELETE SET NULL,
+    order_index INTEGER NOT NULL,
+    total_lessons INTEGER DEFAULT 0,
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_story_arcs_level ON story_arcs(level);
+CREATE INDEX idx_story_arcs_order_index ON story_arcs(order_index);
+
+-- Player Story Progress
+CREATE TABLE player_story_progress (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    player_id UUID REFERENCES players(id) ON DELETE CASCADE,
+    story_arc_id VARCHAR(50) REFERENCES story_arcs(id) ON DELETE CASCADE,
+    status VARCHAR(20) DEFAULT 'locked' CHECK (status IN ('locked', 'unlocked', 'in_progress', 'completed')),
+    unlocked_at TIMESTAMP,
+    started_at TIMESTAMP,
+    completed_at TIMESTAMP,
+    lessons_completed INTEGER DEFAULT 0,
+    UNIQUE(player_id, story_arc_id)
+);
+
+CREATE INDEX idx_player_story_progress_player_id ON player_story_progress(player_id);
+CREATE INDEX idx_player_story_progress_arc_id ON player_story_progress(story_arc_id);
+CREATE INDEX idx_player_story_progress_status ON player_story_progress(status);
+
+-- ============================================================================
 -- INITIAL DATA / SEED
 -- ============================================================================
 
@@ -303,6 +351,18 @@ INSERT INTO achievements (id, name, description, category, unlock_criteria, poin
 ('time-traveler', 'Time Traveler', 'Used git reflog to recover lost work', 'advanced', '{"type": "lesson_completed", "lesson_id": "advanced-git-reflog"}', 100),
 ('command-ninja', 'Command Ninja', 'Completed 25 challenges', 'general', '{"type": "total_challenges", "count": 25}', 75),
 ('speed-demon', 'Speed Demon', 'Completed a speed run challenge in under 60 seconds', 'challenge', '{"type": "speed_run", "time_limit": 60}', 50);
+
+-- Insert default characters (mentors)
+INSERT INTO characters (id, name, title, bio, personality, specialization) VALUES
+('alex', 'Alex Chen', 'Senior Developer', 'A patient mentor with 10+ years of Git experience. Loves teaching through real-world scenarios.', '{"traits": ["patient", "practical", "encouraging"], "tone": "friendly"}', 'Git fundamentals and workflows'),
+('sam', 'Sam Rodriguez', 'DevOps Engineer', 'Former sysadmin turned DevOps expert. Specializes in branching strategies and team collaboration.', '{"traits": ["analytical", "detail-oriented", "supportive"], "tone": "professional"}', 'Branching and merging'),
+('jordan', 'Jordan Kim', 'Tech Lead', 'Veteran developer who has seen it all. Expert in advanced Git techniques and problem-solving.', '{"traits": ["wise", "experienced", "direct"], "tone": "mentoring"}', 'Advanced Git workflows');
+
+-- Insert story arcs
+INSERT INTO story_arcs (id, name, description, level, mentor_id, order_index, total_lessons) VALUES
+('introduction-arc', 'The Awakening', 'Begin your journey as a Version Control Guardian. Learn the fundamentals of Git and protect your first project from chaos.', 'introduction', 'alex', 1, 7),
+('intermediate-arc', 'The Branching Paths', 'Master parallel development and team collaboration. Navigate merge conflicts and remote repositories like a pro.', 'intermediate', 'sam', 2, 7),
+('advanced-arc', 'The Master Quest', 'Unlock advanced Git powers. Rewrite history, recover lost work, and master complex workflows.', 'advanced', 'jordan', 3, 11);
 
 -- Grant permissions (adjust based on your DB user)
 -- GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO gitquest_user;
