@@ -96,3 +96,41 @@ class PlayerStatsResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class GameSessionResponse(BaseModel):
+    """Schema for game session data"""
+    id: uuid.UUID
+    player_id: uuid.UUID
+    started_at: datetime
+    ended_at: Optional[datetime] = None
+    duration_seconds: Optional[int] = None
+    lessons_completed: int
+    challenges_completed: int
+    xp_earned: int
+    is_active: bool = Field(default=True, description="Whether session is currently active")
+
+    class Config:
+        from_attributes = True
+
+
+class StartSessionRequest(BaseModel):
+    """Schema for starting a game session"""
+    pass  # No parameters needed, session is auto-created for current player
+
+
+class EndSessionRequest(BaseModel):
+    """Schema for ending a game session"""
+    session_id: uuid.UUID
+
+
+class SessionStatsResponse(BaseModel):
+    """Schema for session statistics"""
+    total_sessions: int
+    total_playtime_seconds: int
+    average_session_duration_seconds: float
+    total_xp_earned: int
+    total_lessons_completed: int
+    total_challenges_completed: int
+    longest_session_seconds: int
+    current_streak_days: int
