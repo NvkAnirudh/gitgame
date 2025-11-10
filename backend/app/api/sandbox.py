@@ -8,7 +8,7 @@ from typing import Optional, Dict, Any
 from sqlalchemy.orm import Session
 
 from app.db.database import get_db
-from app.services.git_sandbox import get_sandbox_manager
+from app.services.git_sandbox import get_sandbox_manager, CommandNotAllowedError
 from app.models.content import Lesson, Challenge
 from app.models.player import Player
 from app.core.dependencies import get_current_player
@@ -106,17 +106,30 @@ async def execute_command(
                 detail="Sandbox not found or expired"
             )
 
-        # Execute command
-        result = sandbox.execute_command(request.command)
+        # Execute command (returns tuple: success, stdout, stderr)
+        import time
+        start = time.time()
+        success, stdout, stderr = sandbox.execute_command(request.command)
+        execution_time = (time.time() - start) * 1000
+
+        # Combine stdout and stderr for output
+        output = stdout if success else (stderr or stdout)
 
         return SandboxExecuteResponse(
-            output=result.get('output', ''),
-            success=result.get('success', False),
-            execution_time_ms=result.get('execution_time', 0)
+            output=output,
+            success=success,
+            execution_time_ms=execution_time
         )
 
-    except ValueError as e:
+    except CommandNotAllowedError as e:
         # Command blocked or invalid
+        return SandboxExecuteResponse(
+            output=f"⛔ {str(e)}",
+            success=False,
+            execution_time_ms=0
+        )
+    except ValueError as e:
+        # Other validation errors
         return SandboxExecuteResponse(
             output=str(e),
             success=False,
@@ -169,12 +182,12 @@ async def get_sandbox_status(
             )
 
         # Get git status
-        status_result = sandbox.execute_command("git status")
+        success, stdout, stderr = sandbox.execute_command("git status")
 
         return {
             "sandbox_id": sandbox_id,
             "exists": True,
-            "git_status": status_result.get('output', '')
+            "git_status": stdout if success else stderr
         }
 
     except Exception as e:

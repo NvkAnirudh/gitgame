@@ -27,6 +27,12 @@ ALLOWED_GIT_COMMANDS = {
     'rev-parse', 'shortlog', 'whatchanged', 'for-each-ref'
 }
 
+# Shell command whitelist for lesson interaction
+ALLOWED_SHELL_COMMANDS = {
+    'pwd', 'ls', 'cd', 'cat', 'echo', 'mkdir', 'touch', 'rm',
+    'cp', 'mv', 'find', 'tree', 'head', 'tail', 'wc', 'grep'
+}
+
 # Dangerous options to block
 BLOCKED_OPTIONS = [
     '--exec', '--upload-pack', '--receive-pack', 'ext::', 'fd::',
@@ -169,10 +175,10 @@ class GitSandbox:
 
     def execute_command(self, command: str, timeout: int = 30) -> Tuple[bool, str, str]:
         """
-        Execute a Git command in the sandbox
+        Execute a Git or shell command in the sandbox
 
         Args:
-            command: Git command to execute (e.g., "git status")
+            command: Command to execute (e.g., "git status", "pwd", "ls")
             timeout: Maximum execution time in seconds
 
         Returns:
@@ -244,18 +250,33 @@ class GitSandbox:
         if not parts:
             raise CommandNotAllowedError("Empty command")
 
-        # Must start with 'git'
-        if parts[0] != 'git':
-            raise CommandNotAllowedError(f"Only git commands are allowed, got: {parts[0]}")
+        base_command = parts[0]
 
-        # Check if subcommand is allowed
-        if len(parts) > 1:
-            subcommand = parts[1].lstrip('-')  # Remove leading dashes
-            # Extract base command (e.g., 'commit' from '--amend')
-            base_cmd = subcommand.split('=')[0]
-
-            if base_cmd not in ALLOWED_GIT_COMMANDS:
-                raise CommandNotAllowedError(f"Git subcommand not allowed: {base_cmd}")
+        # Check if it's a git command
+        if base_command == 'git':
+            # Allow git with flags like 'git --version'
+            if len(parts) > 1:
+                next_part = parts[1]
+                # If it starts with --, it's a flag (like --version, --help)
+                if next_part.startswith('--'):
+                    # Allow common git flags
+                    allowed_flags = ['--version', '--help', '-h', '-v']
+                    if next_part in allowed_flags:
+                        return
+                    # Otherwise check if it's a subcommand option
+                    subcommand = next_part.lstrip('-').split('=')[0]
+                    if subcommand in ALLOWED_GIT_COMMANDS:
+                        return
+                else:
+                    # It's a subcommand
+                    subcommand = next_part.lstrip('-').split('=')[0]
+                    if subcommand not in ALLOWED_GIT_COMMANDS:
+                        raise CommandNotAllowedError(f"Git subcommand not allowed: {subcommand}")
+        # Check if it's an allowed shell command
+        elif base_command in ALLOWED_SHELL_COMMANDS:
+            return
+        else:
+            raise CommandNotAllowedError(f"Command not allowed: {base_command}")
 
     def get_current_state(self) -> Dict[str, Any]:
         """

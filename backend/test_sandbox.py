@@ -168,7 +168,11 @@ def test_command_security():
         allowed_commands = [
             "git status",
             "git log",
-            "git add ."
+            "git add .",
+            "git --version",
+            "pwd",
+            "ls",
+            "echo test"
         ]
 
         print(f"\n✓ Testing allowed commands:")
