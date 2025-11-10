@@ -144,11 +144,19 @@ export default function Terminal({ lessonId, onCommand, readOnly = false }: Term
       term.writeln('');
     } catch (error: any) {
       console.error('Failed to initialize sandbox:', error);
+      const status = error.response?.status;
       const errorDetail = error.response?.data?.detail || error.message || 'Unknown error';
-      console.error('Error details:', errorDetail);
+      console.error('Error details:', errorDetail, 'Status:', status);
+
       setUseMock(true);
-      term.writeln('\x1b[33m⚠ Sandbox unavailable - using limited mock mode\x1b[0m');
-      term.writeln('\x1b[90m  Error: ' + errorDetail + '\x1b[0m');
+      term.writeln('\x1b[31m✗ Sandbox initialization failed\x1b[0m');
+
+      if (status === 401) {
+        term.writeln('\x1b[33m⚠ Not authenticated - Please log in to use the terminal\x1b[0m');
+      } else {
+        term.writeln('\x1b[33m⚠ Error: ' + errorDetail + '\x1b[0m');
+      }
+      term.writeln('\x1b[90m  Using limited mock mode\x1b[0m');
       term.writeln('');
     }
   };
