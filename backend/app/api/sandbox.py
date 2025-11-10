@@ -7,7 +7,7 @@ from pydantic import BaseModel
 from typing import Optional, Dict, Any
 from sqlalchemy.orm import Session
 
-from app.database import get_db
+from app.db.database import get_db
 from app.services.git_sandbox import get_sandbox_manager
 from app.models.content import Lesson, Challenge
 from app.auth import get_current_player
