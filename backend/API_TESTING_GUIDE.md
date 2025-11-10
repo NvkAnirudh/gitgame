@@ -10,7 +10,7 @@ Complete guide to test all backend API endpoints.
    python -m uvicorn app.main:app --reload --port 8000
    ```
 
-2. **Database Running**: PostgreSQL should be running with the git_quest_db database
+2. **Database Running**: PostgreSQL should be running with the `gitquest` database
 
 3. **Tool**: Use `curl` or any API client (Postman, Insomnia, etc.)
 
