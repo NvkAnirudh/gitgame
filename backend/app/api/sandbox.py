@@ -71,7 +71,7 @@ async def sandbox_health_check():
             "git_output": stdout.strip() if success else stderr
         }
         # Cleanup test sandbox
-        sandbox_manager.destroy_sandbox(test_sandbox.sandbox_id)
+        sandbox_manager.cleanup_sandbox(test_sandbox.sandbox_id)
     except Exception as e:
         health_status["status"] = "unhealthy"
         health_status["checks"]["test_sandbox"] = {
@@ -237,7 +237,7 @@ async def cleanup_sandbox(
     """
     try:
         sandbox_manager = get_sandbox_manager()
-        sandbox_manager.destroy_sandbox(sandbox_id)
+        sandbox_manager.cleanup_sandbox(sandbox_id)
 
         return {"success": True, "message": "Sandbox cleaned up"}
 
