@@ -1,18 +1,22 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Terminal as XTerm } from '@xterm/xterm';
 import { FitAddon } from '@xterm/addon-fit';
 import '@xterm/xterm/css/xterm.css';
+import api from '../../services/api';
 
 interface TerminalProps {
+  lessonId?: string;
   onCommand?: (command: string) => void;
   readOnly?: boolean;
 }
 
-export default function Terminal({ onCommand, readOnly = false }: TerminalProps) {
+export default function Terminal({ lessonId, onCommand, readOnly = false }: TerminalProps) {
   const terminalRef = useRef<HTMLDivElement>(null);
   const xtermRef = useRef<XTerm | null>(null);
   const fitAddonRef = useRef<FitAddon | null>(null);
   const currentLineRef = useRef<string>('');
+  const [sandboxId, setSandboxId] = useState<string | null>(null);
+  const [useMock, setUseMock] = useState(false);
 
   useEffect(() => {
     if (!terminalRef.current) return;
@@ -58,6 +62,9 @@ export default function Terminal({ onCommand, readOnly = false }: TerminalProps)
     // Store refs
     xtermRef.current = term;
     fitAddonRef.current = fitAddon;
+
+    // Initialize sandbox
+    initializeSandbox(term);
 
     // Welcome message
     term.writeln('\x1b[1;36m╔════════════════════════════════════════╗\x1b[0m');
@@ -120,30 +127,98 @@ export default function Terminal({ onCommand, readOnly = false }: TerminalProps)
     return () => {
       window.removeEventListener('resize', handleResize);
       term.dispose();
+      // Cleanup sandbox
+      if (sandboxId) {
+        cleanupSandbox();
+      }
     };
-  }, [readOnly, onCommand]);
+  }, [readOnly, onCommand, lessonId]);
+
+  const initializeSandbox = async (term: XTerm) => {
+    try {
+      const response = await api.post('/sandbox/create', {
+        lesson_id: lessonId,
+      });
+      setSandboxId(response.data.sandbox_id);
+      term.writeln('\x1b[32m✓ Sandbox initialized\x1b[0m');
+      term.writeln('');
+    } catch (error) {
+      console.error('Failed to initialize sandbox:', error);
+      setUseMock(true);
+      term.writeln('\x1b[33m⚠ Using mock mode (sandbox unavailable)\x1b[0m');
+      term.writeln('');
+    }
+  };
+
+  const cleanupSandbox = async () => {
+    if (!sandboxId) return;
+    try {
+      await api.post(`/sandbox/${sandboxId}/cleanup`);
+    } catch (error) {
+      console.error('Failed to cleanup sandbox:', error);
+    }
+  };
 
   const writePrompt = (term: XTerm) => {
     term.write('\x1b[36mgitquest\x1b[0m:\x1b[35m~\x1b[0m$ ');
   };
 
-  const handleCommand = (term: XTerm, command: string) => {
+  const handleCommand = async (term: XTerm, command: string) => {
     const [cmd, ...args] = command.split(' ');
 
+    // Handle clear locally
+    if (cmd === 'clear') {
+      term.clear();
+      return;
+    }
+
+    // Handle help locally
+    if (cmd === 'help') {
+      term.writeln('\x1b[32mAvailable commands:\x1b[0m');
+      term.writeln('  \x1b[36mgit\x1b[0m         - Git version control');
+      term.writeln('  \x1b[36mclear\x1b[0m       - Clear terminal');
+      term.writeln('  \x1b[36mhelp\x1b[0m        - Show this help');
+      term.writeln('');
+      return;
+    }
+
+    // Execute command via sandbox or mock
+    if (sandboxId && !useMock) {
+      await executeCommandViaSandbox(term, command);
+    } else {
+      handleMockCommand(term, cmd, args);
+    }
+  };
+
+  const executeCommandViaSandbox = async (term: XTerm, command: string) => {
+    try {
+      const response = await api.post(`/sandbox/${sandboxId}/execute`, {
+        command,
+      });
+
+      const { output, success } = response.data;
+
+      if (output) {
+        const lines = output.split('\n');
+        lines.forEach((line: string) => {
+          if (line) {
+            term.writeln(success ? `\x1b[32m${line}\x1b[0m` : `\x1b[31m${line}\x1b[0m`);
+          }
+        });
+      }
+      term.writeln('');
+    } catch (error: any) {
+      const errorMsg = error.response?.data?.detail || 'Command execution failed';
+      term.writeln(`\x1b[31m✗ ${errorMsg}\x1b[0m`);
+      term.writeln('');
+    }
+  };
+
+  const handleMockCommand = (term: XTerm, cmd: string, args: string[]) => {
     // Mock Git command responses
     switch (cmd) {
       case 'git':
         handleGitCommand(term, args);
-        break;
-      case 'clear':
-        term.clear();
-        break;
-      case 'help':
-        term.writeln('\x1b[32mAvailable commands:\x1b[0m');
-        term.writeln('  \x1b[36mgit\x1b[0m         - Git version control');
-        term.writeln('  \x1b[36mclear\x1b[0m       - Clear terminal');
-        term.writeln('  \x1b[36mhelp\x1b[0m        - Show this help');
-        term.writeln('');
         break;
       default:
         term.writeln(`\x1b[31mCommand not found: ${cmd}\x1b[0m`);
