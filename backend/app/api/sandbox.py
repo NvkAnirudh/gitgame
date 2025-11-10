@@ -11,7 +11,7 @@ from app.db.database import get_db
 from app.services.git_sandbox import get_sandbox_manager, CommandNotAllowedError
 from app.models.content import Lesson, Challenge
 from app.models.player import Player
-from app.core.dependencies import get_current_player
+from app.core.dependencies import get_optional_current_player
 
 router = APIRouter(prefix="/sandbox", tags=["sandbox"])
 
@@ -41,11 +41,12 @@ class SandboxExecuteResponse(BaseModel):
 async def create_sandbox(
     request: SandboxCreateRequest,
     db: Session = Depends(get_db),
-    current_player: Player = Depends(get_current_player)
+    current_player: Optional[Player] = Depends(get_optional_current_player)
 ):
     """
     Create a new Git sandbox for interactive terminal use.
     Optionally initialize with git_state from a lesson or challenge.
+    Works without authentication for learning purposes.
     """
     try:
         sandbox_manager = get_sandbox_manager()
@@ -91,10 +92,11 @@ async def create_sandbox(
 async def execute_command(
     sandbox_id: str,
     request: SandboxExecuteRequest,
-    current_player: Player = Depends(get_current_player)
+    current_player: Optional[Player] = Depends(get_optional_current_player)
 ):
     """
-    Execute a Git command in the specified sandbox.
+    Execute a Git or shell command in the specified sandbox.
+    Works without authentication for learning purposes.
     """
     try:
         sandbox_manager = get_sandbox_manager()
@@ -145,10 +147,11 @@ async def execute_command(
 @router.post("/{sandbox_id}/cleanup")
 async def cleanup_sandbox(
     sandbox_id: str,
-    current_player: Player = Depends(get_current_player)
+    current_player: Optional[Player] = Depends(get_optional_current_player)
 ):
     """
     Cleanup and destroy a sandbox.
+    Works without authentication for learning purposes.
     """
     try:
         sandbox_manager = get_sandbox_manager()
@@ -166,10 +169,11 @@ async def cleanup_sandbox(
 @router.get("/{sandbox_id}/status")
 async def get_sandbox_status(
     sandbox_id: str,
-    current_player: Player = Depends(get_current_player)
+    current_player: Optional[Player] = Depends(get_optional_current_player)
 ):
     """
     Get the current state of a sandbox.
+    Works without authentication for learning purposes.
     """
     try:
         sandbox_manager = get_sandbox_manager()

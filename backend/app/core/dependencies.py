@@ -4,7 +4,7 @@ Dependencies for FastAPI routes
 
 from typing import Optional
 from fastapi import Depends, HTTPException, status
-from fastapi.security import OAuth2PasswordBearer
+from fastapi.security import OAuth2PasswordBearer, HTTPBearer, HTTPAuthorizationCredentials
 from sqlalchemy.orm import Session
 from app.db.database import get_db
 from app.core.security import verify_token
@@ -13,6 +13,9 @@ from app.models.player import Player
 
 # OAuth2 scheme for token authentication
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
+
+# Optional bearer scheme (doesn't require token)
+optional_oauth2_scheme = HTTPBearer(auto_error=False)
 
 
 async def get_current_user(
@@ -73,7 +76,7 @@ async def get_current_player(
 
 
 async def get_optional_current_user(
-    token: Optional[str] = Depends(oauth2_scheme),
+    credentials: Optional[HTTPAuthorizationCredentials] = Depends(optional_oauth2_scheme),
     db: Session = Depends(get_db)
 ) -> Optional[User]:
     """
@@ -82,9 +85,10 @@ async def get_optional_current_user(
     Usage in routes:
         current_user: Optional[User] = Depends(get_optional_current_user)
     """
-    if token is None:
+    if credentials is None:
         return None
 
+    token = credentials.credentials
     user_id = verify_token(token, token_type="access")
     if user_id is None:
         return None
@@ -94,3 +98,20 @@ async def get_optional_current_user(
         return None
 
     return user
+
+
+async def get_optional_current_player(
+    current_user: Optional[User] = Depends(get_optional_current_user),
+    db: Session = Depends(get_db)
+) -> Optional[Player]:
+    """
+    Dependency to optionally get current player profile (doesn't require auth)
+
+    Usage in routes:
+        current_player: Optional[Player] = Depends(get_optional_current_player)
+    """
+    if current_user is None:
+        return None
+
+    player = db.query(Player).filter(Player.user_id == current_user.id).first()
+    return player

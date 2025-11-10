@@ -140,12 +140,15 @@ export default function Terminal({ lessonId, onCommand, readOnly = false }: Term
         lesson_id: lessonId,
       });
       setSandboxId(response.data.sandbox_id);
-      term.writeln('\x1b[32m✓ Sandbox initialized\x1b[0m');
+      term.writeln('\x1b[32m✓ Live sandbox ready - real Git commands enabled!\x1b[0m');
       term.writeln('');
-    } catch (error) {
+    } catch (error: any) {
       console.error('Failed to initialize sandbox:', error);
+      const errorDetail = error.response?.data?.detail || error.message || 'Unknown error';
+      console.error('Error details:', errorDetail);
       setUseMock(true);
-      term.writeln('\x1b[33m⚠ Using mock mode (sandbox unavailable)\x1b[0m');
+      term.writeln('\x1b[33m⚠ Sandbox unavailable - using limited mock mode\x1b[0m');
+      term.writeln('\x1b[90m  Error: ' + errorDetail + '\x1b[0m');
       term.writeln('');
     }
   };
@@ -198,13 +201,16 @@ export default function Terminal({ lessonId, onCommand, readOnly = false }: Term
 
       const { output, success } = response.data;
 
-      if (output) {
+      if (output && output.trim()) {
         const lines = output.split('\n');
         lines.forEach((line: string) => {
-          if (line) {
-            term.writeln(success ? `\x1b[32m${line}\x1b[0m` : `\x1b[31m${line}\x1b[0m`);
-          }
+          // Show output in appropriate color
+          const color = success ? '\x1b[0m' : '\x1b[31m'; // default or red for errors
+          term.writeln(`${color}${line}\x1b[0m`);
         });
+      } else if (!success) {
+        // Command failed but no output
+        term.writeln('\x1b[31mCommand failed with no output\x1b[0m');
       }
       term.writeln('');
     } catch (error: any) {
